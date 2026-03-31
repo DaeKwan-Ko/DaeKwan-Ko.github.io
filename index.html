@@ -1,681 +1,802 @@
-<!DOCTYPE HTML>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
   <title>Dae Kwan Ko | Michigan State University</title>
-  
   <meta name="author" content="Dae Kwan Ko">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
-	<link rel="icon" type="image/png" href="images/Michigan-State-Spartans-logo.png">
+  <meta name="description" content="Dae Kwan Ko is a plant biologist at Michigan State University studying gene regulatory networks, abiotic stress responses, and multi-omics approaches for crop resilience.">
 
+  <meta property="og:title" content="Dae Kwan Ko | Michigan State University">
+  <meta property="og:description" content="Plant biologist studying gene regulatory networks, abiotic stress responses, and crop resilience.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/DaeKwanKo_headshot.jpeg">
+
+  <link rel="icon" type="image/png" href="images/Michigan-State-Spartans-logo.png">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #222222;
+      --muted: #666666;
+      --border: #e4e4e4;
+      --accent: #18453b;
+      --highlight: #ffffd0;
+      --link: #0b57d0;
+      --max-width: 980px;
+      --shadow: 0 2px 10px rgba(0,0,0,0.04);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 20px 48px;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .site-header-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .site-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+
+    .site-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      font-size: 0.95rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.7fr 1fr;
+      gap: 32px;
+      align-items: center;
+      padding: 36px 0 28px;
+    }
+
+    .hero h1 {
+      margin: 0 0 12px;
+      font-size: 2.2rem;
+      line-height: 1.15;
+    }
+
+    .hero p {
+      margin: 0 0 14px;
+    }
+
+    .hero-photo img {
+      width: 100%;
+      max-width: 280px;
+      margin-left: auto;
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px 18px;
+      align-items: center;
+      margin-top: 18px;
+      font-size: 0.98rem;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text);
+    }
+
+    .social-links i {
+      font-size: 1.05rem;
+    }
+
+    section {
+      padding-top: 26px;
+    }
+
+    section h2 {
+      margin: 0 0 12px;
+      font-size: 1.55rem;
+      color: var(--accent);
+    }
+
+    .section-intro {
+      margin-bottom: 18px;
+    }
+
+    .highlight {
+      background: var(--highlight);
+      padding: 0 4px;
+      border-radius: 4px;
+    }
+
+    .publication-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .publication {
+      display: grid;
+      grid-template-columns: 190px 1fr;
+      gap: 20px;
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .publication.selected {
+      background: var(--highlight);
+    }
+
+    .publication-media img,
+    .publication-media video {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .publication-title {
+      margin: 0 0 6px;
+      font-size: 1.08rem;
+      line-height: 1.35;
+    }
+
+    .publication-title a {
+      color: var(--text);
+    }
+
+    .publication-title a:hover {
+      color: var(--link);
+    }
+
+    .citation,
+    .publication-links,
+    .publication-note {
+      font-size: 0.96rem;
+    }
+
+    .citation {
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .publication-links {
+      margin-bottom: 10px;
+      color: var(--muted);
+    }
+
+    .publication-links a + a::before {
+      content: " / ";
+      color: var(--muted);
+    }
+
+    .publication-note {
+      color: var(--text);
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      margin-top: 14px;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .site-footer {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 10px 20px 36px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      text-align: right;
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-photo img {
+        margin: 0 auto;
+        max-width: 240px;
+      }
+
+      .publication {
+        grid-template-columns: 1fr;
+      }
+
+      .publication-media {
+        max-width: 240px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .site-header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .social-links {
+        gap: 10px 14px;
+      }
+    }
+  </style>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T5HBEESCVD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T5HBEESCVD');
+  </script>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T5HBEESCVD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-T5HBEESCVD');
-</script>
-	
 <body>
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-    <tr style="padding:0px">
-      <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr style="padding:0px">
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-              <p style="text-align:center">
-                <strong><name>Dae Kwan Ko, Ph.D.</name></strong>
-              </p>
-              <p>I am an Assistant Professor - Fixed Term in <a href="https://prl.natsci.msu.edu">the Plant Research Laboratory</a>, <a href="https://plantbiology.natsci.msu.edu">the Department of Plant Biology</a>, and <a href="https://www.glbrc.org">the Great Lakes Bioenergy Research Center (GLBRC)</a> at Michigan State University (MSU).
-              </p>
-              <p>
-                During my Ph.D. studies in <a href="https://molecularbiosci.utexas.edu">the Department of Molecular Biosciences at the University of Texas at Austin</a>, I mainly investigated <a href="https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1006197">the molecular mechanism of hybrid vigor, known as heterosis, in maize using an integrative approach of experimental biology and genomics</a>.
-                </p>
-              <p>
-                After completing my Ph.D. studies, as a postdoc, I joined <a href="https://buell-lab.github.io/robin.html">the lab of C. Robin Buell</a> at MSU for bioinformatics training. Following the successful training, I joined <a href="https://brandizzilab.natsci.msu.edu">the lab of Federica Brandizzi</a> where, as a postdoc, I investigated gene regulatory mechanisms underlying responses to endoplasmic reticulum stress in plants using systems-level approaches</a>. Particularly, I have developed coexpression network-based gene discovery pipelines and applied them to pinpointing regulatory hub genes for functional characterization.
-              </p>
-              	In my current position, I investigate how genes are dynamically regulated in plants, in response to climate change using multi-omics network approaches. My research is funded by GLBRC through <a href="https://brandizzilab.natsci.msu.edu">the Brandizzi Lab</a> and by <a href="https://www.canr.msu.edu/project-greeen/index">the MSU GREEEN project</a> for which I serve as a PI.
-              </p>
-              <p style="text-align:center">
-              	<a href="mailto:dkko@msu.edu"><i
-                  class="fa-solid fa-envelope"></i></a> &nbsp/&nbsp
-                <a href="data/CV_DaeKwanKo.pdf"><i
-                  class="ai ai-cv"></i></a> &nbsp/&nbsp
-                <a href="https://github.com/DaeKwan-Ko/"><i
-                  class="fa-brands fa-github"></i></a> &nbsp/&nbsp
-                <a href="https://www.linkedin.com/in/daekwanko/"><i
-                  class="fa-brands fa-linkedin"></i></a> &nbsp/&nbsp
-                <a href="https://twitter.com/DaeKwan_Ko"><i
-                  class="fa-brands fa-twitter"></i></a> &nbsp/&nbsp
-                <a href="data/DaeKwanKo_bio.txt">Bio</a> &nbsp/&nbsp
-                <a href="https://scholar.google.com/citations?hl=en&user=MXSf08oAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a>
-              </p>
-            </td>
-            <td style="padding:2.5%;width:40%;max-width:40%">
-              <a href="images/DaeKwanKo_headshot.jpeg"><img style="width:90%;max-width:90%" alt="profile photo" src="images/Dae Kwan Ko_headshot.jpeg" class="hoverZoomLink"></a>
-            </td>
-          </tr>
-        </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
- 
-             <!-- Research interests-->
-            <div id="research" style="margin-top: -50px;padding-top: 50px">
-                <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;padding-top:50px; margin-top:-50px"><tbody>
-                <tr>
-                    <td style="padding:20px;width:100%;vertical-align:middle">
-                        <strong><name>Research interests</name></strong>
-                        <p>
-               			 I am a plant biologist driven by a passion for addressing critical biological questions at the systems level through a hypothesis-driven approach, harnessing the power of genomics. Just as individuals in society interact, so too do genes and proteins within cells. But what are the functional consequences of these molecular interactions in regulating biological pathways? These interactions, known as “biological networks,” are essential for maintaining cellular homeostasis in all living organisms. My long-term research goal is to unravel these gene networks and apply the insights to advance translational research. Representative papers are <span class="highlight">highlighted</span> in yellow below.
-             			</p>
-                    </td>
-                </tr>
-                </tbody>
-                </table>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div class="site-title">Dae Kwan Ko</div>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="data/CV_DaeKwanKo.pdf">CV</a>
+        <a href="https://scholar.google.com/citations?hl=en&user=MXSf08oAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about" class="hero" aria-labelledby="page-title">
+      <div class="hero-text">
+        <h1 id="page-title">Dae Kwan Ko, Ph.D.</h1>
+
+        <p>
+          I am a Fixed-Term Assistant Professor in <a href="https://prl.natsci.msu.edu">the Plant Research Laboratory</a>, <a href="https://plantbiology.natsci.msu.edu">the Department of Plant Biology</a>, and <a href="https://www.glbrc.org">the Great Lakes Bioenergy Research Center (GLBRC)</a> at Michigan State University (MSU). My research aims to understand how plants dynamically reprogram gene expression in response to environmental stress, with a particular emphasis on gene regulatory networks and their application to crop resilience.
+        </p>
+
+        <p>
+          During my Ph.D. training in <a href="https://molecularbiosci.utexas.edu">the Department of Molecular Biosciences at the University of Texas at Austin</a>, I investigated the molecular mechanisms of heterosis in maize using an integrative approach that combined experimental biology and genomics. I subsequently joined <a href="https://brandizzilab.natsci.msu.edu">the lab of Federica Brandizzi</a> at MSU as a postdoctoral researcher, where I studied gene regulatory mechanisms underlying plant responses to endoplasmic reticulum stress through systems-level approaches. This work led to the development of coexpression network-based gene discovery pipelines that enabled the identification of regulatory hub genes for functional characterization.
+        </p>
+
+        <p>
+          In my current role, I focus on how gene regulatory networks and multi-omics data can be used to uncover mechanisms of plant adaptation to climate-related stresses. While I am affiliated with the Brandizzi Lab, I also pursue independent research directions, including projects supported by GLBRC and the <a href="https://www.canr.msu.edu/project-greeen/index">MSU GREEEN project</a>, for which I serve as PI.
+        </p>
+
+        <div class="social-links" aria-label="Profile links">
+          <a href="mailto:dkko@msu.edu" aria-label="Email Dae Kwan Ko">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            <span>Email</span>
+          </a>
+          <a href="data/CV_DaeKwanKo.pdf" aria-label="Download CV">
+            <i class="ai ai-cv" aria-hidden="true"></i>
+            <span>CV</span>
+          </a>
+          <a href="https://github.com/DaeKwan-Ko/" aria-label="GitHub profile">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+            <span>GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com/in/daekwanko/" aria-label="LinkedIn profile">
+            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://twitter.com/DaeKwan_Ko" aria-label="Twitter profile">
+            <i class="fa-brands fa-twitter" aria-hidden="true"></i>
+            <span>Twitter</span>
+          </a>
+          <a href="data/DaeKwanKo_bio.txt">Bio</a>
+          <a href="https://scholar.google.com/citations?hl=en&user=MXSf08oAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a>
+        </div>
+      </div>
+
+      <div class="hero-photo">
+        <a href="images/DaeKwanKo_headshot.jpeg">
+          <img
+            src="images/DaeKwanKo_headshot.jpeg"
+            alt="Portrait of Dae Kwan Ko"
+            loading="eager">
+        </a>
+      </div>
+    </section>
+
+    <section id="research" aria-labelledby="research-heading">
+      <h2 id="research-heading">Research Interests</h2>
+      <p class="section-intro">
+        I am a plant biologist driven by a passion for addressing critical biological questions at the systems level through a hypothesis-driven approach, harnessing the power of genomics. Just as individuals in society interact, so too do genes and proteins within cells. But what are the functional consequences of these molecular interactions in regulating biological pathways? These interactions, known as “biological networks,” are essential for maintaining cellular homeostasis in all living organisms. My long-term research goal is to unravel these gene networks and apply the insights to advance translational research. Representative papers are <span class="highlight">highlighted</span> in yellow below.
+      </p>
+    </section>
+
+    <section id="publications" aria-labelledby="publications-heading">
+      <h2 id="publications-heading">Publications</h2>
+
+      <div class="publication-list">
+        <article class="publication selected">
+          <div class="publication-media">
+            <a href="images/Ko_TPJ2026.png">
+              <img src="images/Ko_TPJ2026.png" alt="Figure preview for Plant Journal 2026 paper on abiotic stress responses in sorghum" loading="lazy">
+            </a>
+          </div>
+          <div class="publication-content">
+            <h3 class="publication-title">
+              <a href="https://onlinelibrary.wiley.com/doi/10.1111/tpj.70834">A tissue-resolved, network-based transcriptomic framework for abiotic stress responses in sorghum</a>
+            </h3>
+            <div class="citation"><strong>Ko DK</strong>, Brandizzi F<br>Plant J. 2026 Apr;126(1):e70834.</div>
+            <div class="publication-links">
+              <a href="https://github.com/DaeKwan-Ko/abiotic_bulkrnaseq">GitHub page for scripts</a>
             </div>
+            <div class="publication-note">
+              Description: Understanding how crops coordinate gene expression across tissues and time under environmental stress is a major challenge for improving climate resilience. This study provides a comprehensive, network-based transcriptomic resource that reveals tissue specificity as the dominant driver of abiotic stress responses in sorghum, offering a valuable framework and prioritized regulatory candidates for future crop improvement.
+            </div>
+          </div>
+        </article>
 
-            <!-- Publications -->
-            <div id="publications" style="margin-top: -50px;padding-top: 50px">
-                <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-                <tr>
-                    <td style="padding:20px;width:100%;vertical-align:middle">
-                        <strong><name>Publications</name></strong>
-                    </td>
-                </tr>
-                </tbody></table>
+        <article class="publication">
+          <div class="publication-media">
+            <a href="images/Adhikari_JBC 2025.jpeg">
+              <img src="images/Adhikari_JBC 2025.jpeg" alt="Figure preview for JBC 2025 review on ER stress and viral defense in plants" loading="lazy">
+            </a>
+          </div>
+          <div class="publication-content">
+            <h3 class="publication-title">
+              <a href="https://www.sciencedirect.com/science/article/pii/S0021925825002030">ER stress and viral defense: Advances and future perspectives on plant unfolded protein response in pathogenesis</a>
+            </h3>
+            <div class="citation">Adhikari B, Verchot J*, Brandizzi F, <strong>Ko DK*</strong><br>*Co-corresponding authors<br>J Biol Chem. 2025 Feb 25;301(4):108354.</div>
+            <div class="publication-note">
+              Description: Over the past decade, our understanding of how the plant UPR machinery engages with pathogen infections, especially viral infection, and the functional consequences has greatly advanced because of genetic, genomic, and technological innovations as well as the accumulation of new knowledge of plant UPR. In this review, we provide a comprehensive overview of plant UPR signaling highlighting recent advances that reveal how it is tuned to orchestrate interconnected signaling pathways, thus operating as a moderator to control cell fate.
+            </div>
+          </div>
+        </article>
 
-                <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                    <tbody>
-                    <!-- Abiotic -->
-                    <tr bgcolor="#ffffd0">
-                        <td style="padding:20px;width:25%;vertical-align:middle">
-                            <div class="one">
-                                <a href="images/Ko_TPJ2026.png">
-                                    <img src='images/Ko_TPJ2026.png' width="180" alt="TPJ2026">
-                                </a>
-                            </div>
-                        </td>
-                        <td style="padding:20px;width:75%;vertical-align:middle">
-                            <a href="https://onlinelibrary.wiley.com/doi/10.1111/tpj.70834">
-                                <papertitle>A tissue-resolved, network-based transcriptomic framework for abiotic stress responses in sorghum</papertitle>
-                            </a>
-              				<br>
-              				<strong>Ko DK</strong>, Brandizzi F
-             				<br>
-              				Plant J. 2026 Apr;126(1):e70834.
-              				<br>
-							<a href="https://github.com/DaeKwan-Ko/abiotic_bulkrnaseq">Github page for scripts</a>              				
-              				<p></p>
-              				<p>
-              				Description: Understanding how crops coordinate gene expression across tissues and time under environmental stress is a major challenge for improving climate resilience. This study provides a comprehensive, network-based transcriptomic resource that reveals tissue specificity as the dominant driver of abiotic stress responses in sorghum, offering a valuable framework and prioritized regulatory candidates for future crop improvement.
-              				</p>
-            			</td>
-                    </tr>
-                    
-                    <!-- UPRpathogen review -->
-                    <tr #bgcolor="#ffffd0">
-                        <td style="padding:20px;width:25%;vertical-align:middle">
-                            <div class="one">
-                                <a href="images/Adhikari_JBC 2025.jpeg">
-                                    <img src='images/Adhikari_JBC 2025.jpeg' width="180" alt="ism93">
-                                </a>
-                            </div>
-                        </td>
-                        <td style="padding:20px;width:75%;vertical-align:middle">
-                            <a href="https://www.sciencedirect.com/science/article/pii/S0021925825002030">
-                                <papertitle>ER stress and viral defense: Advances and future perspectives on plant unfolded protein response in pathogenesis</papertitle>
-                            </a>
-              				<br>
-              				Adhikari B, Verchot J*, Brandizzi F, <strong>Ko DK*</strong>
-             				<br>
-							*Co-corresponding authors
-							<br>
-              				J Biol Chem. 2025 Feb 25;301(4):108354.
-              				<br>
-              				<p></p>
-              				<p>
-              				Description: Over the past decade, our understanding of how the plant UPR machinery engages with pathogen infections, especially viral infection, and the functional consequences has greatly advanced because of genetic, genomic, and technological innovations as well as the accumulation of new knowledge of plant UPR. In this review, we provide a comprehensive overview of plant UPR signaling highlighting recent advances that reveal how it is tuned to orchestrate interconnected signaling pathways, thus operating as a moderator to control cell fate.
-              				</p>
-            			</td>
-                    </tr>
-                    
-                    <!-- NEEDLE -->
-                    <tr bgcolor="#ffffd0">
-                        <td style="padding:20px;width:25%;vertical-align:middle">
-                            <div class="one">
-                                <a href="images/Ko_CRM_rev4_GA_v2.png">
-                                    <img src='images/Ko_CRM_rev4_GA_v2.png' width="180" alt="needle">
-                                </a>
-                            </div>
-                        </td>
-                        <td style="padding:20px;width:75%;vertical-align:middle">
-                            <a href="https://www.cell.com/cell-reports-methods/fulltext/S2667-2375(24)00353-9">
-                                <papertitle>A network-enabled pipeline for gene discovery and validation in non-model plant species</papertitle>
-                            </a>
-              				<br>
-              				<strong>Ko DK</strong>, Brandizzi F
-             				<br>
-              				Cell Rep Methods. 2025 Jan 27;5(1):100963.
-              				<br>
-              				<a href="https://prl.natsci.msu.edu/news-and-events/news/2025-02-needle-points-to-gene-regulators-q-and-a-with-federica-brandizzi.aspx">Highlighted in MSU-PRL bulletin</a> /
-							<a href="https://www.glbrc.org/news/research-highlight-needle-points-key-gene-regulators">Highlighted in GLBRC bulletin</a> /
-							<a href="https://github.com/DaeKwan-Ko/needle">Github page for scripts</a>              				
-              				<p></p>
-              				<p>
-              				Description: Meeting the energy and food demands of a growing global population demands the swift development of climate-resilient crops, achievable through targeted gene reprogramming for growth, development, and stress responses. Accurate prediction of transcription regulators is crucial for accelerating crop improvement via targeted engineering and breeding approaches. However, this is constrained by the scarcity of multi-omics datasets for most non-model species. To address this challenge, we present a robust network-based gene discovery pipeline that identifies transcription factors upstream of genes of interest by leveraging transcriptomic dynamics in non-model plants followed by rapid in planta experimental validation.
-              				</p>
-            			</td>
-                    </tr>
-                                        
-                    <!-- UPR review -->
-                    <tr #bgcolor="#ffffd0">
-                        <td style="padding:20px;width:25%;vertical-align:middle">
-                            <div class="one">
-                                <a href="images/Ko and Brandizzi_NRG 2024.png">
-                                    <img src='images/Ko and Brandizzi_NRG 2024.png' width="180" alt="ism93">
-                                </a>
-                            </div>
-                        </td>
-                        <td style="padding:20px;width:75%;vertical-align:middle">
-                            <a href="https://www.nature.com/articles/s41576-024-00710-4">
-                                <papertitle>Dynamics of ER stress-induced gene regulation in plants</papertitle>
-                            </a>
-              				<br>
-              				<strong>Ko DK</strong>, Brandizzi F
-             				<br>
-              				Nat Rev Genet. 2024 Jul;25(7):513-525
-              				<br>
-              				<p></p>
-              				<p>
-              				Description: Plants have uniquely adapted to manage endoplasmic reticulum stress triggered by protein misfolding. We review the dynamics of gene expression regulation underlying the unfolded protein response in plants, highlighting recent insights provided by systems-level approaches and omics data.
-              				</p>
-            			</td>
-                    </tr>
-                
-                    <tbody>
-                    <!-- ism93 -->
-                    <tr bgcolor="#ffffd0">
-                        <td style="padding:20px;width:25%;vertical-align:middle">
-                            <div class="one">
-                                <a href="images/Ko et al_NatPlants2023.png">
-                                    <img src='images/Ko et al_NatPlants2023.png' width="180" alt="ism93">
-                                </a>
-                            </div>
-                        </td>
-                        <td style="padding:20px;width:75%;vertical-align:middle">
-                            <a href="https://www.nature.com/articles/s41477-023-01480-3">
-                                <papertitle>An IRE1-proteasome system signaling cohort controls cell fate determination in unresolved proteotoxic stress of the plant ER</papertitle>
-                            </a>
-              				<br>
-              				<strong>Ko DK</strong>, Kim JY, Thibault ET, Brandizzi F
-             				<br>
-              				Nat Plants. 2023 9:1333-1346.
-              				<br>
-              				<a href="https://www.cell.com/trends/plant-science/fulltext/S1360-1385(23)00388-6">Spotlight by Varshney et al. Trends Plant Sci</a> /
-              				<a href="https://github.com/DaeKwan-Ko/ism93">Github page for scripts</a> /
-             		 		<a href="https://msutoday.msu.edu/news/2023/plant-biology-switch-between-life-and-death">Media highlight</a>
-              				<p></p>
-              				<p>
-              				Description: In this study, we performed a forward genetic screening and discovered a new regulator that helps cells determine life or death under unresolved ER stress. Using an interdisciplinary approach of omics, biochemistry, and genetics, we identified its working mechanism and functional relationship with existing regulators.
-              				</p>
-              				<iframe width="560" height="315" src="https://www.youtube.com/embed/hduMHITolSY?si=OhpITUm-8vj9_K-m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            			</td>
-                    </tr>  
-		 
-                    <!-- tgnap1 -->
-                    <tr #bgcolor="#ffffd0">
-                        <td style="padding:20px;width:25%;vertical-align:middle">
-                            <div class="one">
-                                <a href="images/Bhandari et al_NatComms2023.png">
-                                    <img src='images/Bhandari et al_NatComms2023.png' width="180" alt="tgnap1">
-                                </a>
-                            </div>
-                        </td>
-                        <td style="padding:20px;width:75%;vertical-align:middle">
-                            <a href="https://www.nature.com/articles/s41467-023-41807-4">
-                                <papertitle>Defense against phytopathogens relies on efficient antimicrobial protein secretion mediated by the microtubule-binding protein TGNap1</papertitle>
-                            </a>
-              				<br>
-              				Bhandari BD, <strong>Ko DK</strong>, Kim SJ, Nomura K, He SY, Brandizzi F
-             				<br>
-              				Nat Commun. 2023 14,6357.
-              				<br>
-              				<p></p>
-              				<p>
-              				Description: Defining plant defense machinery against pathogens is significant in cell biology and crop yield. This paper shows that TGNap1, a TGN and microtubule-binding protein, is required for defense and efficient anti-microbial protein secretion, linking secretion and cytoskeleton. I performed the RNA-seq analysis as a co-author. 
-              				</p>
-            			</td>
-                    </tr>  
+        <article class="publication selected">
+          <div class="publication-media">
+            <a href="images/Ko_CRM_rev4_GA_v2.png">
+              <img src="images/Ko_CRM_rev4_GA_v2.png" alt="Figure preview for Cell Reports Methods 2025 NEEDLE paper" loading="lazy">
+            </a>
+          </div>
+          <div class="publication-content">
+            <h3 class="publication-title">
+              <a href="https://www.cell.com/cell-reports-methods/fulltext/S2667-2375(24)00353-9">A network-enabled pipeline for gene discovery and validation in non-model plant species</a>
+            </h3>
+            <div class="citation"><strong>Ko DK</strong>, Brandizzi F<br>Cell Rep Methods. 2025 Jan 27;5(1):100963.</div>
+            <div class="publication-links">
+              <a href="https://prl.natsci.msu.edu/news-and-events/news/2025-02-needle-points-to-gene-regulators-q-and-a-with-federica-brandizzi.aspx">Highlighted in MSU-PRL bulletin</a>
+              <a href="https://www.glbrc.org/news/research-highlight-needle-points-key-gene-regulators">Highlighted in GLBRC bulletin</a>
+              <a href="https://github.com/DaeKwan-Ko/needle">GitHub page for scripts</a>
+            </div>
+            <div class="publication-note">
+              Description: Meeting the energy and food demands of a growing global population demands the swift development of climate-resilient crops, achievable through targeted gene reprogramming for growth, development, and stress responses. Accurate prediction of transcription regulators is crucial for accelerating crop improvement via targeted engineering and breeding approaches. However, this is constrained by the scarcity of multi-omics datasets for most non-model species. To address this challenge, we present a robust network-based gene discovery pipeline that identifies transcription factors upstream of genes of interest by leveraging transcriptomic dynamics in non-model plants followed by rapid in planta experimental validation.
+            </div>
+          </div>
+        </article>
 
-                    <!-- wgcna -->
-                    <tr #bgcolor="#ffffd0">
-                        <td style="padding:20px;width:25%;vertical-align:middle">
-                            <div class="one">
-                                <a href="images/Ko and Brandizzi_Plant Proteostasis 2023_1.jpg">
-                                    <img src='images/Ko and Brandizzi_Plant Proteostasis 2023_1.jpg' width="180" alt="WGCNA">
-                                </a>
-                            </div>
-                        </td>
-                        <td style="padding:20px;width:75%;vertical-align:middle">
-                            <a href="https://link.springer.com/protocol/10.1007/978-1-0716-2784-6_27">
-                                <papertitle>Coexpression Network Construction and Visualization from Transcriptomes Underlying ER Stress Responses</papertitle>
-                            </a>
-              				<br>
-              				<strong>Ko DK</strong>, Brandizzi F
-             				<br>
-              				Plant Proteostasis. Methods in Molecular Biology, 2023 vol 2581. Humana, New York, NY
-              				<br>
-              				<a href="https://github.com/DaeKwan-Ko/WGCNA">Github page</a>
-              				<p></p>
-              				<p>
-              				Description: The paper provides a step-by-step workflow for coexpression network analyses using WGCNA and discusses its potential applications.
-              				</p>
-            			</td>
-                    </tr>  					
-  
-                     <!-- GBF2 -->
-                    <tr bgcolor="#ffffd0">
-                        <td style="padding:20px;width:25%;vertical-align:middle">
-                            <div class="one">
-                                <a href="images/Ko and Brandizzi_Nature Plants 2022_1.png">
-                                    <img src='images/Ko and Brandizzi_Nature Plants 2022_1.png' width="180" alt="GBF2">
-                                </a>
-                            </div>
-                        </td>
-                        <td style="padding:20px;width:75%;vertical-align:middle">
-                            <a href="https://www.nature.com/articles/s41477-022-01150-w#article-info">
-                                <papertitle>Transcriptional competition shapes proteotoxic ER stress resolution</papertitle>
-                            </a>
-              				<br>
-              				<strong>Ko DK</strong>, Brandizzi F
-             				<br>
-              				Nat Plants. 2022 May;8(5):481-490.
-              				<br>
-              				<a href="https://github.com/DaeKwan-Ko/UPR-TFs">Github page for scripts</a> /
-             		 		<a href="https://prl.natsci.msu.edu/news-and-events/news/plant-er-advanced-genomics-illuminate-new-mechanisms-for-stress-mitigation.aspx">Media highlight</a>
-              				<p></p>
-              				<p>
-              				Description: We discovered a new UPR regulator and characterized its functional role in the UPR at the mechanistic level through a multi-omics approach.
-              				</p>
-            			</td>
-                    </tr>  
-		 
-                     <!-- root review-->
-                    <tr #bgcolor="#ffffd0">
-                        <td style="padding:20px;width:25%;vertical-align:middle">
-                            <div class="one">
-                                <a href="images/York et al_The Plant Phenome 2022_1.jpg">
-                                    <img src='images/York et al_The Plant Phenome 2022_1.jpg' width="180" alt="root review">
-                                </a>
-                            </div>
-                        </td>
-                        <td style="padding:20px;width:75%;vertical-align:middle">
-              				<a href="https://acsess.onlinelibrary.wiley.com/doi/abs/10.1002/ppj2.20028">
-                				<papertitle>Bioenergy Belowground: challenges and opportunities for phenotyping roots and the microbiome for sustainable bioenergy crop production</papertitle>
-              				</a>
-              				<br>
-              				York LM, Cumming JR, Trusiak A .... <strong>Ko DK</strong> .... Yang WH
-              				<br>
-              				The Plant Phenome Journal 5.1 2022: e20028.
-              				<br>
-              				<a href="https://www.glbrc.org">GLBRC website</a>
-              				<p></p>
-              				<p>
-              				Description: In this white paper, the GLBRC colleagues and I discussed the significance and challenges of root biology in bioenergy research.
-              				</p>
-            			</td>
-                    </tr>
-                    		 
-                     <!-- recovery network -->
-                    <tr bgcolor="#ffffd0">
-                        <td style="padding:20px;width:25%;vertical-align:middle">
-                            <div class="one">
-                                <a href="images/Ko and Brandizzi_Communications Biology 2022_1.png">
-                                    <img src='images/Ko and Brandizzi_Communications Biology 2022_1.png' width="180" alt="recovery network">
-                                </a>
-                            </div>
-                        </td>
-                        <td style="padding:20px;width:75%;vertical-align:middle">
-                            <a href="https://www.nature.com/articles/s42003-021-02964-8">
-                                <papertitle>Advanced genomics identifies growth effectors for proteotoxic ER stress recovery in Arabidopsis thaliana</papertitle>
-                            </a>
-              				<br>
-              				<strong>Ko DK</strong>, Brandizzi F
-              				<br>
-              				Commun Biol. 2022 Jan 11;5(1):16.
-              				<br>
-              				<a href="https://github.com/DaeKwan-Ko/UPR-GRN">Github page for scripts</a> /
-              				<a href="https://prl.natsci.msu.edu/news-and-events/news/plants-get-stressed-too-were-looking-at-thousands-of-genes-to-understand-how-they-manage-it.aspx">Media highlight</a>
-              				<p></p>
-              				<p>
-              				Description: To better understand the transcriptional activities of the UPR master regulators, bZIP28 and bZIP60, I generated time-series transcriptome datasets and performed coexpression analyses, which allowed me to pinpoint downstream genes for functional characterization.
-              				</p>
-              				<iframe width="560" height="315" src="https://www.youtube.com/embed/vpxlWcIAzqA?si=ORwQv25US918M6X8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            			</td>
-                    </tr> 
+        <article class="publication">
+          <div class="publication-media">
+            <a href="images/Ko and Brandizzi_NRG 2024.png">
+              <img src="images/Ko and Brandizzi_NRG 2024.png" alt="Figure preview for Nature Reviews Genetics 2024 review on ER stress-induced gene regulation in plants" loading="lazy">
+            </a>
+          </div>
+          <div class="publication-content">
+            <h3 class="publication-title">
+              <a href="https://www.nature.com/articles/s41576-024-00710-4">Dynamics of ER stress-induced gene regulation in plants</a>
+            </h3>
+            <div class="citation"><strong>Ko DK</strong>, Brandizzi F<br>Nat Rev Genet. 2024 Jul;25(7):513-525.</div>
+            <div class="publication-note">
+              Description: Plants have uniquely adapted to manage endoplasmic reticulum stress triggered by protein misfolding. We review the dynamics of gene expression regulation underlying the unfolded protein response in plants, highlighting recent insights provided by systems-level approaches and omics data.
+            </div>
+          </div>
+        </article>
 
-                     <!-- pca-->
-                    <tr #bgcolor="#ffffd0">
-                        <td style="padding:20px;width:25%;vertical-align:middle">
-                            <div class="one">
-                                <a href="images/Jha et al_eLife 2021_2.jpg">
-                                    <img src='images/Jha et al_eLife 2021_2.jpg' width="180" alt="pca">
-                                </a>
-                            </div>
-                        </td>
-                        <td style="padding:20px;width:75%;vertical-align:middle">
-              				<a href="https://elifesciences.org/articles/66877">
-                				<papertitle>Science forum: vision, challenges and opportunities for a plant cell atlas</papertitle>
-              				</a>
-              				<br>
-              				Plant Cell Atlas Consortium, Ghosh Jha S, Borowsky AT .... <strong>Ko DK</strong> ... Rhee SY
-              				<br>
-              				eLife. 2021 Sep 7;10:e66877.
-              				<br>
-              				<a href="https://www.plantcellatlas.org">Plant Cell Atlas website</a>
-              				<p></p>
-              				<p>
-              				Description: Plant Cell Atlas (PCA) colleagues and I reported the activities that we initiated for the plant research community.
-              				</p>
-            			</td>
-                    </tr>
-    
-                     <!-- astrobiology -->
-                    <tr #bgcolor="#ffffd0">
-                        <td style="padding:20px;width:25%;vertical-align:middle">
-                            <div class="one">
-                                <a href="images/Angelos et al_Astrobiology 2021_2.png">
-                                    <img src='images/Angelos et al_Astrobiology 2021_2.png' width="180" alt="astrobiology">
-                                </a>
-                            </div>
-                        </td>
-                        <td style="padding:20px;width:75%;vertical-align:middle">
-                            <a href="https://www.liebertpub.com/doi/abs/10.1089/ast.2020.2313">
-                				<papertitle>Relevance of the Unfolded Protein Response to Spaceflight-Induced Transcriptional Reprogramming in Arabidopsis</papertitle>
-              				</a>
-              				<br>
-              				Angelos E, <strong>Ko DK</strong>, Zemelis-Durfee S, Brandizzi F
-              				<br>
-              				Astrobiology. 2021 Mar;21(3):367-380.
-              				<br>
-              				<a href="https://prl.natsci.msu.edu/news-and-events/news/learning-what-it-takes-to-grow-a-space-garden.aspx">Media highlight</a>
-              				<p></p>
-              				<p>
-              				Description: This study focused on investigating transcriptome changes affected by UPR regulators in space. Plants were germinated, grown, and harvested in spaceflight. As a co-author, I performed RNA-seq analyses.
-              				</p>
-            			</td>
-                    </tr>         
+        <article class="publication selected">
+          <div class="publication-media">
+            <a href="images/Ko et al_NatPlants2023.png">
+              <img src="images/Ko et al_NatPlants2023.png" alt="Figure preview for Nature Plants 2023 paper on IRE1-proteasome signaling in unresolved ER stress" loading="lazy">
+            </a>
+          </div>
+          <div class="publication-content">
+            <h3 class="publication-title">
+              <a href="https://www.nature.com/articles/s41477-023-01480-3">An IRE1-proteasome system signaling cohort controls cell fate determination in unresolved proteotoxic stress of the plant ER</a>
+            </h3>
+            <div class="citation"><strong>Ko DK</strong>, Kim JY, Thibault ET, Brandizzi F<br>Nat Plants. 2023 9:1333-1346.</div>
+            <div class="publication-links">
+              <a href="https://www.cell.com/trends/plant-science/fulltext/S1360-1385(23)00388-6">Spotlight by Varshney et al. Trends Plant Sci</a>
+              <a href="https://github.com/DaeKwan-Ko/ism93">GitHub page for scripts</a>
+              <a href="https://msutoday.msu.edu/news/2023/plant-biology-switch-between-life-and-death">Media highlight</a>
+            </div>
+            <div class="publication-note">
+              Description: In this study, we performed a forward genetic screening and discovered a new regulator that helps cells determine life or death under unresolved ER stress. Using an interdisciplinary approach of omics, biochemistry, and genetics, we identified its working mechanism and functional relationship with existing regulators.
+            </div>
+            <div class="video-wrapper">
+              <iframe src="https://www.youtube.com/embed/hduMHITolSY?si=OhpITUm-8vj9_K-m" title="YouTube video on Nature Plants 2023 paper" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+        </article>
 
-                     <!-- maize UPR -->
-                    <tr bgcolor="#ffffd0">
-                        <td style="padding:20px;width:25%;vertical-align:middle">
-                            <div class="one">
-                                <a href="images/Ko and Brandizzi_TPJ2021.png">
-                                    <img src='images/Ko and Brandizzi_TPJ2021.png' width="180" alt="maize UPR">
-                                </a>
-                            </div>
-                        </td>
-                        <td style="padding:20px;width:75%;vertical-align:middle">
-                            <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/tpj.15044">
-                				<papertitle>A temporal hierarchy underpins the transcription factor‐DNA interactome of the maize UPR</papertitle>
-              				</a>
-              				<br>
-              				<strong>Ko DK</strong>, Brandizzi F
-              				<br>
-              				Plant J. 2021 Jan;105(1):254-270.
-              				<br>
-              				<a href="https://prl.natsci.msu.edu/news-and-events/news/identifying-transcription-factor-networks-that-protect-maize-when-its-main-cellular-biofactory-is-under-stress.aspx">Media highlight</a>
-              				<p></p>
-              				<p>
-              				Description: How the UPR is controlled is largely unknown in non-model plant species including maize. To better understand the regulatory landscape of the UPR, I performed TF network analyses based on enhanced Y1H screens for selected UPR marker genes in maize.
-              				</p>
-            			</td>
-                    </tr> 				
+        <article class="publication">
+          <div class="publication-media">
+            <a href="images/Bhandari et al_NatComms2023.png">
+              <img src="images/Bhandari et al_NatComms2023.png" alt="Figure preview for Nature Communications 2023 paper on TGNap1 and defense" loading="lazy">
+            </a>
+          </div>
+          <div class="publication-content">
+            <h3 class="publication-title">
+              <a href="https://www.nature.com/articles/s41467-023-41807-4">Defense against phytopathogens relies on efficient antimicrobial protein secretion mediated by the microtubule-binding protein TGNap1</a>
+            </h3>
+            <div class="citation">Bhandari BD, <strong>Ko DK</strong>, Kim SJ, Nomura K, He SY, Brandizzi F<br>Nat Commun. 2023 14,6357.</div>
+            <div class="publication-note">
+              Description: Defining plant defense machinery against pathogens is significant in cell biology and crop yield. This paper shows that TGNap1, a TGN and microtubule-binding protein, is required for defense and efficient anti-microbial protein secretion, linking secretion and cytoskeleton. I performed the RNA-seq analysis as a co-author.
+            </div>
+          </div>
+        </article>
 
-                     <!-- pca report -->
-                    <tr #bgcolor="#ffffd0">
-                        <td style="padding:20px;width:25%;vertical-align:middle">
-                            <div class="one">
-                                <a href="images/PCA report.png">
-                                    <img src='images/PCA report.png' width="180" alt="pca report">
-                                </a>
-                            </div>
-                        </td>
-                        <td style="padding:20px;width:75%;vertical-align:middle">
-                            <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/pld3.271">
-                				<papertitle>First plant cell atlas workshop report</papertitle>
-              				</a>
-              				<br>
-              				Rice S, Fryer E, Ghosh Jha S...The Plant Cell Atlas Consortium (including <strong>Ko DK</strong>)
-              				<br>
-              				Plant Direct. 00:1–10.
-              				<br>
-              				<a href="https://www.plantcellatlas.org">Plant Cell Atlas website</a>
-              				<p></p>
-              				<p>
-              				Description: In this white, Plant Cell Atlas (PCA) colleagues and I report the very first workshop that was successfully held online
-              				</p>
-            			</td>
-                    </tr>
-                    
-                     <!-- network review -->
-                    <tr #bgcolor="#ffffd0">
-                        <td style="padding:20px;width:25%;vertical-align:middle">
-                            <div class="one">
-                                <a href="images/Ko et al_TPJ_review_Figure1.jpg">
-                                    <img src='images/Ko et al_TPJ_review_Figure1.jpg' width="180" alt="network review">
-                                </a>
-                            </div>
-                        </td>
-                        <td style="padding:20px;width:75%;vertical-align:middle">
-                            <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/tpj.14940">
-                				<papertitle>Network‐based approaches for understanding gene regulation and function in plants</papertitle>
-              				</a>
-              				<br>
-              				<strong>Ko DK</strong>, Brandizzi F
-              				<br>
-              				Plant J. 2020 Oct;104(2):302-317.
-              				<br>
-              				<a href="https://www.sebiology.org/magazine-publication/silico-in-biology/#p=28">Highlighted in the Society for Experimental Biology's Spring Bulletin</a>
-              				<p></p>
-              				<p>
-              				Description: Understanding gene function is a critical requirement to advance knowledge of the principles underpinning fundamental and applied plant biology. In this review, we describe predictive analyses, their strengths and pitfalls that are fast-forwarding our understanding of gene regulation and function in plants.
-              				</p>
-            			</td>
-                    </tr>
-                    
-                     <!-- UPR TIBS -->
-                    <tr #bgcolor="#ffffd0">
-                        <td style="padding:20px;width:25%;vertical-align:middle">
-                            <div class="one">
-                                <a href="images/Pastor-Cantizano et al_TIBS 2019.jpg">
-                                    <img src='images/Pastor-Cantizano et al_TIBS 2019.jpg' width="180" alt="UPR TIBS">
-                                </a>
-                            </div>
-                        </td>
-                        <td style="padding:20px;width:75%;vertical-align:middle">
-                            <a href="https://www.sciencedirect.com/science/article/pii/S0968000419302099">
-                				<papertitle>Functional diversification of ER stress responses in Arabidopsis</papertitle>
-              				</a>
-              				<br>
-              				Pastor-Cantizano N, <strong>Ko DK</strong>, Angelos E, Pu Y, Brandizzi F.
-              				<br>
-              				Trends Biochem Sci. 2020 Feb;45(2):123-136.
-              				<br>
-              				<a href="https://reader.elsevier.com/reader/sd/pii/S096800041930252X?token=90BBCF78E442BD71E62B18F5EDFEBAB1FE18E1C678C1598DE4159EEFDADED681EA78A86820D424679B71622FB74824E8&originRegion=us-east-1&originCreation=20221209171105">On The Cover</a>
-              				<p></p>
-              				<p>
-              				Description: In recent years, the field of plant UPR has substantially advanced, revealing new regulators and mechanisms. My colleagues and I provide recent updates on the new development in the plant UPR to the research community. 
-              				</p>
-            			</td>
-                    </tr>                	
- 
-                      <!-- amplocon-seq -->
-                    <tr #bgcolor="#ffffd0">
-                        <td style="padding:20px;width:25%;vertical-align:middle">
-                            <div class="one">
-                                <a href="images/Nadakuduti et al_FrotiersPlantScience 2019.jpg">
-                                    <img src='images/Nadakuduti et al_FrotiersPlantScience 2019.jpg' width="180" alt="amplocon-seq">
-                                </a>
-                            </div>
-                        </td>
-                        <td style="padding:20px;width:75%;vertical-align:middle">
-                            <a href="https://www.frontiersin.org/articles/10.3389/fpls.2019.00110/full">
-                				<papertitle>Evaluation of Methods to Assess in vivo Activity of Engineered Genome-Editing Nucleases in Protoplasts</papertitle>
-              				</a>
-              				<br>
-              				Nadakuduti SS, Starker CG, <strong>Ko DK</strong>, Jayakody TB, Buell CR, Voytas DF, Douches DS.
-              				<br>
-              				Front Plant Sci. 2019 Feb 8;10:110.
-              				<br>
-              				<p></p>
-              				<p>
-              				Description: We compare three existing methods for detection of gene editing activity in potato protoplasts. In this collaborative project, I performed amplicon-seq analyses as a co-author. 
-              				</p>
-            			</td>
-                    </tr>
- 
-                      <!-- als1 -->
-                    <tr #bgcolor="#ffffd0">
-                        <td style="padding:20px;width:25%;vertical-align:middle">
-                            <div class="one">
-                                <a href="images/Ko et al_2018 PlosOne.png">
-                                    <img src='images/Ko et al_2018 PlosOne.png' width="180" alt="als1">
-                                </a>
-                            </div>
-                        </td>
-                        <td style="padding:20px;width:75%;vertical-align:middle">
-                            <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0206055">
-                				<papertitle>Transcriptome profiling of transgenic potato plants provides insights into variability caused by plant transformation</papertitle>
-              				</a>
-              				<br>
-              				<strong>Ko DK</strong>, Nadakuduti SS, Douches DS, Buell CR.
-              				<br>
-              				PLoS One. 2018 Nov 8;13(11):e0206055.
-              				<br>
-              				<p></p>
-              				<p>
-              				Description: We describe the impact of Agrobacterium-mediated transformation of a mutated acetolactate synthase gene on the transcriptome of potato, highlight the extent of positional effect of transgene insertion and that one component of somaclonal variation is due to altered expression of transcription factors and their downstream targets.
-              				</p>
-            			</td>
-                    </tr>
-                    
-                      <!-- heterosis -->
-                    <tr bgcolor="#ffffd0">
-                        <td style="padding:20px;width:25%;vertical-align:middle">
-                            <div class="one">
-                                <div class="two"> 
-								<video width="180" height="150" autoplay loop muted controls>
-								<source src="images/10_29_2010.mp4" type=video/mp4>
-								</video>
-                            </div>
-                        </td>
-                        <td style="padding:20px;width:75%;vertical-align:middle">
-                            <a href="https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1006197">
-                				<papertitle>Temporal shift of circadian-mediated gene expression and carbon fixation contributes to biomass heterosis in maize hybrids</papertitle>
-              				</a>
-              				<br>
-              				<strong>Ko DK*</strong>, Rohozinski D*, Song Q, Taylor SH, Juenger TE, Harmon FG, *Chen ZJ.
-              				<br>
-							*These authors contributed equally to this work
-              				<br>
-							PLoS Genet. 2016 Jul 28;12(7):e1006197.
-              				<br>
-              				<p></p>
-              				<p>
-              				Description: Heterosis, or hybrid vigor, has been widely used in agriculture for more than a century. Despite extensive investigation and various models proposed, the molecular basis for heterosis remains largely elusive. I led this collaborative project to identify and characterize the molecular link of growth heterosis and the circadian clock. We report that higher carbon fixation and starch accumulation in maize hybrids than in the parents are associated with differences in the diurnal regulation of gene expression.
-              				</p>
-            			</td>
-                    </tr>
+        <article class="publication">
+          <div class="publication-media">
+            <a href="images/Ko and Brandizzi_Plant Proteostasis 2023_1.jpg">
+              <img src="images/Ko and Brandizzi_Plant Proteostasis 2023_1.jpg" alt="Figure preview for Methods in Molecular Biology protocol on coexpression network construction" loading="lazy">
+            </a>
+          </div>
+          <div class="publication-content">
+            <h3 class="publication-title">
+              <a href="https://link.springer.com/protocol/10.1007/978-1-0716-2784-6_27">Coexpression Network Construction and Visualization from Transcriptomes Underlying ER Stress Responses</a>
+            </h3>
+            <div class="citation"><strong>Ko DK</strong>, Brandizzi F<br>Plant Proteostasis. Methods in Molecular Biology, 2023 vol 2581. Humana, New York, NY.</div>
+            <div class="publication-links">
+              <a href="https://github.com/DaeKwan-Ko/WGCNA">GitHub page</a>
+            </div>
+            <div class="publication-note">
+              Description: The paper provides a step-by-step workflow for coexpression network analyses using WGCNA and discusses its potential applications.
+            </div>
+          </div>
+        </article>
 
-                      <!-- allo -->
-                    <tr #bgcolor="#ffffd0">
-                        <td style="padding:20px;width:25%;vertical-align:middle">
-                            <div class="one">
-                                <a href="images/Shi et al_2015 MBE.png">
-                                    <img src='images/Shi et al_2015 MBE.png' width="180" alt="allo">
-                                </a>
-                            </div>
-                        </td>
-                        <td style="padding:20px;width:75%;vertical-align:middle">
-                            <a href="https://academic.oup.com/mbe/article/32/9/2351/1029857">
-                				<papertitle>Genome-wide dosage-dependent and-independent regulation contributes to gene expression and evolutionary novelty in plant polyploids</papertitle>
-              				</a>
-              				<br>
-              				Shi X, Zhang C, <strong>Ko DK</strong>, Chen ZJ.
-              				<br>
-              				Mol Biol Evol. 2015 Sep;32(9):2351-66.
-              				<br>
-              				<p></p>
-              				<p>
-              				Description: We investigate allelic expression novelties using a series of newly synthesized Arabidopsis tetraploids that contain one, two, three, and four genomes of A. thaliana or A. arenosa, as well as reciprocal crosses containing the same nuclear genomes but different cytoplasms. 
-              				</p>
-            			</td>
-                    </tr>
-                    
-                      <!-- bHLH -->
-                    <tr #bgcolor="#ffffd0">
-                        <td style="padding:20px;width:25%;vertical-align:middle">
-                            <div class="one">
-                                <a href="images/Ko et al_JPP 2009.jpg">
-                                    <img src='images/Ko et al_JPP 2009.jpg' width="180" alt="bHLH">
-                                </a>
-                            </div>
-                        </td>
-                        <td style="padding:20px;width:75%;vertical-align:middle">
-                            <a href="https://www.sciencedirect.com/science/article/pii/S0176161708003878">
-                				<papertitle>Submergence-inducible and circadian rhythmic basic helix–loop–helix protein gene in Nicotiana tabacum</papertitle>
-              				</a>
-              				<br>
-              				<strong>Ko DK</strong>, Lee MO, Hahn JS, Kim BG, Hong CB.
-              				<br>
-              				J Plant Physiol. 2009 Jul 1;166(10):1090-100..
-              				<br>
-              				<p></p>
-              				<p>
-              				Description: In my MS research, I identified and characterized a flooding stress-responsive transcription factor gene of which expression was not only responsive to flooding stress but also under the circadian clock regulation in Nicotiana. It demonstrated potential crosstalk between the clock and abiotic stress responses.
-              				</p>
-            			</td>
-                    </tr>
-                                                                              
-        </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-            <td style="padding:0px">
-              <br>
-              <p style="text-align:right;font-size:small;">
-              </p>
-            </td>
-          </tr>
-        </tbody></table>
-      </td>
-    </tr>
-  </table>
+        <article class="publication selected">
+          <div class="publication-media">
+            <a href="images/Ko and Brandizzi_Nature Plants 2022_1.png">
+              <img src="images/Ko and Brandizzi_Nature Plants 2022_1.png" alt="Figure preview for Nature Plants 2022 paper on transcriptional competition in ER stress resolution" loading="lazy">
+            </a>
+          </div>
+          <div class="publication-content">
+            <h3 class="publication-title">
+              <a href="https://www.nature.com/articles/s41477-022-01150-w#article-info">Transcriptional competition shapes proteotoxic ER stress resolution</a>
+            </h3>
+            <div class="citation"><strong>Ko DK</strong>, Brandizzi F<br>Nat Plants. 2022 May;8(5):481-490.</div>
+            <div class="publication-links">
+              <a href="https://github.com/DaeKwan-Ko/UPR-TFs">GitHub page for scripts</a>
+              <a href="https://prl.natsci.msu.edu/news-and-events/news/plant-er-advanced-genomics-illuminate-new-mechanisms-for-stress-mitigation.aspx">Media highlight</a>
+            </div>
+            <div class="publication-note">
+              Description: We discovered a new UPR regulator and characterized its functional role in the UPR at the mechanistic level through a multi-omics approach.
+            </div>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="publication-media">
+            <a href="images/York et al_The Plant Phenome 2022_1.jpg">
+              <img src="images/York et al_The Plant Phenome 2022_1.jpg" alt="Figure preview for Plant Phenome Journal 2022 white paper on roots and microbiome in bioenergy crops" loading="lazy">
+            </a>
+          </div>
+          <div class="publication-content">
+            <h3 class="publication-title">
+              <a href="https://acsess.onlinelibrary.wiley.com/doi/abs/10.1002/ppj2.20028">Bioenergy Belowground: challenges and opportunities for phenotyping roots and the microbiome for sustainable bioenergy crop production</a>
+            </h3>
+            <div class="citation">York LM, Cumming JR, Trusiak A .... <strong>Ko DK</strong> .... Yang WH<br>The Plant Phenome Journal 5.1 2022: e20028.</div>
+            <div class="publication-links">
+              <a href="https://www.glbrc.org">GLBRC website</a>
+            </div>
+            <div class="publication-note">
+              Description: In this white paper, the GLBRC colleagues and I discussed the significance and challenges of root biology in bioenergy research.
+            </div>
+          </div>
+        </article>
+
+        <article class="publication selected">
+          <div class="publication-media">
+            <a href="images/Ko and Brandizzi_Communications Biology 2022_1.png">
+              <img src="images/Ko and Brandizzi_Communications Biology 2022_1.png" alt="Figure preview for Communications Biology 2022 paper on ER stress recovery in Arabidopsis" loading="lazy">
+            </a>
+          </div>
+          <div class="publication-content">
+            <h3 class="publication-title">
+              <a href="https://www.nature.com/articles/s42003-021-02964-8">Advanced genomics identifies growth effectors for proteotoxic ER stress recovery in Arabidopsis thaliana</a>
+            </h3>
+            <div class="citation"><strong>Ko DK</strong>, Brandizzi F<br>Commun Biol. 2022 Jan 11;5(1):16.</div>
+            <div class="publication-links">
+              <a href="https://github.com/DaeKwan-Ko/UPR-GRN">GitHub page for scripts</a>
+              <a href="https://prl.natsci.msu.edu/news-and-events/news/plants-get-stressed-too-were-looking-at-thousands-of-genes-to-understand-how-they-manage-it.aspx">Media highlight</a>
+            </div>
+            <div class="publication-note">
+              Description: To better understand the transcriptional activities of the UPR master regulators, bZIP28 and bZIP60, I generated time-series transcriptome datasets and performed coexpression analyses, which allowed me to pinpoint downstream genes for functional characterization.
+            </div>
+            <div class="video-wrapper">
+              <iframe src="https://www.youtube.com/embed/vpxlWcIAzqA?si=ORwQv25US918M6X8" title="YouTube video on Communications Biology 2022 paper" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="publication-media">
+            <a href="images/Jha et al_eLife 2021_2.jpg">
+              <img src="images/Jha et al_eLife 2021_2.jpg" alt="Figure preview for eLife 2021 Science Forum article on the Plant Cell Atlas" loading="lazy">
+            </a>
+          </div>
+          <div class="publication-content">
+            <h3 class="publication-title">
+              <a href="https://elifesciences.org/articles/66877">Science forum: vision, challenges and opportunities for a plant cell atlas</a>
+            </h3>
+            <div class="citation">Plant Cell Atlas Consortium, Ghosh Jha S, Borowsky AT .... <strong>Ko DK</strong> ... Rhee SY<br>eLife. 2021 Sep 7;10:e66877.</div>
+            <div class="publication-links">
+              <a href="https://www.plantcellatlas.org">Plant Cell Atlas website</a>
+            </div>
+            <div class="publication-note">
+              Description: Plant Cell Atlas (PCA) colleagues and I reported the activities that we initiated for the plant research community.
+            </div>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="publication-media">
+            <a href="images/Angelos et al_Astrobiology 2021_2.png">
+              <img src="images/Angelos et al_Astrobiology 2021_2.png" alt="Figure preview for Astrobiology 2021 paper on UPR and spaceflight-induced transcriptional reprogramming" loading="lazy">
+            </a>
+          </div>
+          <div class="publication-content">
+            <h3 class="publication-title">
+              <a href="https://www.liebertpub.com/doi/abs/10.1089/ast.2020.2313">Relevance of the Unfolded Protein Response to Spaceflight-Induced Transcriptional Reprogramming in Arabidopsis</a>
+            </h3>
+            <div class="citation">Angelos E, <strong>Ko DK</strong>, Zemelis-Durfee S, Brandizzi F<br>Astrobiology. 2021 Mar;21(3):367-380.</div>
+            <div class="publication-links">
+              <a href="https://prl.natsci.msu.edu/news-and-events/news/learning-what-it-takes-to-grow-a-space-garden.aspx">Media highlight</a>
+            </div>
+            <div class="publication-note">
+              Description: This study focused on investigating transcriptome changes affected by UPR regulators in space. Plants were germinated, grown, and harvested in spaceflight. As a co-author, I performed RNA-seq analyses.
+            </div>
+          </div>
+        </article>
+
+        <article class="publication selected">
+          <div class="publication-media">
+            <a href="images/Ko and Brandizzi_TPJ2021.png">
+              <img src="images/Ko and Brandizzi_TPJ2021.png" alt="Figure preview for Plant Journal 2021 paper on maize UPR transcription factor-DNA interactome" loading="lazy">
+            </a>
+          </div>
+          <div class="publication-content">
+            <h3 class="publication-title">
+              <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/tpj.15044">A temporal hierarchy underpins the transcription factor-DNA interactome of the maize UPR</a>
+            </h3>
+            <div class="citation"><strong>Ko DK</strong>, Brandizzi F<br>Plant J. 2021 Jan;105(1):254-270.</div>
+            <div class="publication-links">
+              <a href="https://prl.natsci.msu.edu/news-and-events/news/identifying-transcription-factor-networks-that-protect-maize-when-its-main-cellular-biofactory-is-under-stress.aspx">Media highlight</a>
+            </div>
+            <div class="publication-note">
+              Description: How the UPR is controlled is largely unknown in non-model plant species including maize. To better understand the regulatory landscape of the UPR, I performed TF network analyses based on enhanced Y1H screens for selected UPR marker genes in maize.
+            </div>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="publication-media">
+            <a href="images/PCA report.png">
+              <img src="images/PCA report.png" alt="Figure preview for Plant Direct workshop report on the Plant Cell Atlas" loading="lazy">
+            </a>
+          </div>
+          <div class="publication-content">
+            <h3 class="publication-title">
+              <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/pld3.271">First plant cell atlas workshop report</a>
+            </h3>
+            <div class="citation">Rice S, Fryer E, Ghosh Jha S...The Plant Cell Atlas Consortium (including <strong>Ko DK</strong>)<br>Plant Direct. 00:1–10.</div>
+            <div class="publication-links">
+              <a href="https://www.plantcellatlas.org">Plant Cell Atlas website</a>
+            </div>
+            <div class="publication-note">
+              Description: In this white paper, Plant Cell Atlas colleagues and I report the very first workshop that was successfully held online.
+            </div>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="publication-media">
+            <a href="images/Ko et al_TPJ_review_Figure1.jpg">
+              <img src="images/Ko et al_TPJ_review_Figure1.jpg" alt="Figure preview for Plant Journal 2020 review on network-based approaches in plants" loading="lazy">
+            </a>
+          </div>
+          <div class="publication-content">
+            <h3 class="publication-title">
+              <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/tpj.14940">Network-based approaches for understanding gene regulation and function in plants</a>
+            </h3>
+            <div class="citation"><strong>Ko DK</strong>, Brandizzi F<br>Plant J. 2020 Oct;104(2):302-317.</div>
+            <div class="publication-links">
+              <a href="https://www.sebiology.org/magazine-publication/silico-in-biology/#p=28">Highlighted in the Society for Experimental Biology's Spring Bulletin</a>
+            </div>
+            <div class="publication-note">
+              Description: Understanding gene function is a critical requirement to advance knowledge of the principles underpinning fundamental and applied plant biology. In this review, we describe predictive analyses, their strengths and pitfalls that are fast-forwarding our understanding of gene regulation and function in plants.
+            </div>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="publication-media">
+            <a href="images/Pastor-Cantizano et al_TIBS 2019.jpg">
+              <img src="images/Pastor-Cantizano et al_TIBS 2019.jpg" alt="Figure preview for Trends in Biochemical Sciences 2020 review on ER stress responses in Arabidopsis" loading="lazy">
+            </a>
+          </div>
+          <div class="publication-content">
+            <h3 class="publication-title">
+              <a href="https://www.sciencedirect.com/science/article/pii/S0968000419302099">Functional diversification of ER stress responses in Arabidopsis</a>
+            </h3>
+            <div class="citation">Pastor-Cantizano N, <strong>Ko DK</strong>, Angelos E, Pu Y, Brandizzi F.<br>Trends Biochem Sci. 2020 Feb;45(2):123-136.</div>
+            <div class="publication-links">
+              <a href="https://reader.elsevier.com/reader/sd/pii/S096800041930252X?token=90BBCF78E442BD71E62B18F5EDFEBAB1FE18E1C678C1598DE4159EEFDADED681EA78A86820D424679B71622FB74824E8&originRegion=us-east-1&originCreation=20221209171105">On The Cover</a>
+            </div>
+            <div class="publication-note">
+              Description: In recent years, the field of plant UPR has substantially advanced, revealing new regulators and mechanisms. My colleagues and I provide recent updates on the new development in the plant UPR to the research community.
+            </div>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="publication-media">
+            <a href="images/Nadakuduti et al_FrotiersPlantScience 2019.jpg">
+              <img src="images/Nadakuduti et al_FrotiersPlantScience 2019.jpg" alt="Figure preview for Frontiers in Plant Science 2019 paper on engineered genome-editing nuclease assays" loading="lazy">
+            </a>
+          </div>
+          <div class="publication-content">
+            <h3 class="publication-title">
+              <a href="https://www.frontiersin.org/articles/10.3389/fpls.2019.00110/full">Evaluation of Methods to Assess in vivo Activity of Engineered Genome-Editing Nucleases in Protoplasts</a>
+            </h3>
+            <div class="citation">Nadakuduti SS, Starker CG, <strong>Ko DK</strong>, Jayakody TB, Buell CR, Voytas DF, Douches DS.<br>Front Plant Sci. 2019 Feb 8;10:110.</div>
+            <div class="publication-note">
+              Description: We compare three existing methods for detection of gene editing activity in potato protoplasts. In this collaborative project, I performed amplicon-seq analyses as a co-author.
+            </div>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="publication-media">
+            <a href="images/Ko et al_2018 PlosOne.png">
+              <img src="images/Ko et al_2018 PlosOne.png" alt="Figure preview for PLOS One 2018 paper on transcriptome profiling of transgenic potato" loading="lazy">
+            </a>
+          </div>
+          <div class="publication-content">
+            <h3 class="publication-title">
+              <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0206055">Transcriptome profiling of transgenic potato plants provides insights into variability caused by plant transformation</a>
+            </h3>
+            <div class="citation"><strong>Ko DK</strong>, Nadakuduti SS, Douches DS, Buell CR.<br>PLoS One. 2018 Nov 8;13(11):e0206055.</div>
+            <div class="publication-note">
+              Description: We describe the impact of Agrobacterium-mediated transformation of a mutated acetolactate synthase gene on the transcriptome of potato, highlight the extent of positional effect of transgene insertion and that one component of somaclonal variation is due to altered expression of transcription factors and their downstream targets.
+            </div>
+          </div>
+        </article>
+
+        <article class="publication selected">
+          <div class="publication-media">
+            <video autoplay loop muted controls aria-label="Video associated with the 2016 PLOS Genetics paper on heterosis in maize">
+              <source src="images/10_29_2010.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="publication-content">
+            <h3 class="publication-title">
+              <a href="https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1006197">Temporal shift of circadian-mediated gene expression and carbon fixation contributes to biomass heterosis in maize hybrids</a>
+            </h3>
+            <div class="citation"><strong>Ko DK*</strong>, Rohozinski D*, Song Q, Taylor SH, Juenger TE, Harmon FG, *Chen ZJ.<br>*These authors contributed equally to this work<br>PLoS Genet. 2016 Jul 28;12(7):e1006197.</div>
+            <div class="publication-note">
+              Description: Heterosis, or hybrid vigor, has been widely used in agriculture for more than a century. Despite extensive investigation and various models proposed, the molecular basis for heterosis remains largely elusive. I led this collaborative project to identify and characterize the molecular link of growth heterosis and the circadian clock. We report that higher carbon fixation and starch accumulation in maize hybrids than in the parents are associated with differences in the diurnal regulation of gene expression.
+            </div>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="publication-media">
+            <a href="images/Shi et al_2015 MBE.png">
+              <img src="images/Shi et al_2015 MBE.png" alt="Figure preview for Molecular Biology and Evolution 2015 paper on expression novelty in plant polyploids" loading="lazy">
+            </a>
+          </div>
+          <div class="publication-content">
+            <h3 class="publication-title">
+              <a href="https://academic.oup.com/mbe/article/32/9/2351/1029857">Genome-wide dosage-dependent and-independent regulation contributes to gene expression and evolutionary novelty in plant polyploids</a>
+            </h3>
+            <div class="citation">Shi X, Zhang C, <strong>Ko DK</strong>, Chen ZJ.<br>Mol Biol Evol. 2015 Sep;32(9):2351-66.</div>
+            <div class="publication-note">
+              Description: We investigate allelic expression novelties using a series of newly synthesized Arabidopsis tetraploids that contain one, two, three, and four genomes of A. thaliana or A. arenosa, as well as reciprocal crosses containing the same nuclear genomes but different cytoplasms.
+            </div>
+          </div>
+        </article>
+
+        <article class="publication">
+          <div class="publication-media">
+            <a href="images/Ko et al_JPP 2009.jpg">
+              <img src="images/Ko et al_JPP 2009.jpg" alt="Figure preview for Journal of Plant Physiology 2009 paper on a submergence-inducible bHLH gene in tobacco" loading="lazy">
+            </a>
+          </div>
+          <div class="publication-content">
+            <h3 class="publication-title">
+              <a href="https://www.sciencedirect.com/science/article/pii/S0176161708003878">Submergence-inducible and circadian rhythmic basic helix-loop-helix protein gene in Nicotiana tabacum</a>
+            </h3>
+            <div class="citation"><strong>Ko DK</strong>, Lee MO, Hahn JS, Kim BG, Hong CB.<br>J Plant Physiol. 2009 Jul 1;166(10):1090-100.</div>
+            <div class="publication-note">
+              Description: In my M.S. research, I identified and characterized a flooding stress-responsive transcription factor gene whose expression was not only responsive to flooding stress but also regulated by the circadian clock. This work suggested potential crosstalk between the clock and abiotic stress responses.
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    Website template originally inspired by <a href="http://jonbarron.info/">Jon Barron</a>.
+  </footer>
 </body>
-
-            <!-- Footer -->
-            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-                <tbody>
-                <tr>
-                    <td>
-                        <br>
-                        <p align="right">
-                            <font size="2">
-                                Website template courtesy of <a href="http://jonbarron.info/">Jon Barron.</a>
-                            </font>
-                        </p>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-        </td>
-    </tr>
-</table>
-</body>
-
 </html>
