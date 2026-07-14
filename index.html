@@ -2,21 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
   <title>Dae Kwan Ko | Plant Systems Biology and Genomics</title>
+
   <meta name="author" content="Dae Kwan Ko">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Dae Kwan Ko is a plant systems biologist at Michigan State University studying gene regulatory networks, abiotic stress responses, single-cell genomics, and multi-omics approaches for plant and crop resilience.">
 
-  <meta property="og:title" content="Dae Kwan Ko | Plant Systems Biology and Genomics">
-  <meta property="og:description" content="Plant systems biologist studying gene regulatory networks, abiotic stress responses, single-cell genomics, and crop resilience.">
+  <meta
+    name="description"
+    content="Dae Kwan Ko is a plant systems biologist at Michigan State University studying gene regulatory networks, abiotic stress responses, single-cell genomics, and multi-omics approaches for plant and crop resilience.">
+
+  <meta
+    property="og:title"
+    content="Dae Kwan Ko | Plant Systems Biology and Genomics">
+
+  <meta
+    property="og:description"
+    content="Plant systems biologist studying gene regulatory networks, abiotic stress responses, single-cell genomics, and crop resilience.">
+
   <meta property="og:type" content="website">
-  <meta property="og:image" content="images/DaeKwanKo_headshot.jpeg">
 
-  <link rel="icon" type="image/png" href="images/Michigan-State-Spartans-logo.png">
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <meta
+    property="og:image"
+    content="images/DaeKwanKo_headshot.jpeg">
+
+  <link
+    rel="icon"
+    type="image/png"
+    href="images/Michigan-State-Spartans-logo.png">
+
+  <link
+    rel="preconnect"
+    href="https://cdnjs.cloudflare.com">
+
+  <link
+    rel="preconnect"
+    href="https://cdn.jsdelivr.net">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.css">
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
   <style>
     :root {
@@ -29,7 +58,7 @@
       --highlight: #ffffd0;
       --link: #0b57d0;
       --max-width: 980px;
-      --shadow: 0 2px 10px rgba(0,0,0,0.04);
+      --shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
     }
 
     * {
@@ -42,7 +71,14 @@
 
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
       color: var(--text);
       background: var(--bg);
       line-height: 1.65;
@@ -60,8 +96,8 @@
 
     img,
     video {
-      max-width: 100%;
       display: block;
+      max-width: 100%;
     }
 
     .container {
@@ -75,46 +111,46 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(255,255,255,0.96);
+      background: rgba(255, 255, 255, 0.96);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
     }
 
     .site-header-inner {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 14px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 16px;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 14px 20px;
     }
 
     .site-title {
+      color: var(--accent);
       font-size: 1rem;
       font-weight: 700;
-      color: var(--accent);
       white-space: nowrap;
     }
 
     .site-nav {
       display: flex;
       flex-wrap: wrap;
+      align-items: center;
       gap: 10px;
       font-size: 0.92rem;
-      align-items: center;
     }
 
     .site-nav a {
-      color: var(--text);
       padding: 4px 8px;
+      color: var(--text);
       border-radius: 999px;
     }
 
     .site-nav a:hover,
     .site-nav a:focus {
-      background: var(--accent-light);
       color: var(--accent);
+      background: var(--accent-light);
       text-decoration: none;
     }
 
@@ -134,8 +170,8 @@
 
     .tagline {
       margin: 0 0 16px;
-      font-size: 1.08rem;
       color: var(--accent);
+      font-size: 1.08rem;
       font-weight: 600;
     }
 
@@ -154,8 +190,8 @@
     .social-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px 16px;
       align-items: center;
+      gap: 12px 16px;
       margin-top: 18px;
       font-size: 0.96rem;
     }
@@ -173,22 +209,64 @@
 
     section {
       padding-top: 28px;
+      scroll-margin-top: 88px;
     }
 
     section h2 {
       margin: 0 0 12px;
-      font-size: 1.55rem;
       color: var(--accent);
+      font-size: 1.55rem;
     }
 
     section h3 {
       margin: 18px 0 8px;
-      font-size: 1.15rem;
       color: var(--text);
+      font-size: 1.15rem;
     }
 
     .section-intro {
       margin-bottom: 18px;
+    }
+
+    .recognition-box {
+      display: grid;
+      grid-template-columns: minmax(240px, 38%) 1fr;
+      gap: 22px;
+      align-items: center;
+      padding: 18px;
+      margin: 4px 0 8px;
+      background: var(--accent-light);
+      border: 1px solid #d7e6df;
+      border-left: 5px solid var(--accent);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .recognition-image img {
+      width: 100%;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: var(--shadow);
+    }
+
+    .recognition-content h2 {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font-size: 1.35rem;
+    }
+
+    .recognition-content p {
+      margin: 0 0 8px;
+    }
+
+    .recognition-links {
+      margin-top: 8px;
+      font-size: 0.95rem;
+    }
+
+    .recognition-links a + a::before {
+      content: " / ";
+      color: var(--muted);
     }
 
     .card-grid {
@@ -199,10 +277,10 @@
     }
 
     .card {
+      padding: 16px;
+      background: #ffffff;
       border: 1px solid var(--border);
       border-radius: 14px;
-      padding: 16px;
-      background: #fff;
       box-shadow: var(--shadow);
     }
 
@@ -225,17 +303,17 @@
     }
 
     .highlight {
-      background: var(--highlight);
       padding: 0 4px;
+      background: var(--highlight);
       border-radius: 4px;
     }
 
     .notice-box {
+      padding: 16px 18px;
+      margin: 16px 0;
       background: var(--accent-light);
       border: 1px solid #d7e6df;
       border-radius: 16px;
-      padding: 16px 18px;
-      margin: 16px 0;
     }
 
     .notice-box h3 {
@@ -253,9 +331,9 @@
       grid-template-columns: 190px 1fr;
       gap: 20px;
       padding: 18px;
+      background: #ffffff;
       border: 1px solid var(--border);
       border-radius: 16px;
-      background: #fff;
       box-shadow: var(--shadow);
     }
 
@@ -280,7 +358,8 @@
       color: var(--text);
     }
 
-    .publication-title a:hover {
+    .publication-title a:hover,
+    .publication-title a:focus {
       color: var(--link);
     }
 
@@ -291,8 +370,8 @@
     }
 
     .citation {
-      color: var(--text);
       margin-bottom: 6px;
+      color: var(--text);
     }
 
     .publication-links {
@@ -312,11 +391,11 @@
     .video-wrapper {
       position: relative;
       width: 100%;
-      padding-bottom: 56.25%;
       height: 0;
+      padding-bottom: 56.25%;
+      margin-top: 14px;
       overflow: hidden;
       border-radius: 12px;
-      margin-top: 14px;
     }
 
     .video-wrapper iframe {
@@ -348,8 +427,8 @@
       }
 
       .hero-photo img {
-        margin: 0 auto;
         max-width: 240px;
+        margin: 0 auto;
       }
 
       .publication {
@@ -358,6 +437,16 @@
 
       .publication-media {
         max-width: 240px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .recognition-box {
+        grid-template-columns: 1fr;
+      }
+
+      .recognition-image {
+        max-width: 520px;
       }
     }
 
@@ -377,36 +466,58 @@
     }
   </style>
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T5HBEESCVD"></script>
+  <!-- Google Analytics -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-T5HBEESCVD">
+  </script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-T5HBEESCVD');
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag("js", new Date());
+    gtag("config", "G-T5HBEESCVD");
   </script>
 </head>
 
 <body>
   <header class="site-header">
     <div class="site-header-inner">
-      <div class="site-title">Dae Kwan Ko</div>
+      <div class="site-title">
+        Dae Kwan Ko
+      </div>
 
-      <nav class="site-nav" aria-label="Primary">
+      <nav class="site-nav" aria-label="Primary navigation">
         <a href="#about">Home</a>
+        <a href="#recognition">Recognition</a>
         <a href="#research">Research</a>
         <a href="#publications">Publications</a>
         <a href="#funding">Funding &amp; Projects</a>
         <a href="#teaching">Teaching</a>
         <a href="data/CV_DaeKwanKo.pdf">CV</a>
-        <a href="https://scholar.google.com/citations?hl=en&user=MXSf08oAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a>
+
+        <a
+          href="https://scholar.google.com/citations?hl=en&user=MXSf08oAAAAJ&view_op=list_works&sortby=pubdate">
+          Google Scholar
+        </a>
       </nav>
     </div>
   </header>
 
   <main class="container">
-    <section id="about" class="hero" aria-labelledby="page-title">
+    <section
+      id="about"
+      class="hero"
+      aria-labelledby="page-title">
+
       <div class="hero-text">
-        <h1 id="page-title">Dae Kwan Ko, Ph.D.</h1>
+        <h1 id="page-title">
+          Dae Kwan Ko, Ph.D.
+        </h1>
 
         <p class="tagline">
           Plant systems biology · Gene regulatory networks · Abiotic stress resilience · Single-cell and multi-omics genomics
@@ -414,10 +525,16 @@
 
         <p>
           I am an Assistant Professor — Fixed Term in
-          <a href="https://prl.natsci.msu.edu">the Plant Research Laboratory</a>,
-          <a href="https://plantbiology.natsci.msu.edu">the Department of Plant Biology</a>,
+          <a href="https://prl.natsci.msu.edu">
+            the Plant Research Laboratory
+          </a>,
+          <a href="https://plantbiology.natsci.msu.edu">
+            the Department of Plant Biology
+          </a>,
           and
-          <a href="https://www.glbrc.org">the Great Lakes Bioenergy Research Center (GLBRC)</a>
+          <a href="https://www.glbrc.org">
+            the Great Lakes Bioenergy Research Center (GLBRC)
+          </a>
           at Michigan State University. My research aims to understand how plants dynamically reprogram gene expression in response to environmental stress, with a particular emphasis on gene regulatory networks, systems genomics, and crop resilience.
         </p>
 
@@ -427,39 +544,82 @@
 
         <p>
           While I am affiliated with the Brandizzi Lab, I also lead independent research directions in sorghum abiotic stress biology, regulatory genomics, and network-enabled gene discovery. My work is supported through GLBRC within the Brandizzi Lab, as well as by independent projects including the
-          <a href="https://www.canr.msu.edu/project-greeen/index">MSU GREEEN project</a>
+          <a href="https://www.canr.msu.edu/project-greeen/index">
+            MSU GREEEN project
+          </a>
           and multiple JGI-funded projects for which I serve as PI.
         </p>
 
-        <div class="social-links" aria-label="Profile links">
-          <a href="mailto:dkko@msu.edu" aria-label="Email Dae Kwan Ko">
-            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+        <div
+          class="social-links"
+          aria-label="Professional profile links">
+
+          <a
+            href="mailto:dkko@msu.edu"
+            aria-label="Email Dae Kwan Ko">
+
+            <i
+              class="fa-solid fa-envelope"
+              aria-hidden="true">
+            </i>
+
             <span>Email</span>
           </a>
 
-          <a href="data/CV_DaeKwanKo.pdf" aria-label="Download CV">
-            <i class="ai ai-cv" aria-hidden="true"></i>
+          <a
+            href="data/CV_DaeKwanKo.pdf"
+            aria-label="Download CV">
+
+            <i
+              class="ai ai-cv"
+              aria-hidden="true">
+            </i>
+
             <span>CV</span>
           </a>
 
-          <a href="https://github.com/DaeKwan-Ko/" aria-label="GitHub profile">
-            <i class="fa-brands fa-github" aria-hidden="true"></i>
+          <a
+            href="https://github.com/DaeKwan-Ko/"
+            aria-label="GitHub profile">
+
+            <i
+              class="fa-brands fa-github"
+              aria-hidden="true">
+            </i>
+
             <span>GitHub</span>
           </a>
 
-          <a href="https://www.linkedin.com/in/daekwanko/" aria-label="LinkedIn profile">
-            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+          <a
+            href="https://www.linkedin.com/in/daekwanko/"
+            aria-label="LinkedIn profile">
+
+            <i
+              class="fa-brands fa-linkedin"
+              aria-hidden="true">
+            </i>
+
             <span>LinkedIn</span>
           </a>
 
-          <a href="https://twitter.com/DaeKwan_Ko" aria-label="Twitter profile">
-            <i class="fa-brands fa-twitter" aria-hidden="true"></i>
-            <span>Twitter</span>
+          <a
+            href="https://twitter.com/DaeKwan_Ko"
+            aria-label="X profile">
+
+            <i
+              class="fa-brands fa-twitter"
+              aria-hidden="true">
+            </i>
+
+            <span>X</span>
           </a>
 
-          <a href="data/DaeKwanKo_bio.txt">Bio</a>
+          <a href="data/DaeKwanKo_bio.txt">
+            Bio
+          </a>
 
-          <a href="https://scholar.google.com/citations?hl=en&user=MXSf08oAAAAJ&view_op=list_works&sortby=pubdate">
+          <a
+            href="https://scholar.google.com/citations?hl=en&user=MXSf08oAAAAJ&view_op=list_works&sortby=pubdate">
             Google Scholar
           </a>
         </div>
@@ -475,26 +635,81 @@
       </div>
     </section>
 
-    <section id="research" aria-labelledby="research-heading">
-      <h2 id="research-heading">Research</h2>
+    <section
+      id="recognition"
+      aria-labelledby="recognition-heading">
+
+      <div class="recognition-box">
+        <div class="recognition-image">
+          <img
+            src="images/YaopingZhangAward_2026.jpeg"
+            alt="Dae Kwan Ko giving remarks after receiving the 2026 Yaoping Zhang Bioenergy Research Award"
+            loading="lazy">
+        </div>
+
+        <div class="recognition-content">
+          <h2 id="recognition-heading">
+            Recent Recognition
+          </h2>
+
+          <p>
+            <strong>
+              2026 Yaoping Zhang Bioenergy Research Award
+            </strong>
+            <br>
+            Great Lakes Bioenergy Research Center
+          </p>
+
+          <p>
+            Recognized for contributions to systems-level gene discovery, regulatory genomics, and research advancing the understanding of plant resilience in bioenergy crops.
+          </p>
+
+          <div class="recognition-links">
+            <a
+              href="https://www.glbrc.org/yaoping-zhang-bioenergy-research-award">
+              Award page
+            </a>
+
+            <a
+              href="https://www.glbrc.org/news/system-approach-innovations-improve-understanding-plant-resilience">
+              Researcher profile
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="research"
+      aria-labelledby="research-heading">
+
+      <h2 id="research-heading">
+        Research
+      </h2>
 
       <p class="section-intro">
         I am a plant systems biologist who uses genomics, single-cell technologies, and regulatory network modeling to understand how plants sense, respond to, and recover from environmental stress. My research focuses on transcription factor networks, chromatin regulation, and stress-induced transcriptional reprogramming, with the long-term goal of identifying causal regulators and predictive signatures of resilience.
       </p>
 
       <div class="notice-box">
-        <h3>Future Lab Vision</h3>
+        <h3>
+          Future Lab Vision
+        </h3>
 
         <p>
           My future research program will build interpretable, data-driven models that connect molecular regulatory states to plant stress adaptation, recovery, and interactions with associated microbial communities. By combining computational prediction with experimental validation, my lab will work toward practical strategies for improving resilience in crops and other plant systems under climate change.
         </p>
       </div>
 
-      <h3>Independent Research Directions</h3>
+      <h3>
+        Independent Research Directions
+      </h3>
 
       <div class="card-grid">
         <div class="card">
-          <h3>Predictive regulatory genomics</h3>
+          <h3>
+            Predictive regulatory genomics
+          </h3>
 
           <p>
             We reconstruct stress-responsive gene regulatory networks to identify transcription factors and regulatory pathways that control plant adaptation to drought, heat, salinity, and proteotoxic stress.
@@ -502,7 +717,9 @@
         </div>
 
         <div class="card">
-          <h3>Single-cell and chromatin biology</h3>
+          <h3>
+            Single-cell and chromatin biology
+          </h3>
 
           <p>
             We use single-cell and multi-omics approaches to resolve how stress responses differ across tissues and cell types, and how chromatin accessibility contributes to regulatory state transitions.
@@ -510,7 +727,9 @@
         </div>
 
         <div class="card">
-          <h3>Plant–microbiome resilience</h3>
+          <h3>
+            Plant–microbiome resilience
+          </h3>
 
           <p>
             We aim to connect host regulatory states with rhizosphere microbiome assembly and function, integrating host genomics, microbial profiles, and soil chemistry to understand plant resilience at multiple scales.
@@ -519,12 +738,19 @@
       </div>
     </section>
 
-    <section id="publications" aria-labelledby="publications-heading">
-      <h2 id="publications-heading">Selected Publications</h2>
+    <section
+      id="publications"
+      aria-labelledby="publications-heading">
+
+      <h2 id="publications-heading">
+        Selected Publications
+      </h2>
 
       <p class="section-intro">
         Representative papers most closely related to my future research program are
-        <span class="highlight">highlighted</span>
+        <span class="highlight">
+          highlighted
+        </span>
         in yellow.
       </p>
 
@@ -541,20 +767,34 @@
 
           <div class="publication-content">
             <h3 class="publication-title">
-              <a href="https://onlinelibrary.wiley.com/doi/10.1111/tpj.70834">
+              <a
+                href="https://onlinelibrary.wiley.com/doi/10.1111/tpj.70834">
+
                 A tissue-resolved, network-based transcriptomic framework for abiotic stress responses in sorghum
               </a>
             </h3>
 
             <div class="citation">
-              <strong>Ko DK</strong>, Brandizzi F<br>
+              <strong>Ko DK</strong>, Brandizzi F
+              <br>
               Plant J. 2026 Apr;126(1):e70834.
             </div>
 
             <div class="publication-links">
-              <a href="https://www.glbrc.org/research/highlights/decoding-abiotic-stress-resilience-sorghum">GLBRC highlight</a>
-              <a href="https://sorghumbase.org/post/tissue-specific-gene-regulatory-networks-drive-abiotic-stress-responses-in-sorghum">SorghumBase highlight</a>
-              <a href="https://github.com/DaeKwan-Ko/abiotic_bulkrnaseq">GitHub page for scripts</a>
+              <a
+                href="https://www.glbrc.org/research/highlights/decoding-abiotic-stress-resilience-sorghum">
+                GLBRC highlight
+              </a>
+
+              <a
+                href="https://sorghumbase.org/post/tissue-specific-gene-regulatory-networks-drive-abiotic-stress-responses-in-sorghum">
+                SorghumBase highlight
+              </a>
+
+              <a
+                href="https://github.com/DaeKwan-Ko/abiotic_bulkrnaseq">
+                GitHub page for scripts
+              </a>
             </div>
 
             <div class="publication-note">
@@ -575,20 +815,34 @@
 
           <div class="publication-content">
             <h3 class="publication-title">
-              <a href="https://www.cell.com/cell-reports-methods/fulltext/S2667-2375(24)00353-9">
+              <a
+                href="https://www.cell.com/cell-reports-methods/fulltext/S2667-2375(24)00353-9">
+
                 A network-enabled pipeline for gene discovery and validation in non-model plant species
               </a>
             </h3>
 
             <div class="citation">
-              <strong>Ko DK</strong>, Brandizzi F<br>
+              <strong>Ko DK</strong>, Brandizzi F
+              <br>
               Cell Rep Methods. 2025 Jan 27;5(1):100963.
             </div>
 
             <div class="publication-links">
-              <a href="https://prl.natsci.msu.edu/news-and-events/news/2025-02-needle-points-to-gene-regulators-q-and-a-with-federica-brandizzi.aspx">MSU-PRL highlight</a>
-              <a href="https://www.glbrc.org/news/research-highlight-needle-points-key-gene-regulators">GLBRC highlight</a>
-              <a href="https://github.com/DaeKwan-Ko/needle">GitHub page for scripts</a>
+              <a
+                href="https://prl.natsci.msu.edu/news-and-events/news/2025-02-needle-points-to-gene-regulators-q-and-a-with-federica-brandizzi.aspx">
+                MSU-PRL highlight
+              </a>
+
+              <a
+                href="https://www.glbrc.org/news/research-highlight-needle-points-key-gene-regulators">
+                GLBRC highlight
+              </a>
+
+              <a
+                href="https://github.com/DaeKwan-Ko/needle">
+                GitHub page for scripts
+              </a>
             </div>
 
             <div class="publication-note">
@@ -609,13 +863,16 @@
 
           <div class="publication-content">
             <h3 class="publication-title">
-              <a href="https://www.nature.com/articles/s41576-024-00710-4">
+              <a
+                href="https://www.nature.com/articles/s41576-024-00710-4">
+
                 Dynamics of ER stress-induced gene regulation in plants
               </a>
             </h3>
 
             <div class="citation">
-              <strong>Ko DK</strong>, Brandizzi F<br>
+              <strong>Ko DK</strong>, Brandizzi F
+              <br>
               Nat Rev Genet. 2024 Jul;25(7):513-525.
             </div>
 
@@ -637,20 +894,34 @@
 
           <div class="publication-content">
             <h3 class="publication-title">
-              <a href="https://www.nature.com/articles/s41477-023-01480-3">
+              <a
+                href="https://www.nature.com/articles/s41477-023-01480-3">
+
                 An IRE1-proteasome system signaling cohort controls cell fate determination in unresolved proteotoxic stress of the plant ER
               </a>
             </h3>
 
             <div class="citation">
-              <strong>Ko DK</strong>, Kim JY, Thibault ET, Brandizzi F<br>
-              Nat Plants. 2023 9:1333-1346.
+              <strong>Ko DK</strong>, Kim JY, Thibault ET, Brandizzi F
+              <br>
+              Nat Plants. 2023;9:1333-1346.
             </div>
 
             <div class="publication-links">
-              <a href="https://www.cell.com/trends/plant-science/fulltext/S1360-1385(23)00388-6">Spotlight by Varshney et al. Trends Plant Sci</a>
-              <a href="https://github.com/DaeKwan-Ko/ism93">GitHub page for scripts</a>
-              <a href="https://msutoday.msu.edu/news/2023/plant-biology-switch-between-life-and-death">Media highlight</a>
+              <a
+                href="https://www.cell.com/trends/plant-science/fulltext/S1360-1385(23)00388-6">
+                Spotlight by Varshney et al. Trends Plant Sci
+              </a>
+
+              <a
+                href="https://github.com/DaeKwan-Ko/ism93">
+                GitHub page for scripts
+              </a>
+
+              <a
+                href="https://msutoday.msu.edu/news/2023/plant-biology-switch-between-life-and-death">
+                Media highlight
+              </a>
             </div>
 
             <div class="publication-note">
@@ -671,7 +942,9 @@
 
         <article class="publication selected">
           <div class="publication-media">
-            <a href="images/Ko and Brandizzi_Nature Plants 2022_1.png">
+            <a
+              href="images/Ko and Brandizzi_Nature Plants 2022_1.png">
+
               <img
                 src="images/Ko and Brandizzi_Nature Plants 2022_1.png"
                 alt="Figure preview for Nature Plants 2022 paper on transcriptional competition in ER stress resolution"
@@ -681,19 +954,29 @@
 
           <div class="publication-content">
             <h3 class="publication-title">
-              <a href="https://www.nature.com/articles/s41477-022-01150-w#article-info">
+              <a
+                href="https://www.nature.com/articles/s41477-022-01150-w#article-info">
+
                 Transcriptional competition shapes proteotoxic ER stress resolution
               </a>
             </h3>
 
             <div class="citation">
-              <strong>Ko DK</strong>, Brandizzi F<br>
+              <strong>Ko DK</strong>, Brandizzi F
+              <br>
               Nat Plants. 2022 May;8(5):481-490.
             </div>
 
             <div class="publication-links">
-              <a href="https://github.com/DaeKwan-Ko/UPR-TFs">GitHub page for scripts</a>
-              <a href="https://prl.natsci.msu.edu/news-and-events/news/plant-er-advanced-genomics-illuminate-new-mechanisms-for-stress-mitigation.aspx">Media highlight</a>
+              <a
+                href="https://github.com/DaeKwan-Ko/UPR-TFs">
+                GitHub page for scripts
+              </a>
+
+              <a
+                href="https://prl.natsci.msu.edu/news-and-events/news/plant-er-advanced-genomics-illuminate-new-mechanisms-for-stress-mitigation.aspx">
+                Media highlight
+              </a>
             </div>
 
             <div class="publication-note">
@@ -711,21 +994,28 @@
               controls
               aria-label="Video associated with the 2016 PLOS Genetics paper on heterosis in maize">
 
-              <source src="images/10_29_2010.mp4" type="video/mp4">
+              <source
+                src="images/10_29_2010.mp4"
+                type="video/mp4">
+
               Your browser does not support the video tag.
             </video>
           </div>
 
           <div class="publication-content">
             <h3 class="publication-title">
-              <a href="https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1006197">
+              <a
+                href="https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1006197">
+
                 Temporal shift of circadian-mediated gene expression and carbon fixation contributes to biomass heterosis in maize hybrids
               </a>
             </h3>
 
             <div class="citation">
-              <strong>Ko DK*</strong>, Rohozinski D*, Song Q, Taylor SH, Juenger TE, Harmon FG, *Chen ZJ<br>
-              *These authors contributed equally to this work<br>
+              <strong>Ko DK*</strong>, Rohozinski D*, Song Q, Taylor SH, Juenger TE, Harmon FG, *Chen ZJ
+              <br>
+              *These authors contributed equally to this work
+              <br>
               PLoS Genet. 2016 Jul 28;12(7):e1006197.
             </div>
 
@@ -736,18 +1026,30 @@
         </article>
       </div>
 
-      <h2 style="margin-top:34px;">Additional Publications</h2>
+      <h2 style="margin-top: 34px;">
+        Additional Publications
+      </h2>
 
       <p class="section-intro">
         A complete publication list is available in my
-        <a href="data/CV_DaeKwanKo.pdf">CV</a>
+        <a href="data/CV_DaeKwanKo.pdf">
+          CV
+        </a>
         and on
-        <a href="https://scholar.google.com/citations?hl=en&user=MXSf08oAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a>.
+        <a
+          href="https://scholar.google.com/citations?hl=en&user=MXSf08oAAAAJ&view_op=list_works&sortby=pubdate">
+          Google Scholar
+        </a>.
       </p>
     </section>
 
-    <section id="funding" aria-labelledby="funding-heading">
-      <h2 id="funding-heading">Funding &amp; Projects</h2>
+    <section
+      id="funding"
+      aria-labelledby="funding-heading">
+
+      <h2 id="funding-heading">
+        Funding &amp; Projects
+      </h2>
 
       <p class="section-intro">
         My current and ongoing projects focus on systems-level analysis of plant stress responses, regulatory network modeling, and multi-omics approaches for crop resilience.
@@ -755,7 +1057,9 @@
 
       <div class="card-grid">
         <div class="card">
-          <h3>JGI-funded projects</h3>
+          <h3>
+            JGI-funded projects
+          </h3>
 
           <p>
             Principal Investigator on multiple JGI-supported projects generating transcriptomic and transcription factor binding resources to understand abiotic stress responses in sorghum.
@@ -763,7 +1067,9 @@
         </div>
 
         <div class="card">
-          <h3>MSU GREEEN project</h3>
+          <h3>
+            MSU GREEEN project
+          </h3>
 
           <p>
             Independent project support through MSU GREEEN to investigate stress-associated biological mechanisms relevant to plant resilience and agricultural productivity.
@@ -771,7 +1077,9 @@
         </div>
 
         <div class="card">
-          <h3>GLBRC research</h3>
+          <h3>
+            GLBRC research
+          </h3>
 
           <p>
             Research supported through the Great Lakes Bioenergy Research Center within the Brandizzi Lab, contributing systems-genomics approaches to bioenergy crop resilience.
@@ -779,19 +1087,40 @@
         </div>
       </div>
 
-      <h3>Current project themes</h3>
+      <h3>
+        Current project themes
+      </h3>
 
       <ul class="compact-list">
-        <li>Sorghum abiotic stress transcriptomics and regulatory network modeling</li>
-        <li>Genome-scale TF–DNA binding maps for stress-responsive transcription factors</li>
-        <li>Single-cell multiome analysis of stress-responsive cell states</li>
-        <li>Network-enabled gene discovery and validation in non-model crop species</li>
-        <li>Host regulatory control of rhizosphere microbiome assembly and function</li>
+        <li>
+          Sorghum abiotic stress transcriptomics and regulatory network modeling
+        </li>
+
+        <li>
+          Genome-scale TF–DNA binding maps for stress-responsive transcription factors
+        </li>
+
+        <li>
+          Single-cell multiome analysis of stress-responsive cell states
+        </li>
+
+        <li>
+          Network-enabled gene discovery and validation in non-model crop species
+        </li>
+
+        <li>
+          Host regulatory control of rhizosphere microbiome assembly and function
+        </li>
       </ul>
     </section>
 
-    <section id="teaching" aria-labelledby="teaching-heading">
-      <h2 id="teaching-heading">Teaching &amp; Mentoring</h2>
+    <section
+      id="teaching"
+      aria-labelledby="teaching-heading">
+
+      <h2 id="teaching-heading">
+        Teaching &amp; Mentoring
+      </h2>
 
       <p class="section-intro">
         I teach because I want students to experience the moment when biology shifts from a collection of facts to a coherent and empowering way to understand the living world. My teaching emphasizes evidence-based reasoning, conceptual integration, data interpretation, and clear scientific communication.
@@ -799,7 +1128,9 @@
 
       <div class="card-grid">
         <div class="card">
-          <h3>Teaching areas</h3>
+          <h3>
+            Teaching areas
+          </h3>
 
           <ul class="compact-list">
             <li>Genetics and genomics</li>
@@ -811,7 +1142,9 @@
         </div>
 
         <div class="card">
-          <h3>Teaching approach</h3>
+          <h3>
+            Teaching approach
+          </h3>
 
           <p>
             I use active learning, structured discussions, low-stakes assessments, primary literature, and real biological datasets to help students connect foundational concepts with modern biological research.
@@ -819,7 +1152,9 @@
         </div>
 
         <div class="card">
-          <h3>Mentoring</h3>
+          <h3>
+            Mentoring
+          </h3>
 
           <p>
             I mentor undergraduate researchers, research assistants, and early-career scientists through structured guidance, clear expectations, regular feedback, and meaningful project ownership.
@@ -832,12 +1167,19 @@
       </p>
     </section>
 
-    <section id="cv" aria-labelledby="cv-heading">
-      <h2 id="cv-heading">CV</h2>
+    <section
+      id="cv"
+      aria-labelledby="cv-heading">
+
+      <h2 id="cv-heading">
+        CV
+      </h2>
 
       <p>
         My current CV is available here:
-        <a href="data/CV_DaeKwanKo.pdf">Download CV</a>.
+        <a href="data/CV_DaeKwanKo.pdf">
+          Download CV
+        </a>.
       </p>
     </section>
   </main>
