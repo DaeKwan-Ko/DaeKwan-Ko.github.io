@@ -55,7 +55,6 @@
       --border: #e4e4e4;
       --accent: #18453b;
       --accent-light: #eef5f2;
-      --highlight: #ffffd0;
       --link: #0b57d0;
       --max-width: 980px;
       --shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
@@ -242,11 +241,23 @@
       box-shadow: var(--shadow);
     }
 
+    .recognition-image {
+      margin: 0;
+    }
+
     .recognition-image img {
       width: 100%;
       border-radius: 12px;
       object-fit: cover;
       box-shadow: var(--shadow);
+    }
+
+    .recognition-image figcaption {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      line-height: 1.4;
+      text-align: right;
     }
 
     .recognition-content h2 {
@@ -302,12 +313,6 @@
       margin-bottom: 6px;
     }
 
-    .highlight {
-      padding: 0 4px;
-      background: var(--highlight);
-      border-radius: 4px;
-    }
-
     .notice-box {
       padding: 16px 18px;
       margin: 16px 0;
@@ -335,10 +340,6 @@
       border: 1px solid var(--border);
       border-radius: 16px;
       box-shadow: var(--shadow);
-    }
-
-    .publication.selected {
-      background: var(--highlight);
     }
 
     .publication-media img,
@@ -539,7 +540,7 @@
         </p>
 
         <p>
-          My future lab will develop predictive systems biology frameworks to understand how plants respond to climate-driven environmental stress. We will integrate transcriptomics, single-cell genomics, chromatin accessibility, transcription factor binding maps, regulatory network modeling, and plant–microbe datasets to identify causal regulators of resilience. A major goal is to move from descriptive omics to interpretable, experimentally testable models that can guide climate-resilient agriculture and sustainable plant systems.
+          My research integrates transcriptomics, single-cell genomics, chromatin accessibility, transcription factor binding maps, and regulatory network modeling to identify causal regulators of plant resilience. My long-term goal is to develop interpretable and experimentally testable frameworks that can support climate-resilient agriculture and sustainable plant systems.
         </p>
 
         <p>
@@ -640,12 +641,16 @@
       aria-labelledby="recognition-heading">
 
       <div class="recognition-box">
-        <div class="recognition-image">
+        <figure class="recognition-image">
           <img
             src="images/YaopingZhangAward_2026.jpeg"
             alt="Dae Kwan Ko giving remarks after receiving the 2026 Yaoping Zhang Bioenergy Research Award"
             loading="lazy">
-        </div>
+
+          <figcaption>
+            Photo credit: Federica Brandizzi
+          </figcaption>
+        </figure>
 
         <div class="recognition-content">
           <h2 id="recognition-heading">
@@ -747,15 +752,11 @@
       </h2>
 
       <p class="section-intro">
-        Representative papers most closely related to my future research program are
-        <span class="highlight">
-          highlighted
-        </span>
-        in yellow.
+        Representative publications most closely aligned with my current and future research program.
       </p>
 
       <div class="publication-list">
-        <article class="publication selected">
+        <article class="publication">
           <div class="publication-media">
             <a href="images/Ko_TPJ2026.png">
               <img
@@ -803,7 +804,7 @@
           </div>
         </article>
 
-        <article class="publication selected">
+        <article class="publication">
           <div class="publication-media">
             <a href="images/Ko_CRM_rev4_GA_v2.png">
               <img
@@ -851,7 +852,7 @@
           </div>
         </article>
 
-        <article class="publication selected">
+        <article class="publication">
           <div class="publication-media">
             <a href="images/Ko and Brandizzi_NRG 2024.png">
               <img
@@ -882,7 +883,7 @@
           </div>
         </article>
 
-        <article class="publication selected">
+        <article class="publication">
           <div class="publication-media">
             <a href="images/Ko et al_NatPlants2023.png">
               <img
@@ -940,7 +941,7 @@
           </div>
         </article>
 
-        <article class="publication selected">
+        <article class="publication">
           <div class="publication-media">
             <a
               href="images/Ko and Brandizzi_Nature Plants 2022_1.png">
@@ -985,14 +986,15 @@
           </div>
         </article>
 
-        <article class="publication selected">
+        <article class="publication">
           <div class="publication-media">
             <video
               autoplay
               loop
               muted
+              playsinline
               controls
-              aria-label="Video associated with the 2016 PLOS Genetics paper on heterosis in maize">
+              aria-label="Time-lapse video of maize plants recorded during Dae Kwan Ko's Ph.D. research">
 
               <source
                 src="images/10_29_2010.mp4"
@@ -1020,7 +1022,7 @@
             </div>
 
             <div class="publication-note">
-              I led this collaborative project linking circadian-mediated transcriptional dynamics with carbon fixation and biomass heterosis in maize hybrids.
+              I led this collaborative project linking circadian-mediated transcriptional dynamics with carbon fixation and biomass heterosis in maize hybrids. The accompanying time-lapse video was recorded during my Ph.D. research and shows the growth dynamics of the maize plants used in this work.
             </div>
           </div>
         </article>
