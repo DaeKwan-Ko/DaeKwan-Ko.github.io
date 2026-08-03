@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
 
-  <title>Dae Kwan Ko | Plant Systems Biology and Genomics</title>
+  <title>Dae Kwan Ko | Causal and Predictive Regulatory Genomics</title>
 
   <meta name="author" content="Dae Kwan Ko">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta
     name="description"
-    content="Dae Kwan Ko is a plant systems biologist at Michigan State University studying gene regulatory networks, abiotic stress responses, single-cell genomics, and multi-omics approaches for plant and crop resilience.">
+    content="Dae Kwan Ko is a plant systems biologist at Michigan State University developing causal and predictive regulatory-genomics approaches using interpretable AI/ML, single-nucleus multiome profiling, TF–DNA binding maps, and functional genomics to improve crop stress resilience.">
 
   <meta
     property="og:title"
-    content="Dae Kwan Ko | Plant Systems Biology and Genomics">
+    content="Dae Kwan Ko | Causal and Predictive Regulatory Genomics">
 
   <meta
     property="og:description"
-    content="Plant systems biologist studying gene regulatory networks, abiotic stress responses, single-cell genomics, and crop resilience.">
+    content="Plant systems biologist developing interpretable AI/ML and causal regulatory-genomics approaches for crop stress resilience.">
 
   <meta property="og:type" content="website">
 
@@ -326,6 +326,153 @@
       color: var(--accent);
     }
 
+
+    .research-question {
+      padding: 18px 20px;
+      margin: 16px 0;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--accent);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .research-question p {
+      margin: 0;
+      font-size: 1.05rem;
+    }
+
+    .research-framework {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr auto 1fr;
+      gap: 12px;
+      align-items: stretch;
+      margin: 18px 0;
+    }
+
+    .framework-step {
+      padding: 18px;
+      background: var(--accent-light);
+      border: 1px solid #d7e6df;
+      border-radius: 16px;
+    }
+
+    .framework-step h3 {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font-size: 1.12rem;
+    }
+
+    .framework-step p {
+      margin: 0;
+      font-size: 0.95rem;
+    }
+
+    .step-label {
+      display: inline-block;
+      margin-bottom: 8px;
+      padding: 3px 9px;
+      color: #ffffff;
+      background: var(--accent);
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+    }
+
+    .framework-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .modeling-principles {
+      padding: 16px 18px;
+      margin: 16px 0 22px;
+      background: #f8faf9;
+      border: 1px dashed #b9cec5;
+      border-radius: 14px;
+    }
+
+    .modeling-principles strong {
+      color: var(--accent);
+    }
+
+    .foundation-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin: 16px 0 8px;
+    }
+
+    .foundation-card {
+      padding: 16px;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+    }
+
+    .foundation-card h3 {
+      margin: 0 0 7px;
+      color: var(--accent);
+    }
+
+    .foundation-card p {
+      margin: 0;
+    }
+
+    .metric {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--accent);
+      font-size: 1.35rem;
+      font-weight: 750;
+      line-height: 1.25;
+    }
+
+    .publication-placeholder {
+      display: flex;
+      min-height: 170px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 20px;
+      color: var(--accent);
+      background:
+        linear-gradient(135deg, var(--accent-light), #ffffff);
+      border: 1px solid #d7e6df;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .publication-placeholder i {
+      font-size: 2.2rem;
+    }
+
+    .publication-placeholder span {
+      font-size: 0.9rem;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .status-badge {
+      display: inline-block;
+      margin-left: 6px;
+      padding: 2px 8px;
+      color: var(--accent);
+      background: var(--accent-light);
+      border: 1px solid #d7e6df;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      vertical-align: middle;
+    }
+
     .publication-list {
       display: grid;
       gap: 18px;
@@ -423,6 +570,19 @@
     }
 
     @media (max-width: 800px) {
+
+      .research-framework {
+        grid-template-columns: 1fr;
+      }
+
+      .framework-arrow {
+        transform: rotate(90deg);
+      }
+
+      .foundation-grid {
+        grid-template-columns: 1fr;
+      }
+
       .hero {
         grid-template-columns: 1fr;
       }
@@ -521,7 +681,7 @@
         </h1>
 
         <p class="tagline">
-          Plant systems biology · Gene regulatory networks · Abiotic stress resilience · Single-cell and multi-omics genomics
+          Causal and predictive regulatory genomics · Interpretable AI/ML · Single-cell multi-omics · Crop stress resilience
         </p>
 
         <p>
@@ -536,19 +696,19 @@
           <a href="https://www.glbrc.org">
             the Great Lakes Bioenergy Research Center (GLBRC)
           </a>
-          at Michigan State University. My research aims to understand how plants dynamically reprogram gene expression in response to environmental stress, with a particular emphasis on gene regulatory networks, systems genomics, and crop resilience.
+          at Michigan State University.
         </p>
 
         <p>
-          My research integrates transcriptomics, single-cell genomics, chromatin accessibility, transcription factor binding maps, and regulatory network modeling to identify causal regulators of plant resilience. My long-term goal is to develop interpretable and experimentally testable frameworks that can support climate-resilient agriculture and sustainable plant systems.
+          My research program develops causal and predictive regulatory-genomics approaches to determine how cell-type-specific gene regulatory networks encode crop responses to environmental stress and whether those regulatory rules can predict resilience across genotypes. I integrate time-resolved transcriptomics, single-nucleus multiome profiling, transcription factor–DNA binding maps, functional genetics, and interpretable AI/ML to generate experimentally testable predictions.
         </p>
 
         <p>
-          While I am affiliated with the Brandizzi Lab, I also lead independent research directions in sorghum abiotic stress biology, regulatory genomics, and network-enabled gene discovery. My work is supported through GLBRC within the Brandizzi Lab, as well as by independent projects including the
+          At MSU, I lead independent projects in sorghum stress genomics, regulatory-network inference, and network-enabled gene discovery. I serve as Principal Investigator on three competitive DOE Joint Genome Institute user projects and an
           <a href="https://www.canr.msu.edu/project-greeen/index">
-            MSU GREEEN project
+            MSU Project GREEEN
           </a>
-          and multiple JGI-funded projects for which I serve as PI.
+          award. My broader research is also supported through GLBRC within the Brandizzi Lab.
         </p>
 
         <div
@@ -689,58 +849,100 @@
       aria-labelledby="research-heading">
 
       <h2 id="research-heading">
-        Research
+        Research Program
       </h2>
 
       <p class="section-intro">
-        I am a plant systems biologist who uses genomics, single-cell technologies, and regulatory network modeling to understand how plants sense, respond to, and recover from environmental stress. My research focuses on transcription factor networks, chromatin regulation, and stress-induced transcriptional reprogramming, with the long-term goal of identifying causal regulators and predictive signatures of resilience.
+        Genomic and single-cell technologies can describe transcription factor activity, chromatin accessibility, and gene expression at unprecedented resolution, but most regulatory maps remain correlative. My program uses interpretable modeling and focused experiments to distinguish functional regulatory relationships from context-dependent associations and to determine whether those relationships explain variation in crop performance.
       </p>
 
-      <div class="notice-box">
-        <h3>
-          Future Lab Vision
-        </h3>
-
+      <div class="research-question">
         <p>
-          My future research program will build interpretable, data-driven models that connect molecular regulatory states to plant stress adaptation, recovery, and interactions with associated microbial communities. By combining computational prediction with experimental validation, my lab will work toward practical strategies for improving resilience in crops and other plant systems under climate change.
+          <strong>Central question:</strong>
+          How do cell-type-specific regulatory networks encode environmental stress responses, and can those regulatory rules predict resilience across genotypes?
         </p>
       </div>
 
       <h3>
-        Independent Research Directions
+        MAP → PERTURB → PREDICT
       </h3>
 
-      <div class="card-grid">
-        <div class="card">
-          <h3>
-            Predictive regulatory genomics
-          </h3>
-
+      <div class="research-framework" aria-label="Research framework">
+        <div class="framework-step">
+          <span class="step-label">MAP</span>
+          <h3>Define regulatory programs</h3>
           <p>
-            We reconstruct stress-responsive gene regulatory networks to identify transcription factors and regulatory pathways that control plant adaptation to drought, heat, salinity, and proteotoxic stress.
+            Integrate time-resolved transcriptomes, DNA sequence and motifs, DAP-seq binding maps, chromatin accessibility, and gene expression to rank TF–cis-regulatory element–target relationships in defined root cell types, stresses, and treatment stages.
           </p>
         </div>
 
-        <div class="card">
-          <h3>
-            Single-cell and chromatin biology
-          </h3>
+        <div class="framework-arrow" aria-hidden="true">→</div>
 
+        <div class="framework-step">
+          <span class="step-label">PERTURB</span>
+          <h3>Generate causal evidence</h3>
           <p>
-            We use single-cell and multi-omics approaches to resolve how stress responses differ across tissues and cell types, and how chromatin accessibility contributes to regulatory state transitions.
+            Test prioritized transcription factors through targeted pooled CRISPR perturbation in root-derived sorghum protoplasts, coupled with single-cell transcriptomic readouts and focused cis-regulatory element assays.
           </p>
         </div>
 
-        <div class="card">
-          <h3>
-            Plant–microbiome resilience
-          </h3>
+        <div class="framework-arrow" aria-hidden="true">→</div>
 
+        <div class="framework-step">
+          <span class="step-label">PREDICT</span>
+          <h3>Explain resilience across genotypes</h3>
           <p>
-            We aim to connect host regulatory states with rhizosphere microbiome assembly and function, integrating host genomics, microbial profiles, and soil chemistry to understand plant resilience at multiple scales.
+            Determine whether experimentally informed regulatory rules and natural variation in TFs and cis-regulatory elements predict molecular responses, root traits, growth, and stress performance across genetically diverse sorghum.
           </p>
         </div>
       </div>
+
+      <div class="modeling-principles">
+        <strong>Modeling principles:</strong>
+        interpretable and data-efficient models; biologically structured validation across withheld stresses, treatment stages, and biological replicates; and iterative AI–experiment feedback in which predictions guide experiments and experimental outcomes refine subsequent models.
+      </div>
+
+      <h3>
+        Current Foundation
+      </h3>
+
+      <div class="foundation-grid">
+        <div class="foundation-card">
+          <span class="metric">Drought · Heat · Salinity</span>
+          <h3>Time-resolved stress transcriptomes</h3>
+          <p>
+            Root and shoot RNA-seq resources define shared, tissue-specific, and stress-specific transcriptional responses and provide temporal evidence for candidate regulatory programs.
+          </p>
+        </div>
+
+        <div class="foundation-card">
+          <span class="metric">142 TFs · ~3.5 million sites</span>
+          <h3>Genome-scale TF–DNA binding atlas</h3>
+          <p>
+            Sorghum DAP-seq profiles spanning approximately 31% of the genome define a focused candidate space of TF–DNA interactions for cell-type-aware modeling and causal testing.
+          </p>
+        </div>
+
+        <div class="foundation-card">
+          <span class="metric">RNA + chromatin in the same nucleus</span>
+          <h3>Root single-nucleus multiome</h3>
+          <p>
+            Control and salinity-stressed sorghum roots reveal cell-type-specific transcriptional and chromatin-accessibility states, including distinct responses in cortex and pericycle populations.
+          </p>
+        </div>
+
+        <div class="foundation-card">
+          <span class="metric">Prediction → validation → refinement</span>
+          <h3>Network-enabled gene discovery</h3>
+          <p>
+            NEEDLE, GENIE3, coexpression modeling, promoter analysis, and functional assays establish a practical workflow in which computational models generate focused biological hypotheses rather than serving as endpoints.
+          </p>
+        </div>
+      </div>
+
+      <p>
+        After establishing this core framework in sorghum roots, I will extend it selectively to stress recovery, additional crop systems, and—through collaboration—the influence of root regulatory states on root chemistry and microbial recruitment.
+      </p>
     </section>
 
     <section
@@ -752,10 +954,36 @@
       </h2>
 
       <p class="section-intro">
-        Representative publications most closely aligned with my current and future research program.
+        Selected publications spanning AI-enabled regulator prediction, network modeling, multi-omics, functional genomics, and crop stress biology.
       </p>
 
       <div class="publication-list">
+        <article class="publication">
+          <div class="publication-media">
+            <div class="publication-placeholder" aria-label="AI and plant regulatory genomics">
+              <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
+              <span>AI × Plant Regulatory Genomics</span>
+            </div>
+          </div>
+
+          <div class="publication-content">
+            <h3 class="publication-title">
+              Predicting transcriptional regulators in plants in the era of artificial intelligence
+              <span class="status-badge">In press</span>
+            </h3>
+
+            <div class="citation">
+              <strong>Ko DK</strong>, Brandizzi F
+              <br>
+              Current Opinion in Plant Biology. 2026.
+            </div>
+
+            <div class="publication-note">
+              This review examines how network inference, multi-omics integration, and AI/ML can improve prediction of plant transcriptional regulators and argues for experimentally grounded, iteratively refined models that support biological discovery.
+            </div>
+          </div>
+        </article>
+
         <article class="publication">
           <div class="publication-media">
             <a href="images/Ko_TPJ2026.png">
@@ -1050,68 +1278,72 @@
       aria-labelledby="funding-heading">
 
       <h2 id="funding-heading">
-        Funding &amp; Projects
+        Research Support &amp; Projects
       </h2>
 
       <p class="section-intro">
-        My current and ongoing projects focus on systems-level analysis of plant stress responses, regulatory network modeling, and multi-omics approaches for crop resilience.
+        My current research is supported through competitive user-facility awards, an independent MSU award, and collaborative GLBRC research. These projects have generated the multimodal resources that underpin my causal and predictive regulatory-genomics program.
       </p>
 
       <div class="card-grid">
         <div class="card">
           <h3>
-            JGI-funded projects
+            DOE-JGI User Projects
           </h3>
 
           <p>
-            Principal Investigator on multiple JGI-supported projects generating transcriptomic and transcription factor binding resources to understand abiotic stress responses in sorghum.
+            Principal Investigator on three competitive projects awarded in 2021, 2023, and 2025. These projects support large-scale sorghum stress transcriptomics, DAP-seq profiling of 142 stress-responsive transcription factors, and follow-up time-resolved stress experiments.
           </p>
         </div>
 
         <div class="card">
           <h3>
-            MSU GREEEN project
+            MSU Project GREEEN
           </h3>
 
           <p>
-            Independent project support through MSU GREEEN to investigate stress-associated biological mechanisms relevant to plant resilience and agricultural productivity.
+            Principal Investigator on a $30,000 project examining how abiotic stress alters regulatory DNA activity in sorghum at single-cell resolution.
           </p>
         </div>
 
         <div class="card">
           <h3>
-            GLBRC research
+            GLBRC Research
           </h3>
 
           <p>
-            Research supported through the Great Lakes Bioenergy Research Center within the Brandizzi Lab, contributing systems-genomics approaches to bioenergy crop resilience.
+            Research supported through the Great Lakes Bioenergy Research Center within the Brandizzi Lab, contributing regulatory-genomics and systems-biology approaches to bioenergy crop resilience.
           </p>
         </div>
       </div>
 
       <h3>
-        Current project themes
+        Current Project Themes
       </h3>
 
       <ul class="compact-list">
         <li>
-          Sorghum abiotic stress transcriptomics and regulatory network modeling
+          Interpretable AI/ML for TF–cis-regulatory element–target prediction
         </li>
 
         <li>
-          Genome-scale TF–DNA binding maps for stress-responsive transcription factors
+          Time-resolved sorghum responses to drought, heat, salinity, and combined stresses
         </li>
 
         <li>
-          Single-cell multiome analysis of stress-responsive cell states
+          Genome-scale DAP-seq maps for 142 abiotic stress-responsive transcription factors
         </li>
 
         <li>
-          Network-enabled gene discovery and validation in non-model crop species
+          Single-nucleus multiome analysis of stress-responsive root cell states
         </li>
 
         <li>
-          Host regulatory control of rhizosphere microbiome assembly and function
+          Targeted pooled CRISPR perturbation and cis-regulatory element validation
+        </li>
+
+        <li>
+          Regulatory variation and genotype-level prediction of crop stress resilience
         </li>
       </ul>
     </section>
@@ -1125,31 +1357,31 @@
       </h2>
 
       <p class="section-intro">
-        I teach because I want students to experience the moment when biology shifts from a collection of facts to a coherent and empowering way to understand the living world. My teaching emphasizes evidence-based reasoning, conceptual integration, data interpretation, and clear scientific communication.
+        I teach students to connect biological mechanisms with quantitative evidence. My teaching emphasizes conceptual integration, experimental design, reproducible data analysis, responsible interpretation of computational models, and clear scientific communication.
       </p>
 
       <div class="card-grid">
         <div class="card">
           <h3>
-            Teaching areas
+            Teaching Areas
           </h3>
 
           <ul class="compact-list">
             <li>Genetics and genomics</li>
-            <li>Plant molecular biology</li>
-            <li>Plant physiology and stress biology</li>
-            <li>Systems biology and regulatory networks</li>
-            <li>Data-driven agriculture and multi-omics analysis</li>
+            <li>Plant molecular biology and stress physiology</li>
+            <li>Systems biology and gene regulatory networks</li>
+            <li>Bioinformatics and reproducible data analysis</li>
+            <li>AI/ML and quantitative regulatory genomics</li>
           </ul>
         </div>
 
         <div class="card">
           <h3>
-            Teaching approach
+            Teaching Approach
           </h3>
 
           <p>
-            I use active learning, structured discussions, low-stakes assessments, primary literature, and real biological datasets to help students connect foundational concepts with modern biological research.
+            I use active learning, structured discussion, primary literature, and real biological datasets to help students move from descriptive observations to testable models and evidence-based conclusions.
           </p>
         </div>
 
@@ -1159,13 +1391,13 @@
           </h3>
 
           <p>
-            I mentor undergraduate researchers, research assistants, and early-career scientists through structured guidance, clear expectations, regular feedback, and meaningful project ownership.
+            I mentor undergraduate researchers, research assistants, and early-career scientists through scaffolded training, explicit expectations, regular feedback, reproducible research practices, and meaningful ownership of scientific questions.
           </p>
         </div>
       </div>
 
       <p>
-        My goal as a teacher and mentor is to help students build confidence as scientific thinkers who can work across biology, computation, and agriculture.
+        My goal is to help trainees become confident scientific thinkers who can work across experimental biology, computation, and agriculture.
       </p>
     </section>
 
