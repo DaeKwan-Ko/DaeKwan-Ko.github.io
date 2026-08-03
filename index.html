@@ -434,30 +434,40 @@
       line-height: 1.25;
     }
 
-    .publication-placeholder {
-      display: flex;
+    .publication-pdf-preview {
+      position: relative;
       min-height: 170px;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 20px;
-      color: var(--accent);
-      background:
-        linear-gradient(135deg, var(--accent-light), #ffffff);
+      overflow: hidden;
+      background: var(--accent-light);
       border: 1px solid #d7e6df;
       border-radius: 10px;
-      text-align: center;
     }
 
-    .publication-placeholder i {
-      font-size: 2.2rem;
+    .publication-pdf-preview object {
+      display: block;
+      width: 100%;
+      height: 170px;
+      border: 0;
+      pointer-events: none;
     }
 
-    .publication-placeholder span {
+    .publication-pdf-preview .pdf-overlay-link {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      border-radius: 10px;
+    }
+
+    .publication-pdf-preview .pdf-fallback {
+      display: flex;
+      min-height: 170px;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+      color: var(--accent);
       font-size: 0.9rem;
       font-weight: 700;
-      line-height: 1.35;
+      text-align: center;
     }
 
     .status-badge {
@@ -960,9 +970,22 @@
       <div class="publication-list">
         <article class="publication">
           <div class="publication-media">
-            <div class="publication-placeholder" aria-label="AI and plant regulatory genomics">
-              <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
-              <span>AI × Plant Regulatory Genomics</span>
+            <div class="publication-pdf-preview">
+              <object
+                data="images/Ko_Brandizzi_COPB2026_rev1_Fig1.pdf#page=1&toolbar=0&navpanes=0&scrollbar=0&view=FitH"
+                type="application/pdf"
+                aria-label="Figure 1 preview for the 2026 Current Opinion in Plant Biology review on AI-enabled prediction of plant transcriptional regulators">
+
+                <div class="pdf-fallback">
+                  Figure 1: AI-enabled prediction of plant transcriptional regulators
+                </div>
+              </object>
+
+              <a
+                class="pdf-overlay-link"
+                href="images/Ko_Brandizzi_COPB2026_rev1_Fig1.pdf"
+                aria-label="Open Figure 1 PDF for the Current Opinion in Plant Biology review">
+              </a>
             </div>
           </div>
 
