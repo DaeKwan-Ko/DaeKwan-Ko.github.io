@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
 
-  <title>Dae Kwan Ko | Causal and Predictive Regulatory Genomics</title>
+  <title>Dae Kwan Ko | Causal and Predictive Plant Regulatory Genomics</title>
 
   <meta name="author" content="Dae Kwan Ko">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta
     name="description"
-    content="Dae Kwan Ko is a plant systems biologist at Michigan State University developing causal and predictive regulatory-genomics approaches using interpretable AI/ML, single-nucleus multiome profiling, TF–DNA binding maps, and functional genomics to improve crop stress resilience.">
+    content="Dae Kwan Ko is a plant systems biologist at Michigan State University developing causal and predictive regulatory-genomics approaches to understand plant environmental adaptation across genotypes and environments using cell-type-resolved multi-omics, functional genetics, and interpretable modeling.">
 
   <meta
     property="og:title"
-    content="Dae Kwan Ko | Causal and Predictive Regulatory Genomics">
+    content="Dae Kwan Ko | Causal and Predictive Plant Regulatory Genomics">
 
   <meta
     property="og:description"
-    content="Plant systems biologist developing interpretable AI/ML and causal regulatory-genomics approaches for crop stress resilience.">
+    content="Causal and predictive regulatory genomics of plant environmental adaptation, integrating cell-type-resolved multi-omics, functional genetics, and interpretable modeling.">
 
   <meta property="og:type" content="website">
 
@@ -401,6 +401,19 @@
       color: var(--accent);
     }
 
+    .causal-chain {
+      margin: 16px 0 22px;
+      padding: 14px 18px;
+      color: var(--accent);
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+      font-weight: 700;
+      text-align: center;
+      line-height: 1.6;
+    }
+
     .foundation-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -691,7 +704,7 @@
         </h1>
 
         <p class="tagline">
-          Causal and predictive regulatory genomics · Interpretable AI/ML · Single-cell multi-omics · Crop stress resilience
+          Causal and predictive regulatory genomics · Cell-type-resolved multi-omics · Functional genetics · Interpretable modeling
         </p>
 
         <p>
@@ -710,11 +723,11 @@
         </p>
 
         <p>
-          My research program develops causal and predictive regulatory-genomics approaches to determine how cell-type-specific gene regulatory networks encode crop responses to environmental stress and whether those regulatory rules can predict resilience across genotypes. I integrate time-resolved transcriptomics, single-nucleus multiome profiling, transcription factor–DNA binding maps, functional genetics, and interpretable AI/ML to generate experimentally testable predictions.
+          My research program asks how cell-type-specific gene regulatory networks translate environmental change into adaptive plant responses, and whether experimentally supported regulatory rules can predict resilience across genotypes and environments. I integrate time-resolved transcriptomics, single-nucleus multiome profiling, transcription factor–DNA binding maps, functional genetics, molecular perturbation, and interpretable modeling to move from regulatory inference to causal testing and prospective prediction.
         </p>
 
         <p>
-          At MSU, I lead independent projects in sorghum stress genomics, regulatory-network inference, and network-enabled gene discovery. I serve as Principal Investigator on three competitive DOE Joint Genome Institute user projects and an
+          At MSU, I lead independent projects in sorghum environmental-stress genomics, regulatory-network inference, and network-enabled gene discovery. I serve as Principal Investigator on three competitive DOE Joint Genome Institute user projects and an
           <a href="https://www.canr.msu.edu/project-greeen/index">
             MSU Project GREEEN
           </a>
@@ -871,13 +884,22 @@
       </h2>
 
       <p class="section-intro">
-        Genomic and single-cell technologies can describe transcription factor activity, chromatin accessibility, and gene expression at unprecedented resolution, but most regulatory maps remain correlative. My program uses interpretable modeling and focused experiments to distinguish functional regulatory relationships from context-dependent associations and to determine whether those relationships explain variation in crop performance.
+        Plants continuously adjust growth, physiology, and development as environments change, yet the regulatory mechanisms that determine whether these responses lead to adaptation or loss of performance remain incompletely understood. Genomic and single-nucleus technologies can now resolve transcription factor activity, chromatin accessibility, and gene expression at cell-type resolution, but most regulatory maps remain correlative. My program focuses on identifying which TF–cis-regulatory element–target relationships functionally control environmental responses and whether those experimentally supported rules remain predictive beyond the conditions in which they were discovered.
       </p>
 
       <div class="research-question">
         <p>
           <strong>Central question:</strong>
-          How do cell-type-specific regulatory networks encode environmental stress responses, and can those regulatory rules predict resilience across genotypes?
+          How do cell-type-specific regulatory networks translate environmental change into adaptive plant responses, and can experimentally supported regulatory rules predict resilience across genotypes and environments?
+        </p>
+      </div>
+
+      <div class="notice-box">
+        <h3>
+          From regulatory maps to causal mechanisms
+        </h3>
+        <p>
+          My research has progressed from mechanistic studies of Arabidopsis stress adaptation and recovery, through development of the network-enabled gene discovery framework NEEDLE, to integrated regulatory genomics in sorghum. This progression established a principle that now guides my laboratory: computational and genomic analyses are most informative when they generate mechanistic hypotheses that can be challenged experimentally and then used to improve prediction.
         </p>
       </div>
 
@@ -890,7 +912,7 @@
           <span class="step-label">MAP</span>
           <h3>Define regulatory programs</h3>
           <p>
-            Integrate time-resolved transcriptomes, DNA sequence and motifs, DAP-seq binding maps, chromatin accessibility, and gene expression to rank TF–cis-regulatory element–target relationships in defined root cell types, stresses, and treatment stages.
+            Integrate time-resolved transcriptomes, DNA sequence and motif features, DAP-seq binding maps, chromatin accessibility, and gene expression to define cell-type-specific TF–cis-regulatory element–target relationships and distinguish shared from environment-specific programs across drought, heat, and salinity.
           </p>
         </div>
 
@@ -898,9 +920,9 @@
 
         <div class="framework-step">
           <span class="step-label">PERTURB</span>
-          <h3>Generate causal evidence</h3>
+          <h3>Establish causal mechanisms</h3>
           <p>
-            Test prioritized transcription factors through targeted pooled CRISPR perturbation in root-derived sorghum protoplasts, coupled with single-cell transcriptomic readouts and focused cis-regulatory element assays.
+            Advance prioritized TF–CRE–target hypotheses through staged perturbation: transient TF–promoter assays and CRE mutagenesis, focused pooled CRISPR perturbation with single-cell transcriptomic readouts, and whole-plant validation for the strongest mechanisms.
           </p>
         </div>
 
@@ -908,16 +930,20 @@
 
         <div class="framework-step">
           <span class="step-label">PREDICT</span>
-          <h3>Explain resilience across genotypes</h3>
+          <h3>Test generalization across contexts</h3>
           <p>
-            Determine whether experimentally informed regulatory rules and natural variation in TFs and cis-regulatory elements predict molecular responses, root traits, growth, and stress performance across genetically diverse sorghum.
+            Determine whether experimentally supported regulatory rules and natural variation in TFs and cis-regulatory elements predict molecular responses, physiology, growth, recovery, and plant performance across genotypes, environments, and genotype × environment combinations.
           </p>
         </div>
       </div>
 
       <div class="modeling-principles">
         <strong>Modeling principles:</strong>
-        interpretable and data-efficient models; biologically structured validation across withheld stresses, treatment stages, and biological replicates; and iterative AI–experiment feedback in which predictions guide experiments and experimental outcomes refine subsequent models.
+        interpretable machine-learning and network models; biologically structured holdouts in which entire environmental, temporal, or genetic contexts are excluded from training; prospective prediction rather than random partitioning of individual nuclei; and iterative model–experiment refinement in which both successful and failed predictions reveal biological structure.
+      </div>
+
+      <div class="causal-chain" aria-label="Causal progression from environment and regulatory variation to plant performance">
+        environment + regulatory variation → regulatory state → physiological response → plant performance
       </div>
 
       <h3>
@@ -934,10 +960,10 @@
         </div>
 
         <div class="foundation-card">
-          <span class="metric">142 TFs · ~3.5 million sites</span>
+          <span class="metric">142 stress-responsive TFs</span>
           <h3>Genome-scale TF–DNA binding atlas</h3>
           <p>
-            Sorghum DAP-seq profiles spanning approximately 31% of the genome define a focused candidate space of TF–DNA interactions for cell-type-aware modeling and causal testing.
+            Sorghum DAP-seq profiles define genome-scale TF-binding potential and a focused candidate space of TF–CRE–target relationships that can be evaluated in the context of chromatin accessibility, transcriptional activity, and environmental response.
           </p>
         </div>
 
@@ -950,16 +976,16 @@
         </div>
 
         <div class="foundation-card">
-          <span class="metric">Prediction → validation → refinement</span>
-          <h3>Network-enabled gene discovery</h3>
+          <span class="metric">Mechanism → model → experiment</span>
+          <h3>Experimental and computational foundation</h3>
           <p>
-            NEEDLE, GENIE3, coexpression modeling, promoter analysis, and functional assays establish a practical workflow in which computational models generate focused biological hypotheses rather than serving as endpoints.
+            Arabidopsis stress-recovery genetics, NEEDLE, machine-learning-based network inference, promoter analysis, and functional assays establish a practical workflow for moving from genome-scale observations to experimentally validated regulatory mechanisms.
           </p>
         </div>
       </div>
 
       <p>
-        After establishing this core framework in sorghum roots, I will extend it selectively to stress recovery, additional crop systems, and—through collaboration—the influence of root regulatory states on root chemistry and microbial recruitment.
+        My long-term goal is to establish an experimentally grounded, predictive understanding of how gene regulatory networks enable plants to adapt to changing environments. As the program develops, I will extend MAP → PERTURB → PREDICT to stress recovery, combined environmental challenges, additional plant systems, and selected biotic interactions, asking which regulatory mechanisms are broadly conserved and which depend on genotype, cell type, or environmental history.
       </p>
     </section>
 
@@ -972,7 +998,7 @@
       </h2>
 
       <p class="section-intro">
-        Selected publications spanning AI-enabled regulator prediction, network modeling, multi-omics, functional genomics, and crop stress biology.
+        Selected publications spanning AI-enabled regulator prediction, causal regulatory biology, network modeling, multi-omics, functional genetics, and plant environmental adaptation.
       </p>
 
       <div class="publication-list">
@@ -999,18 +1025,29 @@
 
           <div class="publication-content">
             <h3 class="publication-title">
-              Predicting transcriptional regulators in plants in the era of artificial intelligence
-              <span class="status-badge">In press</span>
+              <a href="https://doi.org/10.1016/j.pbi.2026.102955">
+                Predicting transcriptional regulators in plants in the era of artificial intelligence
+              </a>
             </h3>
 
             <div class="citation">
               <strong>Ko DK</strong>, Brandizzi F
               <br>
-              Current Opinion in Plant Biology. 2026.
+              Curr Opin Plant Biol. 2026 Oct;93:102955.
+            </div>
+
+            <div class="publication-links">
+              <a href="https://doi.org/10.1016/j.pbi.2026.102955">
+                Article
+              </a>
+
+              <a href="https://pubmed.ncbi.nlm.nih.gov/42648065/">
+                PubMed
+              </a>
             </div>
 
             <div class="publication-note">
-              This review examines how network inference, multi-omics integration, and AI/ML can improve prediction of plant transcriptional regulators and argues for experimentally grounded, iteratively refined models that support biological discovery.
+              This review examines how network-enabled gene discovery, multi-omics integration, machine learning, deep learning, and emerging foundation-model approaches are reshaping prediction of plant transcriptional regulators and regulatory relationships, with the goal of building predictive models of plant gene regulation.
             </div>
           </div>
         </article>
@@ -1313,7 +1350,7 @@
       </h2>
 
       <p class="section-intro">
-        My current research is supported through competitive user-facility awards, an independent MSU award, and collaborative GLBRC research. These projects have generated the multimodal resources that underpin my causal and predictive regulatory-genomics program.
+        My current research is supported through competitive user-facility awards, an independent MSU award, and collaborative GLBRC research. These projects have generated the multimodal resources that underpin my program in causal and predictive regulatory genomics of plant environmental adaptation.
       </p>
 
       <div class="card-grid">
@@ -1354,27 +1391,27 @@
 
       <ul class="compact-list">
         <li>
-          Interpretable AI/ML for TF–cis-regulatory element–target prediction
+          Cell-type-specific TF–cis-regulatory element–target inference across drought, heat, and salinity
         </li>
 
         <li>
-          Time-resolved sorghum responses to drought, heat, salinity, and combined stresses
+          Interpretable machine-learning and network models evaluated with biologically structured holdouts
         </li>
 
         <li>
-          Genome-scale DAP-seq maps for 142 abiotic stress-responsive transcription factors
+          Genome-scale DAP-seq maps for 142 stress-responsive transcription factors integrated with root snMultiome data
         </li>
 
         <li>
-          Single-nucleus multiome analysis of stress-responsive root cell states
+          Staged causal testing through TF–promoter assays, CRE mutagenesis, pooled single-cell CRISPR perturbation, and selected whole-plant validation
         </li>
 
         <li>
-          Targeted pooled CRISPR perturbation and cis-regulatory element validation
+          Prospective prediction across genotypes, environments, and genotype × environment combinations
         </li>
 
         <li>
-          Regulatory variation and genotype-level prediction of crop stress resilience
+          Longer-term extension to stress recovery, combined environmental challenges, additional plant systems, and selected biotic interactions
         </li>
       </ul>
     </section>
