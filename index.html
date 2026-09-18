@@ -10,7 +10,7 @@
 
   <meta
     name="description"
-    content="Dae Kwan Ko is a plant systems biologist at Michigan State University developing causal and predictive regulatory-genomics approaches to understand plant environmental adaptation across genotypes and environments using cell-type-resolved multi-omics, functional genetics, and interpretable modeling.">
+    content="Dae Kwan Ko is a plant systems biologist at Michigan State University developing causal and predictive regulatory-genomics approaches that integrate interpretable AI/ML, single-cell multi-omics, TF–DNA binding maps, and experimental validation to understand plant environmental adaptation.">
 
   <meta
     property="og:title"
@@ -18,7 +18,7 @@
 
   <meta
     property="og:description"
-    content="Causal and predictive regulatory genomics of plant environmental adaptation, integrating cell-type-resolved multi-omics, functional genetics, and interpretable modeling.">
+    content="Plant systems biologist developing causal and predictive regulatory-genomics approaches for plant environmental adaptation.">
 
   <meta property="og:type" content="website">
 
@@ -54,10 +54,13 @@
       --muted: #666666;
       --border: #e4e4e4;
       --accent: #18453b;
+      --accent-dark: #12382f;
       --accent-light: #eef5f2;
+      --accent-soft: #f7faf8;
       --link: #0b57d0;
-      --max-width: 980px;
-      --shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+      --max-width: 1040px;
+      --shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+      --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.08);
     }
 
     * {
@@ -93,6 +96,11 @@
       text-decoration: underline;
     }
 
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
     img,
     video {
       display: block;
@@ -103,75 +111,140 @@
       width: 100%;
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 0 20px 48px;
+      padding: 0 22px 54px;
     }
 
     .site-header {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(255, 255, 255, 0.96);
+      background: rgba(255, 255, 255, 0.97);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
     }
 
     .site-header-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 12px 22px 0;
+    }
+
+    .header-top {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 14px 20px;
+      gap: 20px;
+      padding-bottom: 10px;
     }
 
     .site-title {
       color: var(--accent);
-      font-size: 1rem;
-      font-weight: 700;
+      font-size: 1.02rem;
+      font-weight: 750;
+      letter-spacing: 0.01em;
       white-space: nowrap;
     }
 
-    .site-nav {
+    .header-links {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 10px;
-      font-size: 0.92rem;
+      justify-content: flex-end;
+      gap: 10px 16px;
+      font-size: 0.9rem;
     }
 
-    .site-nav a {
-      padding: 4px 8px;
+    .header-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
       color: var(--text);
-      border-radius: 999px;
     }
 
-    .site-nav a:hover,
-    .site-nav a:focus {
+    .header-links a:hover,
+    .header-links a:focus {
       color: var(--accent);
-      background: var(--accent-light);
-      text-decoration: none;
+    }
+
+    .tab-nav-wrap {
+      overflow-x: auto;
+      scrollbar-width: thin;
+    }
+
+    .tab-nav {
+      display: flex;
+      align-items: flex-end;
+      gap: 6px;
+      min-width: max-content;
+    }
+
+    .tab-button {
+      appearance: none;
+      margin: 0;
+      padding: 10px 13px 11px;
+      color: var(--muted);
+      background: transparent;
+      border: 0;
+      border-bottom: 3px solid transparent;
+      cursor: pointer;
+      font: inherit;
+      font-size: 0.94rem;
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    .tab-button:hover,
+    .tab-button:focus-visible {
+      color: var(--accent);
+      background: var(--accent-soft);
+      outline: none;
+    }
+
+    .tab-button[aria-selected="true"] {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    .tab-panel {
+      padding-top: 34px;
+      animation: panelFade 180ms ease-out;
+    }
+
+    .tab-panel[hidden] {
+      display: none;
+    }
+
+    @keyframes panelFade {
+      from {
+        opacity: 0;
+        transform: translateY(4px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .hero {
       display: grid;
-      grid-template-columns: 1.7fr 1fr;
-      gap: 32px;
+      grid-template-columns: minmax(0, 1.7fr) minmax(220px, 0.8fr);
+      gap: 38px;
       align-items: center;
-      padding: 36px 0 22px;
+      padding: 4px 0 20px;
     }
 
     .hero h1 {
       margin: 0 0 10px;
-      font-size: 2.25rem;
-      line-height: 1.15;
+      font-size: 2.35rem;
+      line-height: 1.14;
+      letter-spacing: -0.02em;
     }
 
     .tagline {
-      margin: 0 0 16px;
+      margin: 0 0 17px;
       color: var(--accent);
       font-size: 1.08rem;
-      font-weight: 600;
+      font-weight: 650;
     }
 
     .hero p {
@@ -180,7 +253,7 @@
 
     .hero-photo img {
       width: 100%;
-      max-width: 280px;
+      max-width: 275px;
       margin-left: auto;
       border-radius: 18px;
       box-shadow: var(--shadow);
@@ -190,9 +263,9 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 12px 16px;
-      margin-top: 18px;
-      font-size: 0.96rem;
+      gap: 11px 16px;
+      margin-top: 20px;
+      font-size: 0.94rem;
     }
 
     .social-links a {
@@ -202,38 +275,61 @@
       color: var(--text);
     }
 
+    .social-links a:hover,
+    .social-links a:focus {
+      color: var(--accent);
+    }
+
     .social-links i {
-      font-size: 1.05rem;
+      font-size: 1.02rem;
     }
 
-    section {
-      padding-top: 28px;
-      scroll-margin-top: 88px;
+    .section-block {
+      margin-top: 34px;
     }
 
-    section h2 {
+    .section-block:first-child {
+      margin-top: 0;
+    }
+
+    .section-block > h2,
+    .tab-panel > h2 {
       margin: 0 0 12px;
       color: var(--accent);
-      font-size: 1.55rem;
+      font-size: 1.65rem;
+      line-height: 1.25;
     }
 
-    section h3 {
-      margin: 18px 0 8px;
-      color: var(--text);
-      font-size: 1.15rem;
+    .section-block > h3,
+    .tab-panel > h3 {
+      margin: 24px 0 10px;
+      font-size: 1.16rem;
     }
 
     .section-intro {
-      margin-bottom: 18px;
+      max-width: 880px;
+      margin: 0 0 20px;
+    }
+
+    .eyebrow {
+      margin-bottom: 7px;
+      color: var(--accent);
+      font-size: 0.76rem;
+      font-weight: 750;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .lead {
+      font-size: 1.05rem;
     }
 
     .recognition-box {
       display: grid;
-      grid-template-columns: minmax(240px, 38%) 1fr;
-      gap: 22px;
+      grid-template-columns: minmax(235px, 36%) 1fr;
+      gap: 24px;
       align-items: center;
       padding: 18px;
-      margin: 4px 0 8px;
       background: var(--accent-light);
       border: 1px solid #d7e6df;
       border-left: 5px solid var(--accent);
@@ -249,21 +345,20 @@
       width: 100%;
       border-radius: 12px;
       object-fit: cover;
-      box-shadow: var(--shadow);
     }
 
     .recognition-image figcaption {
       margin-top: 6px;
       color: var(--muted);
-      font-size: 0.82rem;
-      line-height: 1.4;
+      font-size: 0.8rem;
+      line-height: 1.35;
       text-align: right;
     }
 
-    .recognition-content h2 {
+    .recognition-content h3 {
       margin: 0 0 8px;
       color: var(--accent);
-      font-size: 1.35rem;
+      font-size: 1.23rem;
     }
 
     .recognition-content p {
@@ -271,75 +366,28 @@
     }
 
     .recognition-links {
-      margin-top: 8px;
-      font-size: 0.95rem;
+      margin-top: 9px;
+      font-size: 0.94rem;
     }
 
-    .recognition-links a + a::before {
+    .recognition-links a + a::before,
+    .publication-links a + a::before {
       content: " / ";
       color: var(--muted);
     }
 
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin: 16px 0 8px;
-    }
-
-    .card {
-      padding: 16px;
-      background: #ffffff;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      box-shadow: var(--shadow);
-    }
-
-    .card h3 {
-      margin-top: 0;
-      color: var(--accent);
-    }
-
-    .card p {
-      margin-bottom: 0;
-    }
-
-    .compact-list {
-      margin-top: 8px;
-      padding-left: 20px;
-    }
-
-    .compact-list li {
-      margin-bottom: 6px;
-    }
-
-    .notice-box {
-      padding: 16px 18px;
-      margin: 16px 0;
-      background: var(--accent-light);
-      border: 1px solid #d7e6df;
-      border-radius: 16px;
-    }
-
-    .notice-box h3 {
-      margin-top: 0;
-      color: var(--accent);
-    }
-
-
     .research-question {
-      padding: 18px 20px;
-      margin: 16px 0;
-      background: #ffffff;
-      border: 1px solid var(--border);
+      padding: 20px 22px;
+      margin: 18px 0 24px;
+      background: var(--accent-soft);
+      border: 1px solid #dfe9e4;
       border-left: 5px solid var(--accent);
-      border-radius: 16px;
-      box-shadow: var(--shadow);
+      border-radius: 15px;
     }
 
     .research-question p {
       margin: 0;
-      font-size: 1.05rem;
+      font-size: 1.08rem;
     }
 
     .research-framework {
@@ -375,9 +423,9 @@
       color: #ffffff;
       background: var(--accent);
       border-radius: 999px;
-      font-size: 0.76rem;
-      font-weight: 700;
-      letter-spacing: 0.06em;
+      font-size: 0.75rem;
+      font-weight: 750;
+      letter-spacing: 0.07em;
     }
 
     .framework-arrow {
@@ -386,12 +434,12 @@
       justify-content: center;
       color: var(--accent);
       font-size: 1.5rem;
-      font-weight: 700;
+      font-weight: 750;
     }
 
     .modeling-principles {
       padding: 16px 18px;
-      margin: 16px 0 22px;
+      margin: 16px 0 26px;
       background: #f8faf9;
       border: 1px dashed #b9cec5;
       border-radius: 14px;
@@ -401,50 +449,139 @@
       color: var(--accent);
     }
 
-    .causal-chain {
-      margin: 16px 0 22px;
-      padding: 14px 18px;
-      color: var(--accent);
-      background: #ffffff;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      box-shadow: var(--shadow);
-      font-weight: 700;
-      text-align: center;
-      line-height: 1.6;
-    }
-
-    .foundation-grid {
+    .foundation-grid,
+    .card-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
       gap: 14px;
       margin: 16px 0 8px;
     }
 
-    .foundation-card {
-      padding: 16px;
+    .foundation-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .foundation-card,
+    .card {
+      padding: 17px;
       background: #ffffff;
       border: 1px solid var(--border);
       border-radius: 14px;
       box-shadow: var(--shadow);
     }
 
-    .foundation-card h3 {
-      margin: 0 0 7px;
+    .foundation-card h3,
+    .card h3 {
+      margin: 0 0 8px;
       color: var(--accent);
+      font-size: 1.08rem;
     }
 
-    .foundation-card p {
+    .foundation-card p,
+    .card p {
       margin: 0;
     }
 
     .metric {
       display: block;
-      margin-bottom: 4px;
+      margin-bottom: 5px;
       color: var(--accent);
-      font-size: 1.35rem;
+      font-size: 1.23rem;
       font-weight: 750;
       line-height: 1.25;
+    }
+
+    .trajectory {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .trajectory-item {
+      padding: 15px;
+      background: var(--accent-soft);
+      border: 1px solid #e0e8e4;
+      border-radius: 13px;
+    }
+
+    .trajectory-item strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--accent);
+    }
+
+    .trajectory-item p {
+      margin: 0;
+      font-size: 0.92rem;
+    }
+
+    .publication-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .publication {
+      display: grid;
+      grid-template-columns: 190px 1fr;
+      gap: 20px;
+      padding: 18px;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      transition:
+        transform 160ms ease,
+        box-shadow 160ms ease;
+    }
+
+    .publication:hover {
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .publication-media img,
+    .publication-media video {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .publication-title {
+      margin: 0 0 6px;
+      font-size: 1.08rem;
+      line-height: 1.35;
+    }
+
+    .publication-title a {
+      color: var(--text);
+    }
+
+    .publication-title a:hover,
+    .publication-title a:focus {
+      color: var(--link);
+    }
+
+    .citation,
+    .publication-links,
+    .publication-note {
+      font-size: 0.95rem;
+    }
+
+    .citation {
+      margin-bottom: 6px;
+    }
+
+    .publication-links {
+      margin-bottom: 10px;
+      color: var(--muted);
+    }
+
+    .publication-note {
+      color: var(--text);
     }
 
     .publication-pdf-preview {
@@ -483,82 +620,6 @@
       text-align: center;
     }
 
-    .status-badge {
-      display: inline-block;
-      margin-left: 6px;
-      padding: 2px 8px;
-      color: var(--accent);
-      background: var(--accent-light);
-      border: 1px solid #d7e6df;
-      border-radius: 999px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      vertical-align: middle;
-    }
-
-    .publication-list {
-      display: grid;
-      gap: 18px;
-    }
-
-    .publication {
-      display: grid;
-      grid-template-columns: 190px 1fr;
-      gap: 20px;
-      padding: 18px;
-      background: #ffffff;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      box-shadow: var(--shadow);
-    }
-
-    .publication-media img,
-    .publication-media video {
-      width: 100%;
-      border-radius: 10px;
-      object-fit: cover;
-    }
-
-    .publication-title {
-      margin: 0 0 6px;
-      font-size: 1.08rem;
-      line-height: 1.35;
-    }
-
-    .publication-title a {
-      color: var(--text);
-    }
-
-    .publication-title a:hover,
-    .publication-title a:focus {
-      color: var(--link);
-    }
-
-    .citation,
-    .publication-links,
-    .publication-note {
-      font-size: 0.96rem;
-    }
-
-    .citation {
-      margin-bottom: 6px;
-      color: var(--text);
-    }
-
-    .publication-links {
-      margin-bottom: 10px;
-      color: var(--muted);
-    }
-
-    .publication-links a + a::before {
-      content: " / ";
-      color: var(--muted);
-    }
-
-    .publication-note {
-      color: var(--text);
-    }
-
     .video-wrapper {
       position: relative;
       width: 100%;
@@ -577,29 +638,55 @@
       border: 0;
     }
 
+    .compact-list {
+      margin-top: 8px;
+      padding-left: 20px;
+    }
+
+    .compact-list li {
+      margin-bottom: 7px;
+    }
+
+    .callout {
+      padding: 17px 19px;
+      margin-top: 22px;
+      background: var(--accent-light);
+      border: 1px solid #d7e6df;
+      border-radius: 14px;
+    }
+
+    .callout p {
+      margin: 0;
+    }
+
     .site-footer {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 10px 20px 36px;
+      padding: 12px 22px 34px;
       color: var(--muted);
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       text-align: right;
+      border-top: 1px solid var(--border);
     }
 
-    @media (max-width: 880px) {
+    @media (max-width: 920px) {
+      .trajectory {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
       .card-grid {
         grid-template-columns: 1fr;
       }
     }
 
-    @media (max-width: 800px) {
-
+    @media (max-width: 820px) {
       .research-framework {
         grid-template-columns: 1fr;
       }
 
       .framework-arrow {
         transform: rotate(90deg);
+        min-height: 16px;
       }
 
       .foundation-grid {
@@ -611,8 +698,8 @@
       }
 
       .hero-photo img {
-        max-width: 240px;
-        margin: 0 auto;
+        max-width: 235px;
+        margin: 4px auto 0;
       }
 
       .publication {
@@ -620,11 +707,9 @@
       }
 
       .publication-media {
-        max-width: 240px;
+        max-width: 250px;
       }
-    }
 
-    @media (max-width: 700px) {
       .recognition-box {
         grid-template-columns: 1fr;
       }
@@ -634,18 +719,23 @@
       }
     }
 
-    @media (max-width: 560px) {
-      .site-header-inner {
-        flex-direction: column;
+    @media (max-width: 650px) {
+      .header-top {
         align-items: flex-start;
+        flex-direction: column;
+        gap: 7px;
+      }
+
+      .header-links {
+        justify-content: flex-start;
       }
 
       .hero h1 {
-        font-size: 1.8rem;
+        font-size: 1.9rem;
       }
 
-      .social-links {
-        gap: 10px 14px;
+      .trajectory {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -671,334 +761,444 @@
 <body>
   <header class="site-header">
     <div class="site-header-inner">
-      <div class="site-title">
-        Dae Kwan Ko
-      </div>
+      <div class="header-top">
+        <div class="site-title">
+          Dae Kwan Ko
+        </div>
 
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a href="#about">Home</a>
-        <a href="#recognition">Recognition</a>
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#funding">Funding &amp; Projects</a>
-        <a href="#teaching">Teaching</a>
-        <a href="data/CV_DaeKwanKo.pdf">CV</a>
-
-        <a
-          href="https://scholar.google.com/citations?hl=en&user=MXSf08oAAAAJ&view_op=list_works&sortby=pubdate">
-          Google Scholar
-        </a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <section
-      id="about"
-      class="hero"
-      aria-labelledby="page-title">
-
-      <div class="hero-text">
-        <h1 id="page-title">
-          Dae Kwan Ko, Ph.D.
-        </h1>
-
-        <p class="tagline">
-          Causal and predictive regulatory genomics · Cell-type-resolved multi-omics · Functional genetics · Interpretable modeling
-        </p>
-
-        <p>
-          I am an Assistant Professor — Fixed Term in
-          <a href="https://prl.natsci.msu.edu">
-            the Plant Research Laboratory
-          </a>,
-          <a href="https://plantbiology.natsci.msu.edu">
-            the Department of Plant Biology
-          </a>,
-          and
-          <a href="https://www.glbrc.org">
-            the Great Lakes Bioenergy Research Center (GLBRC)
-          </a>
-          at Michigan State University.
-        </p>
-
-        <p>
-          My research program asks how cell-type-specific gene regulatory networks translate environmental change into adaptive plant responses, and whether experimentally supported regulatory rules can predict resilience across genotypes and environments. I integrate time-resolved transcriptomics, single-nucleus multiome profiling, transcription factor–DNA binding maps, functional genetics, molecular perturbation, and interpretable modeling to move from regulatory inference to causal testing and prospective prediction.
-        </p>
-
-        <p>
-          At MSU, I lead independent projects in sorghum environmental-stress genomics, regulatory-network inference, and network-enabled gene discovery. I serve as Principal Investigator on three competitive DOE Joint Genome Institute user projects and an
-          <a href="https://www.canr.msu.edu/project-greeen/index">
-            MSU Project GREEEN
-          </a>
-          award. My broader research is also supported through GLBRC within the Brandizzi Lab.
-        </p>
-
-        <div
-          class="social-links"
-          aria-label="Professional profile links">
-
-          <a
-            href="mailto:dkko@msu.edu"
-            aria-label="Email Dae Kwan Ko">
-
-            <i
-              class="fa-solid fa-envelope"
-              aria-hidden="true">
-            </i>
-
-            <span>Email</span>
-          </a>
-
-          <a
-            href="data/CV_DaeKwanKo.pdf"
-            aria-label="Download CV">
-
-            <i
-              class="ai ai-cv"
-              aria-hidden="true">
-            </i>
-
+        <div class="header-links" aria-label="External profile links">
+          <a href="data/CV_DaeKwanKo.pdf">
+            <i class="ai ai-cv" aria-hidden="true"></i>
             <span>CV</span>
           </a>
 
           <a
-            href="https://github.com/DaeKwan-Ko/"
-            aria-label="GitHub profile">
-
-            <i
-              class="fa-brands fa-github"
-              aria-hidden="true">
-            </i>
-
-            <span>GitHub</span>
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/daekwanko/"
-            aria-label="LinkedIn profile">
-
-            <i
-              class="fa-brands fa-linkedin"
-              aria-hidden="true">
-            </i>
-
-            <span>LinkedIn</span>
-          </a>
-
-          <a
-            href="https://twitter.com/DaeKwan_Ko"
-            aria-label="X profile">
-
-            <i
-              class="fa-brands fa-twitter"
-              aria-hidden="true">
-            </i>
-
-            <span>X</span>
-          </a>
-
-          <a
-            href="data/DaeKwanKo_bio.txt"
-            aria-label="Open Dae Kwan Ko's short biography">
-
-            <i
-              class="fa-solid fa-file-lines"
-              aria-hidden="true">
-            </i>
-
-            <span>Short Bio</span>
-          </a>
-
-          <a
             href="https://scholar.google.com/citations?hl=en&user=MXSf08oAAAAJ&view_op=list_works&sortby=pubdate">
-            Google Scholar
+            <i class="ai ai-google-scholar" aria-hidden="true"></i>
+            <span>Google Scholar</span>
+          </a>
+
+          <a href="mailto:dkko@msu.edu">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            <span>Email</span>
           </a>
         </div>
       </div>
 
-      <div class="hero-photo">
-        <a href="images/DaeKwanKo_headshot.jpeg">
-          <img
-            src="images/DaeKwanKo_headshot.jpeg"
-            alt="Portrait of Dae Kwan Ko"
-            loading="eager">
-        </a>
+      <div class="tab-nav-wrap">
+        <nav
+          class="tab-nav"
+          role="tablist"
+          aria-label="Website sections">
+
+          <button
+            class="tab-button"
+            id="tab-about"
+            type="button"
+            role="tab"
+            aria-selected="true"
+            aria-controls="panel-about"
+            data-tab="about">
+            About
+          </button>
+
+          <button
+            class="tab-button"
+            id="tab-research"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-research"
+            data-tab="research">
+            Research
+          </button>
+
+          <button
+            class="tab-button"
+            id="tab-publications"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-publications"
+            data-tab="publications">
+            Publications
+          </button>
+
+          <button
+            class="tab-button"
+            id="tab-projects"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-projects"
+            data-tab="projects">
+            Support &amp; Projects
+          </button>
+
+          <button
+            class="tab-button"
+            id="tab-teaching"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-teaching"
+            data-tab="teaching">
+            Teaching &amp; Mentoring
+          </button>
+        </nav>
       </div>
-    </section>
+    </div>
+  </header>
 
+  <main class="container">
+    <!-- ABOUT -->
     <section
-      id="recognition"
-      aria-labelledby="recognition-heading">
+      class="tab-panel"
+      id="panel-about"
+      role="tabpanel"
+      aria-labelledby="tab-about"
+      data-panel="about">
 
-      <div class="recognition-box">
-        <figure class="recognition-image">
-          <img
-            src="images/YaopingZhangAward_2026.jpeg"
-            alt="Dae Kwan Ko giving remarks after receiving the 2026 Yaoping Zhang Bioenergy Research Award"
-            loading="lazy">
+      <div class="hero">
+        <div class="hero-text">
+          <div class="eyebrow">Plant systems biology &amp; regulatory genomics</div>
 
-          <figcaption>
-            Photo credit: Federica Brandizzi
-          </figcaption>
-        </figure>
+          <h1>Dae Kwan Ko, Ph.D.</h1>
 
-        <div class="recognition-content">
-          <h2 id="recognition-heading">
-            Recent Recognition
-          </h2>
+          <p class="tagline">
+            Causal and predictive regulatory genomics · Interpretable AI/ML · Single-cell multi-omics · Plant environmental adaptation
+          </p>
 
           <p>
-            <strong>
+            I am an Assistant Professor—Fixed Term in the
+            <a href="https://prl.natsci.msu.edu">
+              MSU-DOE Plant Research Laboratory
+            </a>
+            and
+            <a href="https://plantbiology.natsci.msu.edu">
+              Department of Plant Biology
+            </a>
+            at Michigan State University, and an affiliate of the
+            <a href="https://www.glbrc.org">
+              Great Lakes Bioenergy Research Center
+            </a>.
+          </p>
+
+          <p>
+            My research seeks to understand how gene regulatory networks translate environmental change into adaptive molecular states and plant performance. I combine regulatory genomics, single-cell and multi-omics technologies, functional genetics, and interpretable AI/ML to move from descriptive regulatory maps toward experimentally supported and predictive biological models.
+          </p>
+
+          <p>
+            My work spans Arabidopsis, maize, Brachypodium, and sorghum, with current emphasis on environmental stress responses in sorghum. At MSU, I lead independent DOE Joint Genome Institute user projects and an MSU Project GREEEN project while contributing to collaborative GLBRC research.
+          </p>
+
+          <div
+            class="social-links"
+            aria-label="Professional profile links">
+
+            <a href="mailto:dkko@msu.edu">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              <span>Email</span>
+            </a>
+
+            <a href="data/CV_DaeKwanKo.pdf">
+              <i class="ai ai-cv" aria-hidden="true"></i>
+              <span>CV</span>
+            </a>
+
+            <a href="https://github.com/DaeKwan-Ko/">
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+              <span>GitHub</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/daekwanko/">
+              <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+              <span>LinkedIn</span>
+            </a>
+
+            <a href="https://twitter.com/DaeKwan_Ko">
+              <i class="fa-brands fa-twitter" aria-hidden="true"></i>
+              <span>X</span>
+            </a>
+
+            <a
+              href="data/DaeKwanKo_bio.txt"
+              aria-label="Open Dae Kwan Ko's short biography">
+              <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
+              <span>Short Bio</span>
+            </a>
+
+            <a
+              href="https://scholar.google.com/citations?hl=en&user=MXSf08oAAAAJ&view_op=list_works&sortby=pubdate">
+              <i class="ai ai-google-scholar" aria-hidden="true"></i>
+              <span>Google Scholar</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-photo">
+          <a href="images/DaeKwanKo_headshot.jpeg">
+            <img
+              src="images/DaeKwanKo_headshot.jpeg"
+              alt="Portrait of Dae Kwan Ko"
+              loading="eager">
+          </a>
+        </div>
+      </div>
+
+      <div class="section-block">
+        <div class="recognition-box">
+          <figure class="recognition-image">
+            <img
+              src="images/YaopingZhangAward_2026.jpeg"
+              alt="Dae Kwan Ko giving remarks after receiving the 2026 Yaoping Zhang Bioenergy Research Award"
+              loading="lazy">
+
+            <figcaption>
+              Photo credit: Federica Brandizzi
+            </figcaption>
+          </figure>
+
+          <div class="recognition-content">
+            <div class="eyebrow">Recent recognition</div>
+
+            <h3>
               2026 Yaoping Zhang Bioenergy Research Award
-            </strong>
-            <br>
-            Great Lakes Bioenergy Research Center
-          </p>
+            </h3>
 
-          <p>
-            Recognized for contributions to systems-level gene discovery, regulatory genomics, and research advancing the understanding of plant resilience in bioenergy crops.
-          </p>
+            <p>
+              Great Lakes Bioenergy Research Center
+            </p>
 
-          <div class="recognition-links">
-            <a
-              href="https://www.glbrc.org/yaoping-zhang-bioenergy-research-award">
-              Award page
-            </a>
+            <p>
+              Recognized for contributions to systems-level gene discovery, regulatory genomics, and research advancing the understanding of plant resilience in bioenergy crops.
+            </p>
 
-            <a
-              href="https://www.glbrc.org/news/system-approach-innovations-improve-understanding-plant-resilience">
-              Researcher profile
-            </a>
+            <div class="recognition-links">
+              <a
+                href="https://www.glbrc.org/yaoping-zhang-bioenergy-research-award">
+                Award page
+              </a>
+
+              <a
+                href="https://www.glbrc.org/news/system-approach-innovations-improve-understanding-plant-resilience">
+                Researcher profile
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- RESEARCH -->
     <section
-      id="research"
-      aria-labelledby="research-heading">
+      class="tab-panel"
+      id="panel-research"
+      role="tabpanel"
+      aria-labelledby="tab-research"
+      data-panel="research"
+      hidden>
 
-      <h2 id="research-heading">
-        Research Program
+      <div class="eyebrow">Research overview</div>
+
+      <h2>
+        Causal and Predictive Regulatory Genomics of Plant Environmental Adaptation
       </h2>
 
-      <p class="section-intro">
-        Plants continuously adjust growth, physiology, and development as environments change, yet the regulatory mechanisms that determine whether these responses lead to adaptation or loss of performance remain incompletely understood. Genomic and single-nucleus technologies can now resolve transcription factor activity, chromatin accessibility, and gene expression at cell-type resolution, but most regulatory maps remain correlative. My program focuses on identifying which TF–cis-regulatory element–target relationships functionally control environmental responses and whether those experimentally supported rules remain predictive beyond the conditions in which they were discovered.
+      <p class="section-intro lead">
+        Modern genomics can reveal where transcription factors bind, which chromatin regions are accessible, and which genes respond to environmental change. My research asks the next question: which regulatory relationships are functionally important, and can experimentally supported regulatory rules predict plant responses beyond the conditions in which they were discovered?
       </p>
 
       <div class="research-question">
         <p>
           <strong>Central question:</strong>
-          How do cell-type-specific regulatory networks translate environmental change into adaptive plant responses, and can experimentally supported regulatory rules predict resilience across genotypes and environments?
+          How do cell-type-specific regulatory networks translate environmental change into adaptive states, and can experimentally supported regulatory rules predict resilience across genotypes and environments?
         </p>
       </div>
 
-      <div class="notice-box">
+      <div class="section-block">
+        <h3>MAP → PERTURB → PREDICT</h3>
+
+        <div
+          class="research-framework"
+          aria-label="MAP, PERTURB, PREDICT research framework">
+
+          <div class="framework-step">
+            <span class="step-label">MAP</span>
+
+            <h3>
+              Define regulatory programs
+            </h3>
+
+            <p>
+              Integrate transcriptomic, chromatin, TF-binding, sequence, and cell-type information to identify regulatory relationships associated with plant responses to environmental change.
+            </p>
+          </div>
+
+          <div class="framework-arrow" aria-hidden="true">→</div>
+
+          <div class="framework-step">
+            <span class="step-label">PERTURB</span>
+
+            <h3>
+              Test causal relationships
+            </h3>
+
+            <p>
+              Experimentally evaluate prioritized transcription factors and cis-regulatory elements to distinguish functional mechanisms from correlative associations.
+            </p>
+          </div>
+
+          <div class="framework-arrow" aria-hidden="true">→</div>
+
+          <div class="framework-step">
+            <span class="step-label">PREDICT</span>
+
+            <h3>
+              Predict adaptation
+            </h3>
+
+            <p>
+              Build experimentally informed models that test whether regulatory principles generalize across genetic backgrounds, environmental conditions, and biological contexts.
+            </p>
+          </div>
+        </div>
+
+        <div class="modeling-principles">
+          <strong>Approach:</strong>
+          I use interpretable and data-efficient modeling as a tool for biological discovery. Computational predictions guide focused experiments, and experimental outcomes refine subsequent models.
+        </div>
+      </div>
+
+      <div class="section-block">
         <h3>
-          From regulatory maps to causal mechanisms
+          Experimental and Computational Foundation
         </h3>
+
+        <p class="section-intro">
+          The program builds on datasets, methods, and biological systems that I have already established.
+        </p>
+
+        <div class="foundation-grid">
+          <div class="foundation-card">
+            <span class="metric">Dynamic stress transcriptomes</span>
+
+            <h3>
+              Environmental-response programs
+            </h3>
+
+            <p>
+              Time-resolved transcriptomic resources across drought, heat, salinity, and related stress contexts provide temporal and tissue-level views of plant regulatory responses.
+            </p>
+          </div>
+
+          <div class="foundation-card">
+            <span class="metric">142 sorghum TFs</span>
+
+            <h3>
+              Genome-scale TF–DNA binding maps
+            </h3>
+
+            <p>
+              DAP-seq profiles define millions of candidate TF–DNA interactions and provide a genome-scale foundation for regulatory-network reconstruction.
+            </p>
+          </div>
+
+          <div class="foundation-card">
+            <span class="metric">RNA + chromatin</span>
+
+            <h3>
+              Single-nucleus multi-omics
+            </h3>
+
+            <p>
+              Root snMultiome profiling links transcriptional states with chromatin accessibility to resolve cell-type-specific regulatory responses.
+            </p>
+          </div>
+
+          <div class="foundation-card">
+            <span class="metric">Prediction → experiment</span>
+
+            <h3>
+              Network-enabled gene discovery
+            </h3>
+
+            <p>
+              NEEDLE and related network approaches combine computational prioritization with experimental validation so that models generate testable biological hypotheses rather than serving as endpoints.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-block">
+        <h3>
+          Research Trajectory
+        </h3>
+
+        <div class="trajectory">
+          <div class="trajectory-item">
+            <strong>Regulatory dynamics</strong>
+
+            <p>
+              Circadian and transcriptional regulation underlying biomass heterosis in maize.
+            </p>
+          </div>
+
+          <div class="trajectory-item">
+            <strong>Mechanistic stress biology</strong>
+
+            <p>
+              Regulatory networks controlling proteotoxic stress adaptation, recovery, and cell fate in Arabidopsis.
+            </p>
+          </div>
+
+          <div class="trajectory-item">
+            <strong>Network-enabled discovery</strong>
+
+            <p>
+              Integrative modeling and validation workflows for prioritizing plant transcriptional regulators.
+            </p>
+          </div>
+
+          <div class="trajectory-item">
+            <strong>Predictive regulatory genomics</strong>
+
+            <p>
+              Cell-type-resolved, experimentally grounded models of plant environmental adaptation.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout">
         <p>
-          My research has progressed from mechanistic studies of Arabidopsis stress adaptation and recovery, through development of the network-enabled gene discovery framework NEEDLE, to integrated regulatory genomics in sorghum. This progression established a principle that now guides my laboratory: computational and genomic analyses are most informative when they generate mechanistic hypotheses that can be challenged experimentally and then used to improve prediction.
+          <strong>Long-term direction:</strong>
+          My goal is to identify transferable regulatory principles that explain how plants adapt to changing environments and to use those principles to guide mechanistic discovery and crop resilience research across plant systems.
         </p>
       </div>
-
-      <h3>
-        MAP → PERTURB → PREDICT
-      </h3>
-
-      <div class="research-framework" aria-label="Research framework">
-        <div class="framework-step">
-          <span class="step-label">MAP</span>
-          <h3>Define regulatory programs</h3>
-          <p>
-            Integrate time-resolved transcriptomes, DNA sequence and motif features, DAP-seq binding maps, chromatin accessibility, and gene expression to define cell-type-specific TF–cis-regulatory element–target relationships and distinguish shared from environment-specific programs across drought, heat, and salinity.
-          </p>
-        </div>
-
-        <div class="framework-arrow" aria-hidden="true">→</div>
-
-        <div class="framework-step">
-          <span class="step-label">PERTURB</span>
-          <h3>Establish causal mechanisms</h3>
-          <p>
-            Advance prioritized TF–CRE–target hypotheses through staged perturbation: transient TF–promoter assays and CRE mutagenesis, focused pooled CRISPR perturbation with single-cell transcriptomic readouts, and whole-plant validation for the strongest mechanisms.
-          </p>
-        </div>
-
-        <div class="framework-arrow" aria-hidden="true">→</div>
-
-        <div class="framework-step">
-          <span class="step-label">PREDICT</span>
-          <h3>Test generalization across contexts</h3>
-          <p>
-            Determine whether experimentally supported regulatory rules and natural variation in TFs and cis-regulatory elements predict molecular responses, physiology, growth, recovery, and plant performance across genotypes, environments, and genotype × environment combinations.
-          </p>
-        </div>
-      </div>
-
-      <div class="modeling-principles">
-        <strong>Modeling principles:</strong>
-        interpretable machine-learning and network models; biologically structured holdouts in which entire environmental, temporal, or genetic contexts are excluded from training; prospective prediction rather than random partitioning of individual nuclei; and iterative model–experiment refinement in which both successful and failed predictions reveal biological structure.
-      </div>
-
-      <div class="causal-chain" aria-label="Causal progression from environment and regulatory variation to plant performance">
-        environment + regulatory variation → regulatory state → physiological response → plant performance
-      </div>
-
-      <h3>
-        Current Foundation
-      </h3>
-
-      <div class="foundation-grid">
-        <div class="foundation-card">
-          <span class="metric">Drought · Heat · Salinity</span>
-          <h3>Time-resolved stress transcriptomes</h3>
-          <p>
-            Root and shoot RNA-seq resources define shared, tissue-specific, and stress-specific transcriptional responses and provide temporal evidence for candidate regulatory programs.
-          </p>
-        </div>
-
-        <div class="foundation-card">
-          <span class="metric">142 stress-responsive TFs</span>
-          <h3>Genome-scale TF–DNA binding atlas</h3>
-          <p>
-            Sorghum DAP-seq profiles define genome-scale TF-binding potential and a focused candidate space of TF–CRE–target relationships that can be evaluated in the context of chromatin accessibility, transcriptional activity, and environmental response.
-          </p>
-        </div>
-
-        <div class="foundation-card">
-          <span class="metric">RNA + chromatin in the same nucleus</span>
-          <h3>Root single-nucleus multiome</h3>
-          <p>
-            Control and salinity-stressed sorghum roots reveal cell-type-specific transcriptional and chromatin-accessibility states, including distinct responses in cortex and pericycle populations.
-          </p>
-        </div>
-
-        <div class="foundation-card">
-          <span class="metric">Mechanism → model → experiment</span>
-          <h3>Experimental and computational foundation</h3>
-          <p>
-            Arabidopsis stress-recovery genetics, NEEDLE, machine-learning-based network inference, promoter analysis, and functional assays establish a practical workflow for moving from genome-scale observations to experimentally validated regulatory mechanisms.
-          </p>
-        </div>
-      </div>
-
-      <p>
-        My long-term goal is to establish an experimentally grounded, predictive understanding of how gene regulatory networks enable plants to adapt to changing environments. As the program develops, I will extend MAP → PERTURB → PREDICT to stress recovery, combined environmental challenges, additional plant systems, and selected biotic interactions, asking which regulatory mechanisms are broadly conserved and which depend on genotype, cell type, or environmental history.
-      </p>
     </section>
 
+    <!-- PUBLICATIONS -->
     <section
-      id="publications"
-      aria-labelledby="publications-heading">
+      class="tab-panel"
+      id="panel-publications"
+      role="tabpanel"
+      aria-labelledby="tab-publications"
+      data-panel="publications"
+      hidden>
 
-      <h2 id="publications-heading">
+      <div class="eyebrow">Selected work</div>
+
+      <h2>
         Selected Publications
       </h2>
 
       <p class="section-intro">
-        Selected publications spanning AI-enabled regulator prediction, causal regulatory biology, network modeling, multi-omics, functional genetics, and plant environmental adaptation.
+        Representative publications spanning AI-enabled regulator prediction, network modeling, multi-omics, functional genomics, and plant stress biology. For the full publication record, see
+        <a
+          href="https://scholar.google.com/citations?hl=en&user=MXSf08oAAAAJ&view_op=list_works&sortby=pubdate">
+          Google Scholar
+        </a>.
       </p>
 
       <div class="publication-list">
@@ -1047,7 +1247,7 @@
             </div>
 
             <div class="publication-note">
-              This review examines how network-enabled gene discovery, multi-omics integration, machine learning, deep learning, and emerging foundation-model approaches are reshaping prediction of plant transcriptional regulators and regulatory relationships, with the goal of building predictive models of plant gene regulation.
+              This review examines how network inference, multi-omics integration, machine learning, deep learning, and emerging foundation-model approaches are reshaping prediction of plant transcriptional regulators and regulatory relationships.
             </div>
           </div>
         </article>
@@ -1064,9 +1264,7 @@
 
           <div class="publication-content">
             <h3 class="publication-title">
-              <a
-                href="https://onlinelibrary.wiley.com/doi/10.1111/tpj.70834">
-
+              <a href="https://onlinelibrary.wiley.com/doi/10.1111/tpj.70834">
                 A tissue-resolved, network-based transcriptomic framework for abiotic stress responses in sorghum
               </a>
             </h3>
@@ -1090,12 +1288,12 @@
 
               <a
                 href="https://github.com/DaeKwan-Ko/abiotic_bulkrnaseq">
-                GitHub page for scripts
+                GitHub
               </a>
             </div>
 
             <div class="publication-note">
-              This study provides a network-based transcriptomic resource revealing tissue specificity as a dominant driver of abiotic stress responses in sorghum, with prioritized regulatory candidates for future crop resilience research.
+              A network-based transcriptomic resource revealing tissue specificity as a dominant driver of abiotic stress responses in sorghum and prioritizing candidate regulators for crop resilience research.
             </div>
           </div>
         </article>
@@ -1114,7 +1312,6 @@
             <h3 class="publication-title">
               <a
                 href="https://www.cell.com/cell-reports-methods/fulltext/S2667-2375(24)00353-9">
-
                 A network-enabled pipeline for gene discovery and validation in non-model plant species
               </a>
             </h3>
@@ -1136,14 +1333,13 @@
                 GLBRC highlight
               </a>
 
-              <a
-                href="https://github.com/DaeKwan-Ko/needle">
-                GitHub page for scripts
+              <a href="https://github.com/DaeKwan-Ko/needle">
+                GitHub
               </a>
             </div>
 
             <div class="publication-note">
-              We developed NEEDLE, a network-enabled pipeline that predicts transcriptional regulators in non-model plant species and validates candidates through rapid in planta assays.
+              NEEDLE provides a network-enabled strategy for prioritizing transcriptional regulators and connecting computational predictions with rapid experimental validation.
             </div>
           </div>
         </article>
@@ -1160,9 +1356,7 @@
 
           <div class="publication-content">
             <h3 class="publication-title">
-              <a
-                href="https://www.nature.com/articles/s41576-024-00710-4">
-
+              <a href="https://www.nature.com/articles/s41576-024-00710-4">
                 Dynamics of ER stress-induced gene regulation in plants
               </a>
             </h3>
@@ -1174,7 +1368,7 @@
             </div>
 
             <div class="publication-note">
-              This review synthesizes how plants regulate gene expression during endoplasmic reticulum stress, emphasizing dynamic, systems-level control of stress adaptation and recovery.
+              A synthesis of dynamic transcriptional and post-transcriptional regulation during plant ER stress, adaptation, and recovery.
             </div>
           </div>
         </article>
@@ -1191,9 +1385,7 @@
 
           <div class="publication-content">
             <h3 class="publication-title">
-              <a
-                href="https://www.nature.com/articles/s41477-023-01480-3">
-
+              <a href="https://www.nature.com/articles/s41477-023-01480-3">
                 An IRE1-proteasome system signaling cohort controls cell fate determination in unresolved proteotoxic stress of the plant ER
               </a>
             </h3>
@@ -1207,22 +1399,21 @@
             <div class="publication-links">
               <a
                 href="https://www.cell.com/trends/plant-science/fulltext/S1360-1385(23)00388-6">
-                Spotlight by Varshney et al. Trends Plant Sci
+                Spotlight
               </a>
 
-              <a
-                href="https://github.com/DaeKwan-Ko/ism93">
-                GitHub page for scripts
+              <a href="https://github.com/DaeKwan-Ko/ism93">
+                GitHub
               </a>
 
               <a
                 href="https://msutoday.msu.edu/news/2023/plant-biology-switch-between-life-and-death">
-                Media highlight
+                MSU Today
               </a>
             </div>
 
             <div class="publication-note">
-              Through forward genetics, omics, and molecular analysis, we identified a signaling mechanism that controls cell fate decisions under unresolved ER proteotoxic stress.
+              Forward genetics, genomics, and molecular analysis identified a signaling mechanism controlling cell fate under unresolved ER proteotoxic stress.
             </div>
 
             <div class="video-wrapper">
@@ -1239,9 +1430,7 @@
 
         <article class="publication">
           <div class="publication-media">
-            <a
-              href="images/Ko and Brandizzi_Nature Plants 2022_1.png">
-
+            <a href="images/Ko and Brandizzi_Nature Plants 2022_1.png">
               <img
                 src="images/Ko and Brandizzi_Nature Plants 2022_1.png"
                 alt="Figure preview for Nature Plants 2022 paper on transcriptional competition in ER stress resolution"
@@ -1251,9 +1440,7 @@
 
           <div class="publication-content">
             <h3 class="publication-title">
-              <a
-                href="https://www.nature.com/articles/s41477-022-01150-w#article-info">
-
+              <a href="https://www.nature.com/articles/s41477-022-01150-w#article-info">
                 Transcriptional competition shapes proteotoxic ER stress resolution
               </a>
             </h3>
@@ -1265,19 +1452,18 @@
             </div>
 
             <div class="publication-links">
-              <a
-                href="https://github.com/DaeKwan-Ko/UPR-TFs">
-                GitHub page for scripts
+              <a href="https://github.com/DaeKwan-Ko/UPR-TFs">
+                GitHub
               </a>
 
               <a
                 href="https://prl.natsci.msu.edu/news-and-events/news/plant-er-advanced-genomics-illuminate-new-mechanisms-for-stress-mitigation.aspx">
-                Media highlight
+                MSU-PRL highlight
               </a>
             </div>
 
             <div class="publication-note">
-              We discovered and characterized a new regulatory mechanism shaping plant recovery from proteotoxic ER stress through multi-omics and functional analysis.
+              Multi-omics and functional analysis revealed a regulatory mechanism shaping plant recovery from proteotoxic ER stress.
             </div>
           </div>
         </article>
@@ -1304,7 +1490,6 @@
             <h3 class="publication-title">
               <a
                 href="https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1006197">
-
                 Temporal shift of circadian-mediated gene expression and carbon fixation contributes to biomass heterosis in maize hybrids
               </a>
             </h3>
@@ -1318,39 +1503,30 @@
             </div>
 
             <div class="publication-note">
-              I led this collaborative project linking circadian-mediated transcriptional dynamics with carbon fixation and biomass heterosis in maize hybrids. The accompanying time-lapse video was recorded during my Ph.D. research and shows the growth dynamics of the maize plants used in this work.
+              I led this collaborative study linking circadian-mediated transcriptional dynamics with carbon fixation and biomass heterosis in maize hybrids. The accompanying time-lapse was recorded during my Ph.D. research.
             </div>
           </div>
         </article>
       </div>
-
-      <h2 style="margin-top: 34px;">
-        Additional Publications
-      </h2>
-
-      <p class="section-intro">
-        A complete publication list is available in my
-        <a href="data/CV_DaeKwanKo.pdf">
-          CV
-        </a>
-        and on
-        <a
-          href="https://scholar.google.com/citations?hl=en&user=MXSf08oAAAAJ&view_op=list_works&sortby=pubdate">
-          Google Scholar
-        </a>.
-      </p>
     </section>
 
+    <!-- SUPPORT & PROJECTS -->
     <section
-      id="funding"
-      aria-labelledby="funding-heading">
+      class="tab-panel"
+      id="panel-projects"
+      role="tabpanel"
+      aria-labelledby="tab-projects"
+      data-panel="projects"
+      hidden>
 
-      <h2 id="funding-heading">
+      <div class="eyebrow">Independent and collaborative research</div>
+
+      <h2>
         Research Support &amp; Projects
       </h2>
 
       <p class="section-intro">
-        My current research is supported through competitive user-facility awards, an independent MSU award, and collaborative GLBRC research. These projects have generated the multimodal resources that underpin my program in causal and predictive regulatory genomics of plant environmental adaptation.
+        My current research is supported through competitive DOE user-facility awards, an independent MSU award, and collaborative GLBRC research. Together, these projects have generated the experimental and computational resources that underpin my regulatory-genomics program.
       </p>
 
       <div class="card-grid">
@@ -1360,7 +1536,7 @@
           </h3>
 
           <p>
-            Principal Investigator on three competitive projects awarded in 2021, 2023, and 2025. These projects support large-scale sorghum stress transcriptomics, DAP-seq profiling of 142 stress-responsive transcription factors, and follow-up time-resolved stress experiments.
+            Principal Investigator on three competitive projects awarded in 2021, 2023, and 2025, supporting sorghum stress transcriptomics, genome-scale TF–DNA binding maps, and follow-up studies of dynamic environmental responses.
           </p>
         </div>
 
@@ -1385,46 +1561,55 @@
         </div>
       </div>
 
-      <h3>
-        Current Project Themes
-      </h3>
+      <div class="section-block">
+        <h3>
+          Current Research Themes
+        </h3>
 
-      <ul class="compact-list">
-        <li>
-          Cell-type-specific TF–cis-regulatory element–target inference across drought, heat, and salinity
-        </li>
+        <ul class="compact-list">
+          <li>
+            Interpretable AI/ML for regulatory-network inference and transcriptional regulator prediction
+          </li>
 
-        <li>
-          Interpretable machine-learning and network models evaluated with biologically structured holdouts
-        </li>
+          <li>
+            Time-resolved regulatory genomics of plant responses to environmental stress
+          </li>
 
-        <li>
-          Genome-scale DAP-seq maps for 142 stress-responsive transcription factors integrated with root snMultiome data
-        </li>
+          <li>
+            Genome-scale transcription factor–DNA interaction maps
+          </li>
 
-        <li>
-          Staged causal testing through TF–promoter assays, CRE mutagenesis, pooled single-cell CRISPR perturbation, and selected whole-plant validation
-        </li>
+          <li>
+            Cell-type-resolved transcriptional and chromatin states
+          </li>
 
-        <li>
-          Prospective prediction across genotypes, environments, and genotype × environment combinations
-        </li>
+          <li>
+            Experimental testing of predicted regulatory mechanisms
+          </li>
 
-        <li>
-          Longer-term extension to stress recovery, combined environmental challenges, additional plant systems, and selected biotic interactions
-        </li>
-      </ul>
+          <li>
+            Regulatory variation and predictive models of plant resilience
+          </li>
+        </ul>
+      </div>
     </section>
 
+    <!-- TEACHING -->
     <section
-      id="teaching"
-      aria-labelledby="teaching-heading">
+      class="tab-panel"
+      id="panel-teaching"
+      role="tabpanel"
+      aria-labelledby="tab-teaching"
+      data-panel="teaching"
+      hidden>
 
-      <h2 id="teaching-heading">
+      <div class="eyebrow">Education and trainee development</div>
+
+      <h2>
         Teaching &amp; Mentoring
       </h2>
 
-      <p class="section-intro">
+      <p class="section-intro lead">
         I teach students to connect biological mechanisms with quantitative evidence. My teaching emphasizes conceptual integration, experimental design, reproducible data analysis, responsible interpretation of computational models, and clear scientific communication.
       </p>
 
@@ -1464,30 +1649,118 @@
         </div>
       </div>
 
-      <p>
-        My goal is to help trainees become confident scientific thinkers who can work across experimental biology, computation, and agriculture.
-      </p>
-    </section>
-
-    <section
-      id="cv"
-      aria-labelledby="cv-heading">
-
-      <h2 id="cv-heading">
-        CV
-      </h2>
-
-      <p>
-        My current CV is available here:
-        <a href="data/CV_DaeKwanKo.pdf">
-          Download CV
-        </a>.
-      </p>
+      <div class="callout">
+        <p>
+          My goal is to help trainees become confident scientific thinkers who can work across experimental biology, computation, and agriculture.
+        </p>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
     © 2026 Dae Kwan Ko.
   </footer>
+
+  <script>
+    (function () {
+      const buttons = Array.from(
+        document.querySelectorAll(".tab-button")
+      );
+
+      const panels = Array.from(
+        document.querySelectorAll(".tab-panel")
+      );
+
+      const validTabs = new Set(
+        buttons.map((button) => button.dataset.tab)
+      );
+
+      function activateTab(tabName, updateHash) {
+        const target = validTabs.has(tabName)
+          ? tabName
+          : "about";
+
+        buttons.forEach((button) => {
+          const active = button.dataset.tab === target;
+
+          button.setAttribute(
+            "aria-selected",
+            active ? "true" : "false"
+          );
+
+          button.tabIndex = active ? 0 : -1;
+        });
+
+        panels.forEach((panel) => {
+          panel.hidden = panel.dataset.panel !== target;
+        });
+
+        if (updateHash) {
+          history.pushState(
+            null,
+            "",
+            target === "about"
+              ? window.location.pathname + window.location.search
+              : "#" + target
+          );
+        }
+
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      }
+
+      buttons.forEach((button, index) => {
+        button.addEventListener("click", () => {
+          activateTab(button.dataset.tab, true);
+        });
+
+        button.addEventListener("keydown", (event) => {
+          let newIndex = index;
+
+          if (event.key === "ArrowRight") {
+            newIndex = (index + 1) % buttons.length;
+          } else if (event.key === "ArrowLeft") {
+            newIndex =
+              (index - 1 + buttons.length) % buttons.length;
+          } else if (event.key === "Home") {
+            newIndex = 0;
+          } else if (event.key === "End") {
+            newIndex = buttons.length - 1;
+          } else {
+            return;
+          }
+
+          event.preventDefault();
+
+          buttons[newIndex].focus();
+
+          activateTab(
+            buttons[newIndex].dataset.tab,
+            true
+          );
+        });
+      });
+
+      function tabFromLocation() {
+        const hash = window.location.hash.replace("#", "");
+
+        return validTabs.has(hash)
+          ? hash
+          : "about";
+      }
+
+      window.addEventListener("popstate", () => {
+        activateTab(tabFromLocation(), false);
+      });
+
+      window.addEventListener("hashchange", () => {
+        activateTab(tabFromLocation(), false);
+      });
+
+      activateTab(tabFromLocation(), false);
+    })();
+  </script>
 </body>
 </html>
