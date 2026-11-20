@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
 
-  <title>Dae Kwan Ko | Causal and Predictive Plant Regulatory Genomics</title>
+  <title>Ko Research Group | Causal and Predictive Plant Regulatory Genomics</title>
 
   <meta name="author" content="Dae Kwan Ko">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta
     name="description"
-    content="Dae Kwan Ko is a plant systems biologist at Michigan State University developing causal and predictive regulatory-genomics approaches that integrate interpretable AI/ML, single-cell multi-omics, TF–DNA binding maps, and experimental validation to understand plant environmental adaptation.">
+    content="The Ko Research Group at Michigan State University studies plant environmental adaptation through regulatory genomics, single-nucleus multiomics, experimental biology, and interpretable AI/ML. Led by Dae Kwan Ko, Ph.D.">
 
   <meta
     property="og:title"
-    content="Dae Kwan Ko | Causal and Predictive Plant Regulatory Genomics">
+    content="Ko Research Group | Causal and Predictive Plant Regulatory Genomics">
 
   <meta
     property="og:description"
-    content="Plant systems biologist developing causal and predictive regulatory-genomics approaches for plant environmental adaptation.">
+    content="A Michigan State University research group investigating plant stress adaptation through causal and predictive regulatory genomics.">
 
   <meta property="og:type" content="website">
 
@@ -166,6 +166,10 @@
       color: var(--accent);
     }
 
+    .tab-nav-hint {
+      display: none;
+    }
+
     .tab-nav-wrap {
       overflow-x: auto;
       scrollbar-width: thin;
@@ -257,6 +261,13 @@
       margin-left: auto;
       border-radius: 18px;
       box-shadow: var(--shadow);
+    }
+
+    .hero-photo .photo-caption {
+      margin: 9px 0 0;
+      color: var(--muted);
+      font-size: 0.88rem;
+      text-align: right;
     }
 
     .social-links {
@@ -462,6 +473,15 @@
 
     .card-grid {
       grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    /* Keep the detailed EOP description readable without stretching shorter cards. */
+    .projects-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .projects-grid > .card:last-child {
+      grid-column: 1 / -1;
     }
 
     .foundation-card,
@@ -702,6 +722,10 @@
         margin: 4px auto 0;
       }
 
+      .hero-photo .photo-caption {
+        text-align: center;
+      }
+
       .publication {
         grid-template-columns: 1fr;
       }
@@ -720,6 +744,14 @@
     }
 
     @media (max-width: 650px) {
+      .tab-nav-hint {
+        display: block;
+        padding-bottom: 2px;
+        color: var(--muted);
+        font-size: 0.72rem;
+        text-align: right;
+      }
+
       .header-top {
         align-items: flex-start;
         flex-direction: column;
@@ -763,7 +795,7 @@
     <div class="site-header-inner">
       <div class="header-top">
         <div class="site-title">
-          Dae Kwan Ko
+          Ko Research Group
         </div>
 
         <div class="header-links" aria-label="External profile links">
@@ -785,6 +817,7 @@
         </div>
       </div>
 
+      <div class="tab-nav-hint" aria-hidden="true">Swipe to browse sections ↔</div>
       <div class="tab-nav-wrap">
         <nav
           class="tab-nav"
@@ -799,7 +832,7 @@
             aria-selected="true"
             aria-controls="panel-about"
             data-tab="about">
-            About
+            Home
           </button>
 
           <button
@@ -872,36 +905,28 @@
 
       <div class="hero">
         <div class="hero-text">
-          <div class="eyebrow">Plant systems biology &amp; regulatory genomics</div>
+          <div class="eyebrow">Michigan State University · MSU–DOE Plant Research Laboratory</div>
 
-          <h1>Dae Kwan Ko, Ph.D.</h1>
+          <h1>Ko Research Group</h1>
 
           <p class="tagline">
-            Causal and predictive regulatory genomics · Interpretable AI/ML · Single-cell multi-omics · Plant environmental adaptation
+            Causal and Predictive Plant Regulatory Genomics
           </p>
 
           <p>
-            I am an Assistant Professor—Fixed Term in the
-            <a href="https://prl.natsci.msu.edu">
-              MSU-DOE Plant Research Laboratory
-            </a>
-            and
-            <a href="https://plantbiology.natsci.msu.edu">
-              Department of Plant Biology
-            </a>
-            at Michigan State University, and an incoming Co-Investigator
-            (effective December 1, 2026) in the
-            <a href="https://www.glbrc.org">
-              Great Lakes Bioenergy Research Center
-            </a>.
+            We investigate how plant gene regulatory networks translate environmental change into molecular and physiological responses. Our research combines regulatory genomics, single-nucleus multiomics, functional genetics, and interpretable AI/ML to develop experimentally supported models of plant stress adaptation.
           </p>
 
           <p>
-            My research seeks to understand how gene regulatory networks translate environmental change into adaptive molecular states and plant performance. I combine regulatory genomics, single-cell and multi-omics technologies, functional genetics, and interpretable AI/ML to move from descriptive regulatory maps toward experimentally supported and predictive biological models.
+            The group is led by <strong>Dae Kwan Ko, Ph.D.</strong>, Assistant Professor (Fixed Term) in the
+            <a href="https://prl.natsci.msu.edu">MSU–DOE Plant Research Laboratory</a>
+            and <a href="https://plantbiology.natsci.msu.edu">Department of Plant Biology</a>
+            at Michigan State University. He is an incoming Co-Investigator (effective December 1, 2026) in the
+            <a href="https://www.glbrc.org">Great Lakes Bioenergy Research Center</a>.
           </p>
 
           <p>
-            My work spans Arabidopsis, maize, Brachypodium, and sorghum, with current emphasis on environmental stress responses in sorghum. At MSU, I lead independent DOE Joint Genome Institute user projects and an MSU Project GREEEN project. I also lead an approved GLBRC Year 20 Emerging Opportunity Project on cell-type-specific regulatory responses to abiotic stress in sorghum roots, scheduled to begin December 1, 2026.
+            Our work spans Arabidopsis, maize, Brachypodium, and sorghum, with current emphasis on plant stress responses. The group builds on DOE Joint Genome Institute user projects and MSU Project GREEEN research led by Dae Kwan Ko, alongside an approved GLBRC Year 20 Emerging Opportunity Project on cell-type-specific regulatory responses in sorghum roots, scheduled to begin December 1, 2026.
           </p>
 
           <div
@@ -955,6 +980,7 @@
               alt="Portrait of Dae Kwan Ko"
               loading="eager">
           </a>
+          <p class="photo-caption">Dae Kwan Ko, Ph.D. · Group Lead</p>
         </div>
       </div>
 
@@ -972,7 +998,7 @@
           </figure>
 
           <div class="recognition-content">
-            <div class="eyebrow">Recent recognition</div>
+            <div class="eyebrow">Group lead recognition</div>
 
             <h3>
               2026 Yaoping Zhang Bioenergy Research Award
@@ -983,7 +1009,7 @@
             </p>
 
             <p>
-              Recognized for contributions to systems-level gene discovery, regulatory genomics, and research advancing the understanding of plant resilience in bioenergy crops.
+              Awarded to Dae Kwan Ko for contributions to systems-level gene discovery, regulatory genomics, and research advancing the understanding of plant resilience in bioenergy crops.
             </p>
 
             <div class="recognition-links">
@@ -1018,7 +1044,7 @@
       </h2>
 
       <p class="section-intro lead">
-        Modern genomics can reveal where transcription factors bind, which chromatin regions are accessible, and which genes respond to environmental change. My research asks the next question: which regulatory relationships are functionally important, and can experimentally supported regulatory rules predict plant responses beyond the conditions in which they were discovered?
+        Modern genomics can reveal where transcription factors bind, which chromatin regions are accessible, and which genes respond to environmental change. Our research asks the next question: which regulatory relationships are functionally important, and can experimentally supported regulatory rules predict plant responses beyond the conditions in which they were discovered?
       </p>
 
       <div class="research-question">
@@ -1078,7 +1104,29 @@
 
         <div class="modeling-principles">
           <strong>Approach:</strong>
-          I use interpretable and data-efficient modeling as a tool for biological discovery. Computational predictions guide focused experiments, and experimental outcomes refine subsequent models.
+          We use interpretable and data-efficient modeling as a tool for biological discovery. Computational predictions guide focused experiments, and experimental outcomes refine subsequent models.
+        </div>
+      </div>
+
+      <div class="section-block">
+        <h3>Research Directions</h3>
+
+        <div class="foundation-grid">
+          <div class="foundation-card">
+            <h3>Plant regulatory genomics and stress-response networks</h3>
+
+            <p>
+              We integrate sorghum stress transcriptomics, transcription factor DNA-binding maps, and root single-nucleus multiomics with interpretable computational models to identify cell-type-specific regulatory networks and prioritize regulatory relationships for experimental testing.
+            </p>
+          </div>
+
+          <div class="foundation-card">
+            <h3>Plant ER stress signaling and physiological adaptation</h3>
+
+            <p>
+              We investigate how IRE1 and bZIP signaling pathways shape responses to endoplasmic reticulum stress in Arabidopsis, including root development, adaptation, and recovery. Single-nucleus multiomics is an emerging approach for resolving these responses across cell types.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -1088,7 +1136,7 @@
         </h3>
 
         <p class="section-intro">
-          The program builds on datasets, methods, and biological systems that I have already established.
+          The program builds on datasets, methods, and biological systems established through Dae Kwan Ko’s research and collaborations.
         </p>
 
         <div class="foundation-grid">
@@ -1185,7 +1233,7 @@
       <div class="callout">
         <p>
           <strong>Long-term direction:</strong>
-          My goal is to identify transferable regulatory principles that explain how plants adapt to changing environments and to use those principles to guide mechanistic discovery and crop resilience research across plant systems.
+          Our goal is to identify transferable regulatory principles that explain how plants adapt to changing environments and to use those principles to guide mechanistic discovery and crop resilience research across plant systems.
         </p>
       </div>
     </section>
@@ -1206,7 +1254,7 @@
       </h2>
 
       <p class="section-intro">
-        Representative publications spanning AI-enabled regulator prediction, network modeling, multi-omics, functional genomics, and plant stress biology. For the full publication record, see
+        Selected publications by Dae Kwan Ko and collaborators spanning AI-enabled regulator prediction, network modeling, multi-omics, functional genomics, and plant stress biology. For the full publication record, see
         <a
           href="https://scholar.google.com/citations?hl=en&user=MXSf08oAAAAJ&view_op=list_works&sortby=pubdate">
           Google Scholar
@@ -1515,7 +1563,7 @@
             </div>
 
             <div class="publication-note">
-              I led this collaborative study linking circadian-mediated transcriptional dynamics with carbon fixation and biomass heterosis in maize hybrids. The accompanying time-lapse was recorded during my Ph.D. research.
+              Dae Kwan Ko led this collaborative study linking circadian-mediated transcriptional dynamics with carbon fixation and biomass heterosis in maize hybrids. The accompanying time-lapse was recorded during his Ph.D. research.
             </div>
           </div>
         </article>
@@ -1536,21 +1584,28 @@
       <h2>Research Team</h2>
 
       <p class="section-intro">
-        Researchers contributing to plant regulatory genomics, single-nucleus multiomics, and stress biology.
+        The Ko Research Group brings together experimental and computational approaches to plant regulatory genomics and stress biology at Michigan State University.
       </p>
 
-      <div class="section-block">
-        <h3>Marie Brockhoff</h3>
+      <div class="foundation-grid">
+        <article class="foundation-card">
+          <h3>Dae Kwan Ko, Ph.D.</h3>
+          <p><strong>Group Lead · Assistant Professor (Fixed Term)</strong><br>
+            MSU–DOE Plant Research Laboratory and Department of Plant Biology, Michigan State University</p>
+          <p style="margin-top: 10px;">
+            Research interests include plant regulatory genomics, stress-response networks, single-nucleus multiomics, and interpretable computational models of gene regulation.
+          </p>
+        </article>
 
-        <p>
-          <strong>Research Technician</strong><br>
-          MSU–DOE Plant Research Laboratory, Michigan State University
-        </p>
-
-        <p>
-          <strong>Joining the research team December 1, 2026.</strong>
-          Marie will contribute to nuclei isolation, single-nucleus multiomics in Arabidopsis and sorghum, and experimental studies of plant stress responses. Her research activities will be supported by the Great Lakes Bioenergy Research Center (GLBRC).
-        </p>
+        <article class="foundation-card">
+          <h3>Marie Brockhoff</h3>
+          <p><strong>Research Technician</strong><br>
+            MSU–DOE Plant Research Laboratory, Michigan State University</p>
+          <p style="margin-top: 10px;">
+            <strong>Joining December 1, 2026.</strong>
+            Marie will contribute to nuclei isolation, single-nucleus multiomics in Arabidopsis and sorghum, and experimental studies of plant stress responses. Her research activities will be supported by the Great Lakes Bioenergy Research Center (GLBRC).
+          </p>
+        </article>
       </div>
     </section>
 
@@ -1570,17 +1625,17 @@
       </h2>
 
       <p class="section-intro">
-        My research draws on competitive DOE user-facility awards, an independent MSU award, and GLBRC-supported research. An approved GLBRC Year 20 Emerging Opportunity Project, scheduled for December 2026–November 2027, builds on this foundation to investigate cell-type-specific regulatory responses to abiotic stress.
+        The group’s research builds on DOE user-facility awards and MSU Project GREEEN research led by Dae Kwan Ko, as well as GLBRC-supported collaborations. An approved GLBRC Year 20 Emerging Opportunity Project, scheduled for December 2026–November 2027, builds on this foundation to investigate cell-type-specific regulatory responses to abiotic stress.
       </p>
 
-      <div class="card-grid">
+      <div class="card-grid projects-grid">
         <div class="card">
           <h3>
             DOE-JGI User Projects
           </h3>
 
           <p>
-            Principal Investigator on three competitive projects awarded in 2021, 2023, and 2025, supporting sorghum stress transcriptomics, genome-scale TF–DNA binding maps, and follow-up studies of dynamic environmental responses.
+            Dae Kwan Ko is Principal Investigator on three competitive projects awarded in 2021, 2023, and 2025, supporting sorghum stress transcriptomics, genome-scale TF–DNA binding maps, and follow-up studies of dynamic environmental responses.
           </p>
         </div>
 
@@ -1590,7 +1645,7 @@
           </h3>
 
           <p>
-            Principal Investigator on an MSU Project GREEEN award examining how abiotic stress alters regulatory DNA activity in sorghum at single-cell resolution.
+            Dae Kwan Ko is Principal Investigator on an MSU Project GREEEN award examining how abiotic stress alters regulatory DNA activity in sorghum at single-cell resolution.
           </p>
         </div>
 
@@ -1662,7 +1717,7 @@
       </h2>
 
       <p class="section-intro lead">
-        I teach students to connect biological mechanisms with quantitative evidence. My teaching emphasizes conceptual integration, experimental design, reproducible data analysis, responsible interpretation of computational models, and clear scientific communication.
+        Teaching and mentoring are integral to the research program. Dae Kwan Ko emphasizes conceptual integration, experimental design, reproducible data analysis, responsible interpretation of computational models, and clear scientific communication.
       </p>
 
       <div class="card-grid">
@@ -1686,7 +1741,7 @@
           </h3>
 
           <p>
-            I use active learning, structured discussion, primary literature, and real biological datasets to help students move from descriptive observations to testable models and evidence-based conclusions.
+            Dae Kwan Ko uses active learning, structured discussion, primary literature, and real biological datasets to help students move from descriptive observations to testable models and evidence-based conclusions.
           </p>
         </div>
 
@@ -1696,21 +1751,21 @@
           </h3>
 
           <p>
-            I mentor undergraduate researchers, research assistants, and early-career scientists through scaffolded training, explicit expectations, regular feedback, reproducible research practices, and meaningful ownership of scientific questions.
+            Dae Kwan Ko mentors undergraduate researchers, research assistants, and early-career scientists through scaffolded training, explicit expectations, regular feedback, reproducible research practices, and meaningful ownership of scientific questions.
           </p>
         </div>
       </div>
 
       <div class="callout">
         <p>
-          My goal is to help trainees become confident scientific thinkers who can work across experimental biology, computation, and agriculture.
+          Our mentoring goal is to help trainees become confident scientific thinkers who can work across experimental biology, computation, and agriculture.
         </p>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    © 2026 Dae Kwan Ko.
+    © 2026 Ko Research Group · Dae Kwan Ko.
   </footer>
 
   <script>
